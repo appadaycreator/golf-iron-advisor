@@ -1281,6 +1281,9 @@
                     }
                 }
             });
+            
+            // Setup all step navigation event listeners
+            setupStepNavigation();
         });
         
         function startDiagnosis() {
@@ -1318,8 +1321,8 @@
             }
         }
         
-        // Step navigation event listeners
-        setTimeout(() => {
+        // Step navigation event listeners - Setup after DOM is loaded
+        function setupStepNavigation() {
             // Step 1
             document.getElementById('next-1')?.addEventListener('click', function() {
                 diagnosisData.height = document.getElementById('height').value;
@@ -1420,8 +1423,7 @@
             document.getElementById('retakeBtn')?.addEventListener('click', function() {
                 startDiagnosis();
             });
-            
-        }, 100);
+        }
         
         console.log('[App] Script loaded successfully');
     </script>
