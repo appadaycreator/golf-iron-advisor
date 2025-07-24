@@ -1265,6 +1265,22 @@
                 const text = encodeURIComponent('ゴルフアイアン適性診断で最適なクラブを見つけよう！');
                 window.open(`https://social-plugins.line.me/lineit/share?url=${url}&text=${text}`, '_blank');
             });
+            
+            // Quiz option selection - MOVED HERE FOR IMMEDIATE AVAILABILITY
+            document.addEventListener('click', function(e) {
+                if (e.target.closest('.quiz-option')) {
+                    const option = e.target.closest('.quiz-option');
+                    const step = option.closest('[id^="step-"]');
+                    
+                    if (step) {
+                        step.querySelectorAll('.quiz-option').forEach(opt => {
+                            opt.classList.remove('selected');
+                        });
+                        
+                        option.classList.add('selected');
+                    }
+                }
+            });
         });
         
         function startDiagnosis() {
@@ -1394,20 +1410,6 @@
                     const results = calculateResults(diagnosisData);
                     showResults(results);
                 }, 1500);
-            });
-            
-            // Quiz option selection
-            document.addEventListener('click', function(e) {
-                if (e.target.closest('.quiz-option')) {
-                    const option = e.target.closest('.quiz-option');
-                    const step = option.closest('[id^="step-"]');
-                    
-                    step.querySelectorAll('.quiz-option').forEach(opt => {
-                        opt.classList.remove('selected');
-                    });
-                    
-                    option.classList.add('selected');
-                }
             });
             
             // Results actions

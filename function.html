@@ -45,8 +45,8 @@
                     <h1>機能仕様書</h1>
                     <p>ゴルフアイアン適性診断システムの詳細機能と技術仕様</p>
                     <div class="spec-meta">
-                        <span class="version">Version 1.0</span>
-                        <span class="updated">更新日: 2024年12月</span>
+                        <span class="version">Version 1.1</span>
+                        <span class="updated">更新日: 2025年1月</span>
                     </div>
                 </section>
 
@@ -65,6 +65,32 @@
                         <li><a href="#integrations">外部連携</a></li>
                         <li><a href="#future-roadmap">今後の機能拡張予定</a></li>
                     </ol>
+                </section>
+
+                <!-- 実装ステータス -->
+                <section class="spec-section" style="background-color: #f0fdf4; border: 2px solid #16a34a; padding: 20px; margin-bottom: 30px;">
+                    <h2 style="color: #16a34a;">📊 現在の実装ステータス</h2>
+                    <div class="spec-content">
+                        <div class="metrics-grid" style="margin-top: 20px;">
+                            <div class="metric-item">
+                                <span class="metric-number">7/7</span>
+                                <span class="metric-label">診断質問実装</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-number">100%</span>
+                                <span class="metric-label">基本診断機能</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-number">実装済</span>
+                                <span class="metric-label">結果保存機能</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-number">実装済</span>
+                                <span class="metric-label">SNSシェア機能</span>
+                            </div>
+                        </div>
+                        <p style="margin-top: 20px;"><strong>最終更新:</strong> 2025年1月 - クイズオプション選択バグを修正</p>
+                    </div>
                 </section>
 
                 <!-- システム概要 -->
@@ -125,23 +151,24 @@
                                     
                                     <h4>入力項目</h4>
                                     <ul>
-                                        <li><strong>基本情報:</strong> 性別、身長、体重</li>
-                                        <li><strong>ゴルフ経験:</strong> ゴルフ歴、ハンディキャップ</li>
-                                        <li><strong>スイング特性:</strong> スイングスピード、弾道の高さ</li>
-                                        <li><strong>ミス傾向:</strong> スライス、フック、トップ、ダフリ</li>
-                                        <li><strong>重視ポイント:</strong> 飛距離、正確性、寛容性、打感</li>
-                                        <li><strong>予算:</strong> 価格帯の設定</li>
-                                        <li><strong>ブランド志向:</strong> 好みのメーカー</li>
-                                        <li><strong>その他:</strong> 見た目の志向、追加要望</li>
+                                        <li><strong>基本情報:</strong> 身長、体重、年齢（実装済み ✓）</li>
+                                        <li><strong>ゴルフ経験:</strong> 初心者、アマチュア、中級者、上級者（実装済み ✓）</li>
+                                        <li><strong>スイング特性:</strong> スイングスピード（ゆっくり、標準、速い）（実装済み ✓）</li>
+                                        <li><strong>ミス傾向:</strong> スライス、フック、トップ、ダフリ（実装済み ✓）</li>
+                                        <li><strong>弾道の高さ:</strong> 低い、中程度、高い（実装済み ✓）</li>
+                                        <li><strong>重視ポイント:</strong> 飛距離、正確性、操作性、やさしさ（実装済み ✓）</li>
+                                        <li><strong>予算:</strong> 5万円以下、5-10万円、10-15万円、15万円以上（実装済み ✓）</li>
                                     </ul>
                                     
                                     <h4>出力項目</h4>
                                     <ul>
-                                        <li>推奨アイアンセット（上位3位まで）</li>
-                                        <li>適合度スコア（100点満点）</li>
-                                        <li>推奨理由の詳細説明</li>
-                                        <li>シャフト推奨</li>
-                                        <li>価格情報・購入リンク</li>
+                                        <li>推奨アイアンセット（上位3位まで）（実装済み ✓）</li>
+                                        <li>適合度スコア（100点満点）（実装済み ✓）</li>
+                                        <li>推奨理由の詳細説明（実装済み ✓）</li>
+                                        <li>レーダーチャート表示（実装済み ✓）</li>
+                                        <li>各クラブの特性表示（やさしさ、操作性、飛距離）（実装済み ✓）</li>
+                                        <li>価格情報・購入リンク（Amazon、楽天）（実装済み ✓）</li>
+                                        <li>シャフト推奨（未実装）</li>
                                     </ul>
                                 </div>
                             </div>
@@ -150,15 +177,22 @@
                                 <h3>2.2 結果保存・履歴機能</h3>
                                 <div class="feature-details">
                                     <h4>機能概要</h4>
-                                    <p>診断結果の保存、履歴管理、比較機能を提供</p>
+                                    <p>診断結果の保存、履歴管理機能を提供</p>
                                     
-                                    <h4>主要機能</h4>
+                                    <h4>実装済み機能 ✓</h4>
                                     <ul>
                                         <li>診断結果のローカル保存</li>
-                                        <li>クラウド保存（Supabase連携）</li>
                                         <li>診断履歴の一覧表示</li>
-                                        <li>過去診断との比較機能</li>
+                                        <li>最近の診断表示（サイドバー）</li>
+                                        <li>履歴から結果の再表示</li>
+                                        <li>最大10件の履歴保持</li>
+                                    </ul>
+                                    
+                                    <h4>未実装機能</h4>
+                                    <ul>
+                                        <li>クラウド保存（Supabase連携）</li>
                                         <li>PDFエクスポート機能</li>
+                                        <li>過去診断との比較機能</li>
                                     </ul>
                                 </div>
                             </div>
@@ -171,10 +205,12 @@
                                     
                                     <h4>共有方法</h4>
                                     <ul>
-                                        <li>SNSシェア（Twitter、Facebook、LINE）</li>
-                                        <li>メール送信</li>
-                                        <li>QRコード生成</li>
-                                        <li>URL共有</li>
+                                        <li>SNSシェア（Twitter）（実装済み ✓）</li>
+                                        <li>SNSシェア（Facebook）（実装済み ✓）</li>
+                                        <li>SNSシェア（LINE）（実装済み ✓）</li>
+                                        <li>URLコピー（実装済み ✓）</li>
+                                        <li>メール送信（未実装）</li>
+                                        <li>QRコード生成（未実装）</li>
                                     </ul>
                                 </div>
                             </div>
@@ -329,18 +365,21 @@
                                 <h3>フロントエンド</h3>
                                 <ul>
                                     <li><strong>HTML5:</strong> セマンティックマークアップ</li>
-                                    <li><strong>CSS3:</strong> Grid/Flexbox レスポンシブデザイン</li>
-                                    <li><strong>JavaScript (ES6+):</strong> Vanilla JS, モジュール設計</li>
-                                    <li><strong>PWA:</strong> Service Worker, Web App Manifest</li>
+                                    <li><strong>CSS3:</strong> Grid/Flexbox レスポンシブデザイン（実装済み ✓）</li>
+                                    <li><strong>JavaScript (ES6+):</strong> Vanilla JS, モジュール設計（実装済み ✓）</li>
+                                    <li><strong>TailwindCSS:</strong> ユーティリティファーストCSS（実装済み ✓）</li>
+                                    <li><strong>Chart.js:</strong> レーダーチャート表示（実装済み ✓）</li>
+                                    <li><strong>PWA:</strong> Service Worker, Web App Manifest（部分実装）</li>
                                 </ul>
                             </div>
 
                             <div class="tech-category">
                                 <h3>バックエンド・データベース</h3>
                                 <ul>
-                                    <li><strong>Supabase:</strong> 認証・データベース・API</li>
-                                    <li><strong>PostgreSQL:</strong> リレーショナルデータベース</li>
-                                    <li><strong>Row Level Security:</strong> データアクセス制御</li>
+                                    <li><strong>ローカルストレージ:</strong> 診断結果・履歴保存（実装済み ✓）</li>
+                                    <li><strong>Supabase:</strong> 認証・データベース・API（計画中）</li>
+                                    <li><strong>PostgreSQL:</strong> リレーショナルデータベース（計画中）</li>
+                                    <li><strong>Row Level Security:</strong> データアクセス制御（計画中）</li>
                                 </ul>
                             </div>
 
