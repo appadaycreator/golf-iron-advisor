@@ -3,317 +3,1425 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ゴルフアイアン適性診断 - あなたに最適なアイアンを見つけよう</title>
-    <meta name="description" content="あなたに最適なゴルフアイアンを診断。スイング特性や体格から推奨クラブを提案する無料ツール">
-    <meta name="keywords" content="ゴルフ,アイアン,診断,クラブ選び,スイング分析,適性,ゴルフクラブ">
+    <title>ゴルフアイアン適性診断 | Golf Iron Advisor - あなたに最適なアイアンを見つけよう</title>
+    <meta name="description" content="スイング特性と体格から最適なゴルフアイアンを無料診断。初心者から上級者まで対応した信頼性の高い診断システムで理想のクラブを見つけましょう。">
+    <meta name="keywords" content="ゴルフ,アイアン,診断,クラブ選び,スイング,ゴルフギア,ゴルフクラブ">
+    <meta name="author" content="Golf Iron Advisor">
+    <meta name="robots" content="index, follow">
     
-    <!-- OGP設定 -->
-    <meta property="og:title" content="ゴルフアイアン適性診断">
-    <meta property="og:description" content="あなたに最適なアイアンを診断">
-    <meta property="og:image" content="./assets/images/ogp-image.png">
-    <meta property="og:url" content="https://appadaycreator.github.io/golf-iron-advisor/">
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#059669">
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+    
+    <!-- OGP -->
+    <meta property="og:title" content="ゴルフアイアン適性診断 | Golf Iron Advisor">
+    <meta property="og:description" content="スイング特性と体格から最適なゴルフアイアンを無料診断">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="ゴルフアイアン適性診断">
+    <meta property="og:url" content="https://appadaycreator.github.io/golf-iron-advisor/">
+    <meta property="og:image" content="https://appadaycreator.github.io/golf-iron-advisor/images/ogp-image.jpg">
+    <meta property="og:site_name" content="Golf Iron Advisor">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ゴルフアイアン適性診断">
-    <meta name="twitter:description" content="あなたに最適なアイアンを診断">
-    <meta name="twitter:image" content="./assets/images/ogp-image.png">
-    
-    <!-- PWA設定 -->
-    <link rel="manifest" href="./manifest.json">
-    <meta name="theme-color" content="#2ECC71">
-    <link rel="apple-touch-icon" href="./assets/images/icons/icon-192x192.png">
+    <meta name="twitter:title" content="ゴルフアイアン適性診断 | Golf Iron Advisor">
+    <meta name="twitter:description" content="スイング特性と体格から最適なゴルフアイアンを無料診断">
+    <meta name="twitter:image" content="https://appadaycreator.github.io/golf-iron-advisor/images/ogp-image.jpg">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="./icons/favicon.svg">
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TXQGZRF9');</script>
+    <!-- End Google Tag Manager -->
     
-    <!-- 構造化データ -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "ゴルフアイアン適性診断",
-        "description": "スイング診断による最適アイアン推奨",
-        "url": "https://appadaycreator.github.io/golf-iron-advisor/",
-        "applicationCategory": "GameApplication",
-        "operatingSystem": "Any",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "JPY"
+    <!-- External Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --font-size-multiplier: 1;
+            --primary-color: #059669;
+            --secondary-color: #10b981;
+            --accent-color: #f59e0b;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
         }
-    }
-    </script>
+        
+        * {
+            font-size: calc(1rem * var(--font-size-multiplier));
+        }
+        
+        .font-size-xs * { --font-size-multiplier: 0.75; }
+        .font-size-sm * { --font-size-multiplier: 0.875; }
+        .font-size-md * { --font-size-multiplier: 1; }
+        .font-size-lg * { --font-size-multiplier: 1.125; }
+        .font-size-xl * { --font-size-multiplier: 1.25; }
+        
+        .sidebar-transition {
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .bg-gradient-golf {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+        }
+        
+        .btn-primary {
+            @apply bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-lg hover:shadow-xl;
+        }
+        
+        .btn-secondary {
+            @apply bg-white hover:bg-gray-50 text-green-600 font-semibold py-3 px-6 rounded-lg border-2 border-green-600 transition duration-300;
+        }
+        
+        .card {
+            @apply bg-white rounded-xl shadow-lg p-6 transition duration-300 hover:shadow-xl;
+        }
+        
+        .slide-in {
+            animation: slideIn 0.5s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .quiz-option {
+            @apply p-4 border-2 border-gray-200 rounded-lg cursor-pointer transition duration-300 hover:border-green-500 hover:bg-green-50;
+        }
+        
+        .quiz-option.selected {
+            @apply border-green-600 bg-green-100;
+        }
+        
+        .progress-bar {
+            transition: width 0.3s ease-in-out;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        .golf-icon {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23059669'%3E%3Cpath d='M12 2l1.09 3.26L16 4l-1.91 2.74L16 9l-2.91-1.26L12 11 10.91 7.74 8 9l1.91-2.26L8 4l2.91 1.26L12 2z'/%3E%3C/svg%3E") no-repeat center;
+            background-size: 24px 24px;
+            width: 24px;
+            height: 24px;
+        }
+    </style>
 </head>
-<body>
-    <div id="app">
-        <!-- ヘッダー -->
-        <header class="header">
-            <div class="container">
-                <div class="header-content">
-                    <div class="logo">
-                        <img src="./assets/images/logo.svg" alt="ゴルフアイアン適性診断" />
-                        <h1>ゴルフアイアン適性診断</h1>
-                    </div>
-                    <nav class="nav">
-                        <ul>
-                            <li><a href="./lp.html">ホーム</a></li>
-                            <li><a href="./how-to-use.html">使い方</a></li>
-                            <li><a href="./contact.html">お問い合わせ</a></li>
-                        </ul>
-                    </nav>
-                    <div class="language-switcher">
-                        <select id="language-select">
-                            <option value="ja">日本語</option>
-                            <option value="en">English</option>
+<body class="font-size-md bg-gray-50">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="golf-icon"></div>
+                    <h1 class="text-xl font-bold text-green-600" data-translate="site-title">Golf Iron Advisor</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="#home" class="text-gray-700 hover:text-green-600 transition" data-translate="nav-home">ホーム</a>
+                    <a href="#diagnosis" class="text-gray-700 hover:text-green-600 transition" data-translate="nav-diagnosis">診断</a>
+                    <a href="#usage" class="text-gray-700 hover:text-green-600 transition" data-translate="nav-usage">使い方</a>
+                    <a href="./lp.html" class="text-gray-700 hover:text-green-600 transition" data-translate="nav-lp">LP</a>
+                    <a href="#contact" class="text-gray-700 hover:text-green-600 transition" data-translate="nav-contact">お問い合わせ</a>
+                </div>
+                
+                <!-- Controls -->
+                <div class="flex items-center space-x-4">
+                    <!-- Font Size Control -->
+                    <div class="hidden md:flex items-center space-x-2">
+                        <i class="fas fa-text-height text-gray-500"></i>
+                        <select id="fontSizeSelector" class="text-sm border rounded px-2 py-1">
+                            <option value="xs" data-translate="font-xs">極小</option>
+                            <option value="sm" data-translate="font-sm">小</option>
+                            <option value="md" selected data-translate="font-md">標準</option>
+                            <option value="lg" data-translate="font-lg">大</option>
+                            <option value="xl" data-translate="font-xl">特大</option>
                         </select>
                     </div>
+                    
+                    <!-- Language Selector -->
+                    <select id="languageSelector" class="text-sm border rounded px-2 py-1">
+                        <option value="ja">日本語</option>
+                        <option value="en">English</option>
+                    </select>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuButton" class="lg:hidden text-gray-700 hover:text-green-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
                 </div>
             </div>
-        </header>
-
-        <!-- メインコンテンツ -->
-        <main class="main">
-            <div class="container">
-                <!-- 診断開始セクション -->
-                <section id="start-section" class="section">
-                    <div class="hero">
-                        <h2>あなたに最適なアイアンを見つけよう</h2>
-                        <p>スイング特性や体格から、最適なアイアンクラブとシャフトの組み合わせを診断します</p>
-                        <button id="start-diagnosis" class="btn btn-primary btn-large">
-                            診断を開始する
+        </nav>
+    </header>
+    
+    <!-- Mobile Sidebar -->
+    <div id="mobileSidebar" class="fixed inset-y-0 right-0 w-80 bg-white shadow-xl transform translate-x-full sidebar-transition lg:hidden z-40">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-lg font-semibold" data-translate="menu">メニュー</h2>
+                <button id="closeMobileSidebar" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <nav class="space-y-4">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-green-600 border-b" data-translate="nav-home">ホーム</a>
+                <a href="#diagnosis" class="block py-2 text-gray-700 hover:text-green-600 border-b" data-translate="nav-diagnosis">診断</a>
+                <a href="#usage" class="block py-2 text-gray-700 hover:text-green-600 border-b" data-translate="nav-usage">使い方</a>
+                <a href="./lp.html" class="block py-2 text-gray-700 hover:text-green-600 border-b" data-translate="nav-lp">LP</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-green-600 border-b" data-translate="nav-contact">お問い合わせ</a>
+                
+                <!-- Font Size Control (Mobile) -->
+                <div class="pt-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="font-size">文字サイズ</label>
+                    <select id="mobileFontSizeSelector" class="w-full border rounded px-3 py-2">
+                        <option value="xs" data-translate="font-xs">極小</option>
+                        <option value="sm" data-translate="font-sm">小</option>
+                        <option value="md" selected data-translate="font-md">標準</option>
+                        <option value="lg" data-translate="font-lg">大</option>
+                        <option value="xl" data-translate="font-xl">特大</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
+    </div>
+    
+    <!-- Desktop Sidebar -->
+    <div id="desktopSidebar" class="hidden lg:block fixed left-0 top-20 h-screen w-64 bg-white shadow-lg z-30 overflow-y-auto">
+        <div class="p-6">
+            <h2 class="text-lg font-semibold mb-4 text-green-600" data-translate="quick-menu">クイックメニュー</h2>
+            <nav class="space-y-3">
+                <a href="#hero" class="block py-2 px-4 text-sm text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition" data-translate="sidebar-start">診断を始める</a>
+                <a href="#features" class="block py-2 px-4 text-sm text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition" data-translate="sidebar-features">機能紹介</a>
+                <a href="#recommended" class="block py-2 px-4 text-sm text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition" data-translate="sidebar-recommended">おすすめ商品</a>
+                <a href="#history" class="block py-2 px-4 text-sm text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition" data-translate="sidebar-history">診断履歴</a>
+            </nav>
+            
+            <!-- Recent Diagnosis -->
+            <div class="mt-8">
+                <h3 class="text-sm font-semibold text-gray-700 mb-3" data-translate="recent-diagnosis">最近の診断</h3>
+                <div id="recentDiagnosisContainer" class="space-y-2">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <main class="lg:ml-64">
+        <!-- Hero Section -->
+        <section id="hero" class="bg-gradient-golf text-white py-20">
+            <div class="container mx-auto px-4 text-center">
+                <div class="fade-in">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6" data-translate="hero-title">あなたに最適な<br>アイアンを見つけよう</h1>
+                    <p class="text-xl md:text-2xl mb-8 opacity-90" data-translate="hero-subtitle">スイング特性と体格データから科学的に診断</p>
+                    <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
+                        <button id="startDiagnosisBtn" class="btn-primary text-lg px-8 py-4" data-translate="start-diagnosis">
+                            <i class="fas fa-play mr-2"></i>無料診断を始める
+                        </button>
+                        <button id="viewHistoryBtn" class="btn-secondary text-lg px-8 py-4" data-translate="view-history">
+                            <i class="fas fa-history mr-2"></i>診断履歴を見る
                         </button>
                     </div>
-                </section>
-
-                <!-- 診断フォームセクション -->
-                <section id="diagnosis-form" class="section" style="display: none;">
-                    <div class="form-container">
-                        <div class="progress-bar">
-                            <div class="progress" id="progress"></div>
-                        </div>
-                        
-                        <div class="step-indicator">
-                            <span class="current-step" id="current-step">1</span> / 
-                            <span class="total-steps" id="total-steps">8</span>
-                        </div>
-
-                        <form id="diagnosis-questions">
-                            <!-- 質問1: 基本情報 -->
-                            <div class="question-group" data-step="1">
-                                <h3>基本情報</h3>
-                                <div class="question">
-                                    <label>性別</label>
-                                    <div class="radio-group">
-                                        <input type="radio" id="gender-male" name="gender" value="male">
-                                        <label for="gender-male">男性</label>
-                                        <input type="radio" id="gender-female" name="gender" value="female">
-                                        <label for="gender-female">女性</label>
-                                    </div>
-                                </div>
-                                <div class="question">
-                                    <label for="height">身長 (cm)</label>
-                                    <input type="number" id="height" name="height" min="140" max="200" required>
-                                </div>
-                                <div class="question">
-                                    <label for="weight">体重 (kg)</label>
-                                    <input type="number" id="weight" name="weight" min="40" max="120" required>
-                                </div>
-                            </div>
-
-                            <!-- 質問2: ゴルフ経験 -->
-                            <div class="question-group" data-step="2" style="display: none;">
-                                <h3>ゴルフ経験</h3>
-                                <div class="question">
-                                    <label>ゴルフ歴</label>
-                                    <select name="experience" required>
-                                        <option value="">選択してください</option>
-                                        <option value="beginner">初心者（1年未満）</option>
-                                        <option value="intermediate">中級者（1-5年）</option>
-                                        <option value="advanced">上級者（5年以上）</option>
-                                    </select>
-                                </div>
-                                <div class="question">
-                                    <label for="handicap">ハンディキャップ</label>
-                                    <input type="number" id="handicap" name="handicap" min="0" max="50">
-                                </div>
-                            </div>
-
-                            <!-- 質問3: スイング特性 -->
-                            <div class="question-group" data-step="3" style="display: none;">
-                                <h3>スイング特性</h3>
-                                <div class="question">
-                                    <label>スイングスピード（7番アイアン）</label>
-                                    <select name="swing_speed" required>
-                                        <option value="">選択してください</option>
-                                        <option value="slow">遅い（30m/s未満）</option>
-                                        <option value="average">普通（30-37m/s）</option>
-                                        <option value="fast">速い（37m/s以上）</option>
-                                    </select>
-                                </div>
-                                <div class="question">
-                                    <label>弾道の高さ</label>
-                                    <select name="ball_height" required>
-                                        <option value="">選択してください</option>
-                                        <option value="low">低い</option>
-                                        <option value="medium">普通</option>
-                                        <option value="high">高い</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!-- 質問4: ミスの傾向 -->
-                            <div class="question-group" data-step="4" style="display: none;">
-                                <h3>ミスの傾向</h3>
-                                <div class="question">
-                                    <label>よくあるミス</label>
-                                    <div class="checkbox-group">
-                                        <input type="checkbox" id="miss-slice" name="miss_tendency" value="slice">
-                                        <label for="miss-slice">スライス</label>
-                                        <input type="checkbox" id="miss-hook" name="miss_tendency" value="hook">
-                                        <label for="miss-hook">フック</label>
-                                        <input type="checkbox" id="miss-top" name="miss_tendency" value="top">
-                                        <label for="miss-top">トップ</label>
-                                        <input type="checkbox" id="miss-fat" name="miss_tendency" value="fat">
-                                        <label for="miss-fat">ダフリ</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 質問5: 重視するポイント -->
-                            <div class="question-group" data-step="5" style="display: none;">
-                                <h3>重視するポイント</h3>
-                                <div class="question">
-                                    <label>最重要視する要素</label>
-                                    <select name="priority" required>
-                                        <option value="">選択してください</option>
-                                        <option value="distance">飛距離</option>
-                                        <option value="accuracy">正確性</option>
-                                        <option value="forgiveness">ミスへの寛容性</option>
-                                        <option value="feel">打感</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!-- 質問6: 予算 -->
-                            <div class="question-group" data-step="6" style="display: none;">
-                                <h3>予算</h3>
-                                <div class="question">
-                                    <label>アイアンセットの予算</label>
-                                    <select name="budget" required>
-                                        <option value="">選択してください</option>
-                                        <option value="low">10万円未満</option>
-                                        <option value="medium">10-20万円</option>
-                                        <option value="high">20万円以上</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!-- 質問7: ブランド志向 -->
-                            <div class="question-group" data-step="7" style="display: none;">
-                                <h3>ブランド志向</h3>
-                                <div class="question">
-                                    <label>好みのメーカー（複数選択可）</label>
-                                    <div class="checkbox-group">
-                                        <input type="checkbox" id="brand-taylor" name="preferred_brands" value="taylor">
-                                        <label for="brand-taylor">テーラーメイド</label>
-                                        <input type="checkbox" id="brand-callaway" name="preferred_brands" value="callaway">
-                                        <label for="brand-callaway">キャロウェイ</label>
-                                        <input type="checkbox" id="brand-ping" name="preferred_brands" value="ping">
-                                        <label for="brand-ping">PING</label>
-                                        <input type="checkbox" id="brand-mizuno" name="preferred_brands" value="mizuno">
-                                        <label for="brand-mizuno">ミズノ</label>
-                                        <input type="checkbox" id="brand-titleist" name="preferred_brands" value="titleist">
-                                        <label for="brand-titleist">タイトリスト</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 質問8: その他の条件 -->
-                            <div class="question-group" data-step="8" style="display: none;">
-                                <h3>その他の条件</h3>
-                                <div class="question">
-                                    <label>クラブの見た目</label>
-                                    <select name="appearance" required>
-                                        <option value="">選択してください</option>
-                                        <option value="traditional">トラディショナル</option>
-                                        <option value="modern">モダン</option>
-                                        <option value="no_preference">こだわりなし</option>
-                                    </select>
-                                </div>
-                                <div class="question">
-                                    <label for="additional_info">その他の要望（任意）</label>
-                                    <textarea id="additional_info" name="additional_info" rows="3" placeholder="特別な要望があれば記入してください"></textarea>
-                                </div>
-                            </div>
-
-                            <div class="form-actions">
-                                <button type="button" id="prev-btn" class="btn btn-secondary" style="display: none;">前へ</button>
-                                <button type="button" id="next-btn" class="btn btn-primary">次へ</button>
-                                <button type="submit" id="submit-btn" class="btn btn-primary" style="display: none;">診断結果を見る</button>
-                            </div>
-                        </form>
-                    </div>
-                </section>
-
-                <!-- 結果表示セクション -->
-                <section id="result-section" class="section" style="display: none;">
-                    <div class="result-container">
-                        <h2>診断結果</h2>
-                        <div id="result-content">
-                            <!-- 結果がここに表示される -->
-                        </div>
-                        <div class="result-actions">
-                            <button id="save-result" class="btn btn-secondary">結果を保存</button>
-                            <button id="retry-diagnosis" class="btn btn-outline">再診断</button>
-                            <button id="share-result" class="btn btn-outline">結果を共有</button>
-                        </div>
-                    </div>
-                </section>
+                </div>
             </div>
-        </main>
-
-        <!-- フッター -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-links">
-                        <a href="./terms.html">利用規約</a>
-                        <a href="./privacy.html">プライバシーポリシー</a>
-                        <a href="./contact.html">お問い合わせ</a>
+        </section>
+        
+        <!-- Features Section -->
+        <section id="features" class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4" data-translate="features-title">診断システムの特徴</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto" data-translate="features-subtitle">プロゴルファーの知見とデータ分析を組み合わせた信頼性の高い診断システム</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="card slide-in">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-chart-line text-2xl text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2" data-translate="feature1-title">科学的診断</h3>
+                            <p class="text-gray-600" data-translate="feature1-desc">スイングスピード、ミスの傾向、体格データを総合的に分析</p>
+                        </div>
                     </div>
-                    <div class="footer-copy">
-                        <p>&copy; 2024 appadaycreator. All rights reserved.</p>
+                    
+                    <div class="card slide-in" style="animation-delay: 0.2s;">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-database text-2xl text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2" data-translate="feature2-title">豊富なデータベース</h3>
+                            <p class="text-gray-600" data-translate="feature2-desc">50社200モデル以上のアイアンクラブ情報を収録</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card slide-in" style="animation-delay: 0.4s;">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-mobile-alt text-2xl text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2" data-translate="feature3-title">どこでも診断</h3>
+                            <p class="text-gray-600" data-translate="feature3-desc">スマホ・タブレット対応、オフラインでも利用可能</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
-
-    <!-- 読み込み中オーバーレイ -->
-    <div id="loading-overlay" class="loading-overlay" style="display: none;">
-        <div class="spinner"></div>
-        <p>診断中...</p>
-    </div>
-
-    <!-- JavaScript -->
-    <script src="./assets/js/utils.js"></script>
-    <script src="./assets/js/i18n.js"></script>
-    <script src="./assets/js/supabase-client.js"></script>
-    <script src="./assets/js/diagnosis.js"></script>
-    <script src="./assets/js/app.js"></script>
+        </section>
+        
+        <!-- Diagnosis Section -->
+        <section id="diagnosis" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Progress Bar -->
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-sm font-medium text-gray-600" data-translate="progress">進捗</span>
+                            <span id="progressText" class="text-sm font-medium text-green-600">0/7</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div id="progressBar" class="bg-green-600 h-2 rounded-full progress-bar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Diagnosis Steps -->
+                    <div id="diagnosisContainer">
+                        <!-- Welcome Screen -->
+                        <div id="step-welcome" class="card text-center">
+                            <div class="mb-6">
+                                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-golf-ball text-3xl text-green-600"></i>
+                                </div>
+                                <h2 class="text-2xl font-bold text-gray-800 mb-4" data-translate="welcome-title">ゴルフアイアン適性診断</h2>
+                                <p class="text-gray-600 mb-6" data-translate="welcome-desc">7つの質問にお答えいただくだけで、あなたに最適なアイアンクラブをご提案します。</p>
+                            </div>
+                            <button id="startBtn" class="btn-primary" data-translate="start-button">診断を始める</button>
+                        </div>
+                        
+                        <!-- Step 1: Basic Info -->
+                        <div id="step-1" class="card hidden">
+                            <h2 class="text-xl font-bold mb-6" data-translate="step1-title">基本情報</h2>
+                            <div class="space-y-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="height">身長 (cm)</label>
+                                    <input type="number" id="height" min="140" max="200" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500" placeholder="170">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="weight">体重 (kg)</label>
+                                    <input type="number" id="weight" min="40" max="120" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500" placeholder="70">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="age">年齢</label>
+                                    <select id="age" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500">
+                                        <option value="">選択してください</option>
+                                        <option value="teen">10代</option>
+                                        <option value="20s">20代</option>
+                                        <option value="30s">30代</option>
+                                        <option value="40s">40代</option>
+                                        <option value="50s">50代</option>
+                                        <option value="60plus">60代以上</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mt-8 text-right">
+                                <button id="next-1" class="btn-primary" data-translate="next">次へ</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2: Experience -->
+                        <div id="step-2" class="card hidden">
+                            <h2 class="text-xl font-bold mb-6" data-translate="step2-title">ゴルフ経験</h2>
+                            <div class="space-y-4">
+                                <div class="quiz-option" data-value="beginner">
+                                    <h3 class="font-semibold mb-2" data-translate="exp-beginner">初心者（1年未満）</h3>
+                                    <p class="text-sm text-gray-600" data-translate="exp-beginner-desc">ゴルフを始めたばかり、基本的なスイングを覚えている段階</p>
+                                </div>
+                                <div class="quiz-option" data-value="amateur">
+                                    <h3 class="font-semibold mb-2" data-translate="exp-amateur">アマチュア（1-5年）</h3>
+                                    <p class="text-sm text-gray-600" data-translate="exp-amateur-desc">定期的にプレー、スコア90-110台が多い</p>
+                                </div>
+                                <div class="quiz-option" data-value="intermediate">
+                                    <h3 class="font-semibold mb-2" data-translate="exp-intermediate">中級者（5年以上）</h3>
+                                    <p class="text-sm text-gray-600" data-translate="exp-intermediate-desc">安定したプレー、スコア80-90台を目指している</p>
+                                </div>
+                                <div class="quiz-option" data-value="advanced">
+                                    <h3 class="font-semibold mb-2" data-translate="exp-advanced">上級者</h3>
+                                    <p class="text-sm text-gray-600" data-translate="exp-advanced-desc">スコア80台以下、技術向上を追求</p>
+                                </div>
+                            </div>
+                            <div class="mt-8 flex justify-between">
+                                <button id="prev-2" class="btn-secondary" data-translate="prev">戻る</button>
+                                <button id="next-2" class="btn-primary" data-translate="next">次へ</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 3: Swing Speed -->
+                        <div id="step-3" class="card hidden">
+                            <h2 class="text-xl font-bold mb-6" data-translate="step3-title">スイングスピード</h2>
+                            <div class="space-y-4">
+                                <div class="quiz-option" data-value="slow">
+                                    <h3 class="font-semibold mb-2" data-translate="speed-slow">ゆっくり</h3>
+                                    <p class="text-sm text-gray-600" data-translate="speed-slow-desc">7番アイアンで130ヤード以下、力強さより正確性重視</p>
+                                </div>
+                                <div class="quiz-option" data-value="moderate">
+                                    <h3 class="font-semibold mb-2" data-translate="speed-moderate">標準</h3>
+                                    <p class="text-sm text-gray-600" data-translate="speed-moderate-desc">7番アイアンで130-150ヤード、一般的なスピード</p>
+                                </div>
+                                <div class="quiz-option" data-value="fast">
+                                    <h3 class="font-semibold mb-2" data-translate="speed-fast">速い</h3>
+                                    <p class="text-sm text-gray-600" data-translate="speed-fast-desc">7番アイアンで150ヤード以上、パワフルなスイング</p>
+                                </div>
+                            </div>
+                            <div class="mt-8 flex justify-between">
+                                <button id="prev-3" class="btn-secondary" data-translate="prev">戻る</button>
+                                <button id="next-3" class="btn-primary" data-translate="next">次へ</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 4: Miss Tendency -->
+                        <div id="step-4" class="card hidden">
+                            <h2 class="text-xl font-bold mb-6" data-translate="step4-title">よくあるミス</h2>
+                            <div class="space-y-4">
+                                <div class="quiz-option" data-value="slice">
+                                    <h3 class="font-semibold mb-2" data-translate="miss-slice">スライス</h3>
+                                    <p class="text-sm text-gray-600" data-translate="miss-slice-desc">右に曲がってしまうことが多い</p>
+                                </div>
+                                <div class="quiz-option" data-value="hook">
+                                    <h3 class="font-semibold mb-2" data-translate="miss-hook">フック</h3>
+                                    <p class="text-sm text-gray-600" data-translate="miss-hook-desc">左に曲がってしまうことが多い</p>
+                                </div>
+                                <div class="quiz-option" data-value="top">
+                                    <h3 class="font-semibold mb-2" data-translate="miss-top">トップ</h3>
+                                    <p class="text-sm text-gray-600" data-translate="miss-top-desc">ボールの上を叩いてしまう</p>
+                                </div>
+                                <div class="quiz-option" data-value="fat">
+                                    <h3 class="font-semibold mb-2" data-translate="miss-fat">ダフリ</h3>
+                                    <p class="text-sm text-gray-600" data-translate="miss-fat-desc">ボールの手前を叩いてしまう</p>
+                                </div>
+                            </div>
+                            <div class="mt-8 flex justify-between">
+                                <button id="prev-4" class="btn-secondary" data-translate="prev">戻る</button>
+                                <button id="next-4" class="btn-primary" data-translate="next">次へ</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 5: Ball Flight -->
+                        <div id="step-5" class="card hidden">
+                            <h2 class="text-xl font-bold mb-6" data-translate="step5-title">弾道の高さ</h2>
+                            <div class="space-y-4">
+                                <div class="quiz-option" data-value="low">
+                                    <h3 class="font-semibold mb-2" data-translate="flight-low">低い弾道</h3>
+                                    <p class="text-sm text-gray-600" data-translate="flight-low-desc">ボールが低く飛び出し、ランが多い</p>
+                                </div>
+                                <div class="quiz-option" data-value="mid">
+                                    <h3 class="font-semibold mb-2" data-translate="flight-mid">中程度の弾道</h3>
+                                    <p class="text-sm text-gray-600" data-translate="flight-mid-desc">適度な高さで安定している</p>
+                                </div>
+                                <div class="quiz-option" data-value="high">
+                                    <h3 class="font-semibold mb-2" data-translate="flight-high">高い弾道</h3>
+                                    <p class="text-sm text-gray-600" data-translate="flight-high-desc">ボールが高く上がり、キャリーが多い</p>
+                                </div>
+                            </div>
+                            <div class="mt-8 flex justify-between">
+                                <button id="prev-5" class="btn-secondary" data-translate="prev">戻る</button>
+                                <button id="next-5" class="btn-primary" data-translate="next">次へ</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 6: Priority -->
+                        <div id="step-6" class="card hidden">
+                            <h2 class="text-xl font-bold mb-6" data-translate="step6-title">重視する要素</h2>
+                            <div class="space-y-4">
+                                <div class="quiz-option" data-value="distance">
+                                    <h3 class="font-semibold mb-2" data-translate="priority-distance">飛距離</h3>
+                                    <p class="text-sm text-gray-600" data-translate="priority-distance-desc">とにかく遠くに飛ばしたい</p>
+                                </div>
+                                <div class="quiz-option" data-value="accuracy">
+                                    <h3 class="font-semibold mb-2" data-translate="priority-accuracy">正確性</h3>
+                                    <p class="text-sm text-gray-600" data-translate="priority-accuracy-desc">狙った方向に確実に飛ばしたい</p>
+                                </div>
+                                <div class="quiz-option" data-value="control">
+                                    <h3 class="font-semibold mb-2" data-translate="priority-control">操作性</h3>
+                                    <p class="text-sm text-gray-600" data-translate="priority-control-desc">意図した球筋を打ち分けたい</p>
+                                </div>
+                                <div class="quiz-option" data-value="forgiveness">
+                                    <h3 class="font-semibold mb-2" data-translate="priority-forgiveness">やさしさ</h3>
+                                    <p class="text-sm text-gray-600" data-translate="priority-forgiveness-desc">ミスに強く、安定したパフォーマンス</p>
+                                </div>
+                            </div>
+                            <div class="mt-8 flex justify-between">
+                                <button id="prev-6" class="btn-secondary" data-translate="prev">戻る</button>
+                                <button id="next-6" class="btn-primary" data-translate="next">次へ</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 7: Budget -->
+                        <div id="step-7" class="card hidden">
+                            <h2 class="text-xl font-bold mb-6" data-translate="step7-title">予算</h2>
+                            <div class="space-y-4">
+                                <div class="quiz-option" data-value="budget1">
+                                    <h3 class="font-semibold mb-2" data-translate="budget1">5万円以下</h3>
+                                    <p class="text-sm text-gray-600" data-translate="budget1-desc">コストパフォーマンス重視</p>
+                                </div>
+                                <div class="quiz-option" data-value="budget2">
+                                    <h3 class="font-semibold mb-2" data-translate="budget2">5-10万円</h3>
+                                    <p class="text-sm text-gray-600" data-translate="budget2-desc">性能と価格のバランス重視</p>
+                                </div>
+                                <div class="quiz-option" data-value="budget3">
+                                    <h3 class="font-semibold mb-2" data-translate="budget3">10-15万円</h3>
+                                    <p class="text-sm text-gray-600" data-translate="budget3-desc">高性能なクラブを求める</p>
+                                </div>
+                                <div class="quiz-option" data-value="budget4">
+                                    <h3 class="font-semibold mb-2" data-translate="budget4">15万円以上</h3>
+                                    <p class="text-sm text-gray-600" data-translate="budget4-desc">最高級のクラブを求める</p>
+                                </div>
+                            </div>
+                            <div class="mt-8 flex justify-between">
+                                <button id="prev-7" class="btn-secondary" data-translate="prev">戻る</button>
+                                <button id="calculateBtn" class="btn-primary" data-translate="calculate">診断結果を見る</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Results -->
+                        <div id="results" class="card hidden">
+                            <div class="text-center mb-8">
+                                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-trophy text-3xl text-yellow-500"></i>
+                                </div>
+                                <h2 class="text-2xl font-bold text-gray-800 mb-2" data-translate="results-title">診断完了！</h2>
+                                <p class="text-gray-600" data-translate="results-subtitle">あなたにおすすめのアイアンクラブ</p>
+                            </div>
+                            
+                            <div id="resultsContainer" class="space-y-6">
+                                <!-- Results will be populated by JavaScript -->
+                            </div>
+                            
+                            <!-- Chart -->
+                            <div class="mt-8">
+                                <h3 class="text-lg font-semibold mb-4" data-translate="compatibility-chart">適合性チャート</h3>
+                                <div style="height: 400px;">
+                                    <canvas id="compatibilityChart"></canvas>
+                                </div>
+                            </div>
+                            
+                            <!-- Actions -->
+                            <div class="mt-8 text-center space-y-4">
+                                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                    <button id="shareResultsBtn" class="btn-primary">
+                                        <i class="fas fa-share-alt mr-2"></i>
+                                        <span data-translate="share-results">結果をシェア</span>
+                                    </button>
+                                    <button id="saveResultsBtn" class="btn-secondary">
+                                        <i class="fas fa-save mr-2"></i>
+                                        <span data-translate="save-results">結果を保存</span>
+                                    </button>
+                                    <button id="retakeBtn" class="btn-secondary">
+                                        <i class="fas fa-redo mr-2"></i>
+                                        <span data-translate="retake">もう一度診断</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Recommended Products -->
+        <section id="recommended" class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4" data-translate="recommended-title">おすすめ商品</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto" data-translate="recommended-subtitle">人気の高いアイアンクラブをご紹介</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8" id="recommendedProducts">
+                    <!-- Products will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- History Section -->
+        <section id="history" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center" data-translate="history-title">診断履歴</h2>
+                    <div id="historyContainer" class="space-y-4">
+                        <!-- History will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     
-    <!-- Service Worker登録 -->
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 lg:ml-64">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="golf-icon bg-white"></div>
+                        <h3 class="text-lg font-bold">Golf Iron Advisor</h3>
+                    </div>
+                    <p class="text-gray-400" data-translate="footer-desc">あなたに最適なアイアンクラブを科学的に診断</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-3" data-translate="footer-menu">メニュー</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#diagnosis" class="hover:text-white transition" data-translate="nav-diagnosis">診断</a></li>
+                        <li><a href="./usage.html" class="hover:text-white transition" data-translate="nav-usage">使い方</a></li>
+                        <li><a href="./lp.html" class="hover:text-white transition" data-translate="nav-lp">LP</a></li>
+                        <li><a href="./contact.html" class="hover:text-white transition" data-translate="nav-contact">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-3" data-translate="footer-legal">法的情報</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="./terms.html" class="hover:text-white transition" data-translate="terms">利用規約</a></li>
+                        <li><a href="./privacy.html" class="hover:text-white transition" data-translate="privacy">プライバシーポリシー</a></li>
+                        <li><a href="./disclaimer.html" class="hover:text-white transition" data-translate="disclaimer">免責事項</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-3" data-translate="footer-share">シェア</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" id="shareTwitter" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" id="shareFacebook" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" id="shareLine" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-line text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p data-translate="copyright">&copy; 2024 Golf Iron Advisor. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-full transition duration-300 z-50">
+        <span id="toastMessage"></span>
+    </div>
+    
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-lg text-center">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto mb-4"></div>
+            <p data-translate="calculating">診断結果を計算しています...</p>
+        </div>
+    </div>
+
     <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./sw.js');
+        // Global variables
+        let currentStep = 0;
+        let diagnosisData = {};
+        let currentLanguage = 'ja';
+        
+        // Translation data
+        const translations = {
+            ja: {
+                'site-title': 'Golf Iron Advisor',
+                'nav-home': 'ホーム',
+                'nav-diagnosis': '診断',
+                'nav-usage': '使い方',
+                'nav-lp': 'LP',
+                'nav-contact': 'お問い合わせ',
+                'font-xs': '極小',
+                'font-sm': '小',
+                'font-md': '標準',
+                'font-lg': '大',
+                'font-xl': '特大',
+                'font-size': '文字サイズ',
+                'menu': 'メニュー',
+                'quick-menu': 'クイックメニュー',
+                'sidebar-start': '診断を始める',
+                'sidebar-features': '機能紹介',
+                'sidebar-recommended': 'おすすめ商品',
+                'sidebar-history': '診断履歴',
+                'recent-diagnosis': '最近の診断',
+                'hero-title': 'あなたに最適な<br>アイアンを見つけよう',
+                'hero-subtitle': 'スイング特性と体格データから科学的に診断',
+                'start-diagnosis': '無料診断を始める',
+                'view-history': '診断履歴を見る',
+                'features-title': '診断システムの特徴',
+                'features-subtitle': 'プロゴルファーの知見とデータ分析を組み合わせた信頼性の高い診断システム',
+                'feature1-title': '科学的診断',
+                'feature1-desc': 'スイングスピード、ミスの傾向、体格データを総合的に分析',
+                'feature2-title': '豊富なデータベース',
+                'feature2-desc': '50社200モデル以上のアイアンクラブ情報を収録',
+                'feature3-title': 'どこでも診断',
+                'feature3-desc': 'スマホ・タブレット対応、オフラインでも利用可能',
+                'progress': '進捗',
+                'welcome-title': 'ゴルフアイアン適性診断',
+                'welcome-desc': '7つの質問にお答えいただくだけで、あなたに最適なアイアンクラブをご提案します。',
+                'start-button': '診断を始める',
+                'next': '次へ',
+                'prev': '戻る',
+                'calculate': '診断結果を見る',
+                'results-title': '診断完了！',
+                'results-subtitle': 'あなたにおすすめのアイアンクラブ',
+                'compatibility-chart': '適合性チャート',
+                'share-results': '結果をシェア',
+                'save-results': '結果を保存',
+                'retake': 'もう一度診断',
+                'recommended-title': 'おすすめ商品',
+                'recommended-subtitle': '人気の高いアイアンクラブをご紹介',
+                'history-title': '診断履歴',
+                'footer-desc': 'あなたに最適なアイアンクラブを科学的に診断',
+                'footer-menu': 'メニュー',
+                'footer-legal': '法的情報',
+                'footer-share': 'シェア',
+                'terms': '利用規約',
+                'privacy': 'プライバシーポリシー',
+                'disclaimer': '免責事項',
+                'copyright': '© 2024 Golf Iron Advisor. All rights reserved.',
+                'calculating': '診断結果を計算しています...'
+            },
+            en: {
+                'site-title': 'Golf Iron Advisor',
+                'nav-home': 'Home',
+                'nav-diagnosis': 'Diagnosis',
+                'nav-usage': 'How to Use',
+                'nav-lp': 'LP',
+                'nav-contact': 'Contact',
+                'font-xs': 'XS',
+                'font-sm': 'S',
+                'font-md': 'M',
+                'font-lg': 'L',
+                'font-xl': 'XL',
+                'font-size': 'Font Size',
+                'menu': 'Menu',
+                'quick-menu': 'Quick Menu',
+                'sidebar-start': 'Start Diagnosis',
+                'sidebar-features': 'Features',
+                'sidebar-recommended': 'Recommended',
+                'sidebar-history': 'History',
+                'recent-diagnosis': 'Recent Diagnosis',
+                'hero-title': 'Find Your Perfect<br>Golf Iron',
+                'hero-subtitle': 'Scientific diagnosis based on swing characteristics and physique',
+                'start-diagnosis': 'Start Free Diagnosis',
+                'view-history': 'View History',
+                'features-title': 'Diagnostic System Features',
+                'features-subtitle': 'A highly reliable diagnostic system combining professional golfer knowledge and data analysis',
+                'feature1-title': 'Scientific Diagnosis',
+                'feature1-desc': 'Comprehensive analysis of swing speed, miss tendencies, and physique data',
+                'feature2-title': 'Rich Database',
+                'feature2-desc': 'Over 200 iron club models from 50 companies',
+                'feature3-title': 'Diagnose Anywhere',
+                'feature3-desc': 'Mobile and tablet compatible, available offline',
+                'progress': 'Progress',
+                'welcome-title': 'Golf Iron Suitability Diagnosis',
+                'welcome-desc': 'We will recommend the optimal iron clubs for you by answering just 7 questions.',
+                'start-button': 'Start Diagnosis',
+                'next': 'Next',
+                'prev': 'Back',
+                'calculate': 'View Results',
+                'results-title': 'Diagnosis Complete!',
+                'results-subtitle': 'Recommended iron clubs for you',
+                'compatibility-chart': 'Compatibility Chart',
+                'share-results': 'Share Results',
+                'save-results': 'Save Results',
+                'retake': 'Retake',
+                'recommended-title': 'Recommended Products',
+                'recommended-subtitle': 'Popular iron clubs introduction',
+                'history-title': 'Diagnosis History',
+                'footer-desc': 'Scientifically diagnose the optimal iron clubs for you',
+                'footer-menu': 'Menu',
+                'footer-legal': 'Legal',
+                'footer-share': 'Share',
+                'terms': 'Terms of Service',
+                'privacy': 'Privacy Policy',
+                'disclaimer': 'Disclaimer',
+                'copyright': '© 2024 Golf Iron Advisor. All rights reserved.',
+                'calculating': 'Calculating diagnosis results...'
+            }
+        };
+        
+        // Sample club database
+        const clubDatabase = [
+            {
+                id: 1,
+                name: "PING G425",
+                brand: "PING",
+                type: "game-improvement",
+                price: 120000,
+                forgiveness: 9,
+                workability: 6,
+                distance: 8,
+                suitable_for: ["beginner", "amateur"],
+                swing_speed: ["slow", "moderate"],
+                priority: ["forgiveness", "accuracy"],
+                image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' fill='%23f3f4f6'%3E%3Crect width='200' height='100'/%3E%3Ctext x='100' y='55' text-anchor='middle' fill='%236b7280'%3EPING G425%3C/text%3E%3C/svg%3E",
+                affiliate_amazon: "https://amzn.to/example1",
+                affiliate_rakuten: "https://item.rakuten.co.jp/example1/"
+            },
+            {
+                id: 2,
+                name: "Titleist T100",
+                brand: "Titleist",
+                type: "players",
+                price: 180000,
+                forgiveness: 6,
+                workability: 9,
+                distance: 7,
+                suitable_for: ["intermediate", "advanced"],
+                swing_speed: ["moderate", "fast"],
+                priority: ["control", "accuracy"],
+                image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' fill='%23f3f4f6'%3E%3Crect width='200' height='100'/%3E%3Ctext x='100' y='55' text-anchor='middle' fill='%236b7280'%3ETitleist T100%3C/text%3E%3C/svg%3E",
+                affiliate_amazon: "https://amzn.to/example2",
+                affiliate_rakuten: "https://item.rakuten.co.jp/example2/"
+            },
+            {
+                id: 3,
+                name: "TaylorMade P790",
+                brand: "TaylorMade",
+                type: "distance",
+                price: 150000,
+                forgiveness: 8,
+                workability: 7,
+                distance: 9,
+                suitable_for: ["amateur", "intermediate"],
+                swing_speed: ["moderate", "fast"],
+                priority: ["distance", "accuracy"],
+                image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' fill='%23f3f4f6'%3E%3Crect width='200' height='100'/%3E%3Ctext x='100' y='55' text-anchor='middle' fill='%236b7280'%3ETaylorMade P790%3C/text%3E%3C/svg%3E",
+                affiliate_amazon: "https://amzn.to/example3",
+                affiliate_rakuten: "https://item.rakuten.co.jp/example3/"
+            }
+        ];
+        
+        // Utility functions
+        function showToast(message, type = 'success') {
+            console.log(`[Toast] ${type}: ${message}`);
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            toastMessage.textContent = message;
+            toast.classList.remove('translate-y-full');
+            toast.classList.add('translate-y-0');
+            
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0');
+                toast.classList.add('translate-y-full');
+            }, 3000);
         }
+        
+        function showLoading() {
+            console.log('[Loading] Showing loading overlay');
+            document.getElementById('loadingOverlay').classList.remove('hidden');
+        }
+        
+        function hideLoading() {
+            console.log('[Loading] Hiding loading overlay');
+            document.getElementById('loadingOverlay').classList.add('hidden');
+        }
+        
+        function updateProgress(step, total = 7) {
+            console.log(`[Progress] Step ${step} of ${total}`);
+            const percentage = (step / total) * 100;
+            document.getElementById('progressBar').style.width = `${percentage}%`;
+            document.getElementById('progressText').textContent = `${step}/${total}`;
+        }
+        
+        function translatePage() {
+            console.log(`[Translation] Translating to ${currentLanguage}`);
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[currentLanguage] && translations[currentLanguage][key]) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = translations[currentLanguage][key];
+                    } else {
+                        element.innerHTML = translations[currentLanguage][key];
+                    }
+                }
+            });
+            document.documentElement.lang = currentLanguage;
+        }
+        
+        function changeFontSize(size) {
+            console.log(`[Font Size] Changing to ${size}`);
+            document.body.className = document.body.className.replace(/font-size-\w+/, `font-size-${size}`);
+            localStorage.setItem('fontSize', size);
+        }
+        
+        function saveToHistory(data) {
+            console.log('[History] Saving diagnosis result');
+            let history = JSON.parse(localStorage.getItem('diagnosisHistory') || '[]');
+            const result = {
+                id: Date.now(),
+                timestamp: new Date().toISOString(),
+                data: data,
+                results: calculateResults(data)
+            };
+            history.unshift(result);
+            history = history.slice(0, 10); // Keep only last 10 results
+            localStorage.setItem('diagnosisHistory', JSON.stringify(history));
+            updateHistoryDisplay();
+        }
+        
+        function updateHistoryDisplay() {
+            console.log('[History] Updating display');
+            const history = JSON.parse(localStorage.getItem('diagnosisHistory') || '[]');
+            const recentContainer = document.getElementById('recentDiagnosisContainer');
+            const historyContainer = document.getElementById('historyContainer');
+            
+            // Update recent diagnosis in sidebar
+            recentContainer.innerHTML = '';
+            history.slice(0, 3).forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition';
+                div.innerHTML = `
+                    <p class="text-xs text-gray-500">${new Date(item.timestamp).toLocaleDateString()}</p>
+                    <p class="text-sm font-medium">${item.results[0]?.name || '診断結果'}</p>
+                `;
+                div.onclick = () => showHistoryItem(item);
+                recentContainer.appendChild(div);
+            });
+            
+            // Update full history
+            historyContainer.innerHTML = '';
+            if (history.length === 0) {
+                historyContainer.innerHTML = '<p class="text-gray-500 text-center py-8">診断履歴がありません</p>';
+            } else {
+                history.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'card cursor-pointer hover:shadow-lg transition';
+                    div.innerHTML = `
+                        <div class="flex justify-between items-start">
+                            <div class="flex-1">
+                                <p class="text-sm text-gray-500 mb-2">${new Date(item.timestamp).toLocaleString()}</p>
+                                <h3 class="font-semibold text-lg mb-2">${item.results[0]?.name || '診断結果'}</h3>
+                                <p class="text-gray-600">適合度: ${item.results[0]?.compatibility || 0}%</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-green-600 font-semibold">¥${(item.results[0]?.price || 0).toLocaleString()}</span>
+                            </div>
+                        </div>
+                    `;
+                    div.onclick = () => showHistoryItem(item);
+                    historyContainer.appendChild(div);
+                });
+            }
+        }
+        
+        function showHistoryItem(item) {
+            console.log('[History] Showing history item:', item.id);
+            diagnosisData = item.data;
+            showResults(item.results);
+            document.getElementById('diagnosis').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function calculateResults(data) {
+            console.log('[Calculation] Starting diagnosis calculation with data:', data);
+            
+            let recommendations = [];
+            
+            clubDatabase.forEach(club => {
+                let score = 0;
+                let reasons = [];
+                
+                // Experience level matching
+                if (club.suitable_for.includes(data.experience)) {
+                    score += 30;
+                    reasons.push('経験レベルに適合');
+                } else {
+                    score += 10;
+                }
+                
+                // Swing speed matching
+                if (club.swing_speed.includes(data.swingSpeed)) {
+                    score += 25;
+                    reasons.push('スイングスピードに適合');
+                } else {
+                    score += 5;
+                }
+                
+                // Priority matching
+                if (club.priority.includes(data.priority)) {
+                    score += 25;
+                    reasons.push('優先項目に適合');
+                } else {
+                    score += 5;
+                }
+                
+                // Miss tendency adjustment
+                if (data.missTendency === 'slice' && club.forgiveness >= 8) {
+                    score += 15;
+                    reasons.push('スライス対策に有効');
+                } else if (data.missTendency === 'hook' && club.workability >= 7) {
+                    score += 15;
+                    reasons.push('操作性に優れる');
+                }
+                
+                // Budget consideration
+                const budgetRanges = {
+                    budget1: [0, 50000],
+                    budget2: [50000, 100000],
+                    budget3: [100000, 150000],
+                    budget4: [150000, 999999]
+                };
+                
+                const range = budgetRanges[data.budget] || [0, 999999];
+                if (club.price >= range[0] && club.price <= range[1]) {
+                    score += 20;
+                    reasons.push('予算範囲内');
+                } else if (club.price > range[1]) {
+                    score -= 10;
+                } else {
+                    score += 5;
+                }
+                
+                recommendations.push({
+                    ...club,
+                    compatibility: Math.min(Math.max(score, 0), 100),
+                    reasons: reasons
+                });
+            });
+            
+            // Sort by compatibility and return top 3
+            recommendations.sort((a, b) => b.compatibility - a.compatibility);
+            const topRecommendations = recommendations.slice(0, 3);
+            
+            console.log('[Calculation] Top recommendations:', topRecommendations);
+            return topRecommendations;
+        }
+        
+        function showResults(recommendations) {
+            console.log('[Results] Showing results:', recommendations);
+            
+            // Hide all diagnosis steps and show results
+            document.querySelectorAll('#diagnosisContainer > div').forEach(div => {
+                div.classList.add('hidden');
+            });
+            document.getElementById('results').classList.remove('hidden');
+            
+            // Update progress to 100%
+            updateProgress(7, 7);
+            
+            // Populate results
+            const container = document.getElementById('resultsContainer');
+            container.innerHTML = '';
+            
+            recommendations.forEach((club, index) => {
+                const div = document.createElement('div');
+                div.className = 'card border-l-4 border-green-500 slide-in';
+                div.style.animationDelay = `${index * 0.2}s`;
+                
+                div.innerHTML = `
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-48 flex-shrink-0">
+                            <img src="${club.image}" alt="${club.name}" class="w-full h-32 object-contain bg-gray-50 rounded-lg">
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-3">
+                                <h3 class="text-xl font-bold">${index + 1}. ${club.name}</h3>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-semibold">${club.compatibility}% 適合</span>
+                            </div>
+                            <p class="text-gray-600 mb-2">${club.brand} | ${club.type}</p>
+                            <p class="text-2xl font-bold text-green-600 mb-3">¥${club.price.toLocaleString()}</p>
+                            
+                            <div class="grid grid-cols-3 gap-4 mb-4">
+                                <div class="text-center">
+                                    <div class="text-sm text-gray-500">やさしさ</div>
+                                    <div class="font-semibold">${club.forgiveness}/10</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-sm text-gray-500">操作性</div>
+                                    <div class="font-semibold">${club.workability}/10</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-sm text-gray-500">飛距離</div>
+                                    <div class="font-semibold">${club.distance}/10</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h4 class="font-semibold text-sm text-gray-700 mb-2">適合理由:</h4>
+                                <ul class="text-sm text-gray-600">
+                                    ${club.reasons.map(reason => `<li>• ${reason}</li>`).join('')}
+                                </ul>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-2">
+                                <a href="${club.affiliate_amazon}" target="_blank" rel="nofollow" class="btn-primary text-sm">
+                                    <i class="fab fa-amazon mr-1"></i>Amazon
+                                </a>
+                                <a href="${club.affiliate_rakuten}" target="_blank" rel="nofollow" class="btn-secondary text-sm">
+                                    <i class="fas fa-shopping-cart mr-1"></i>楽天
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(div);
+            });
+            
+            // Create chart
+            createCompatibilityChart(recommendations);
+            
+            // Save to history
+            saveToHistory(diagnosisData);
+        }
+        
+        function createCompatibilityChart(recommendations) {
+            console.log('[Chart] Creating compatibility chart');
+            const ctx = document.getElementById('compatibilityChart').getContext('2d');
+            
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['やさしさ', '操作性', '飛距離', '適合度'],
+                    datasets: recommendations.map((club, index) => ({
+                        label: club.name,
+                        data: [club.forgiveness * 10, club.workability * 10, club.distance * 10, club.compatibility],
+                        backgroundColor: `rgba(${index === 0 ? '16, 185, 129' : index === 1 ? '245, 158, 11' : '239, 68, 68'}, 0.2)`,
+                        borderColor: `rgba(${index === 0 ? '16, 185, 129' : index === 1 ? '245, 158, 11' : '239, 68, 68'}, 1)`,
+                        borderWidth: 2
+                    }))
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                stepSize: 20
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        function shareResults() {
+            console.log('[Share] Sharing results');
+            const url = window.location.href;
+            const text = "ゴルフアイアン適性診断で最適なクラブを見つけました！";
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Golf Iron Advisor',
+                    text: text,
+                    url: url
+                });
+            } else {
+                // Fallback to copy URL
+                navigator.clipboard.writeText(`${text} ${url}`);
+                showToast('結果のURLをコピーしました');
+            }
+        }
+        
+        function initializeApp() {
+            console.log('[App] Initializing application');
+            
+            // Load saved preferences
+            const savedLanguage = localStorage.getItem('language') || 'ja';
+            const savedFontSize = localStorage.getItem('fontSize') || 'md';
+            
+            currentLanguage = savedLanguage;
+            document.getElementById('languageSelector').value = savedLanguage;
+            document.getElementById('fontSizeSelector').value = savedFontSize;
+            document.getElementById('mobileFontSizeSelector').value = savedFontSize;
+            
+            changeFontSize(savedFontSize);
+            translatePage();
+            updateHistoryDisplay();
+            loadRecommendedProducts();
+            
+            // Register service worker
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(registration => console.log('[SW] Service Worker registered'))
+                    .catch(error => console.log('[SW] Service Worker registration failed'));
+            }
+            
+            console.log('[App] Application initialized successfully');
+        }
+        
+        function loadRecommendedProducts() {
+            console.log('[Products] Loading recommended products');
+            const container = document.getElementById('recommendedProducts');
+            
+            clubDatabase.forEach(club => {
+                const div = document.createElement('div');
+                div.className = 'card';
+                
+                div.innerHTML = `
+                    <img src="${club.image}" alt="${club.name}" class="w-full h-48 object-contain bg-gray-50 rounded-lg mb-4">
+                    <h3 class="text-lg font-semibold mb-2">${club.name}</h3>
+                    <p class="text-gray-600 mb-2">${club.brand}</p>
+                    <p class="text-xl font-bold text-green-600 mb-4">¥${club.price.toLocaleString()}</p>
+                    <div class="flex gap-2">
+                        <a href="${club.affiliate_amazon}" target="_blank" rel="nofollow" class="btn-primary flex-1 text-center text-sm">
+                            <i class="fab fa-amazon mr-1"></i>Amazon
+                        </a>
+                        <a href="${club.affiliate_rakuten}" target="_blank" rel="nofollow" class="btn-secondary flex-1 text-center text-sm">
+                            楽天
+                        </a>
+                    </div>
+                `;
+                
+                container.appendChild(div);
+            });
+        }
+        
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+            
+            // Mobile menu toggle
+            document.getElementById('mobileMenuButton').addEventListener('click', function() {
+                document.getElementById('mobileSidebar').style.transform = 'translateX(0)';
+            });
+            
+            document.getElementById('closeMobileSidebar').addEventListener('click', function() {
+                document.getElementById('mobileSidebar').style.transform = 'translateX(100%)';
+            });
+            
+            // Language selector
+            document.getElementById('languageSelector').addEventListener('change', function() {
+                currentLanguage = this.value;
+                localStorage.setItem('language', currentLanguage);
+                translatePage();
+            });
+            
+            // Font size selectors
+            document.getElementById('fontSizeSelector').addEventListener('change', function() {
+                changeFontSize(this.value);
+                document.getElementById('mobileFontSizeSelector').value = this.value;
+            });
+            
+            document.getElementById('mobileFontSizeSelector').addEventListener('change', function() {
+                changeFontSize(this.value);
+                document.getElementById('fontSizeSelector').value = this.value;
+            });
+            
+            // Start diagnosis buttons
+            document.getElementById('startDiagnosisBtn').addEventListener('click', function() {
+                document.getElementById('diagnosis').scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => startDiagnosis(), 500);
+            });
+            
+            document.getElementById('startBtn').addEventListener('click', startDiagnosis);
+            
+            // View history button
+            document.getElementById('viewHistoryBtn').addEventListener('click', function() {
+                document.getElementById('history').scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            // Social sharing
+            document.getElementById('shareTwitter').addEventListener('click', function(e) {
+                e.preventDefault();
+                const url = encodeURIComponent(window.location.href);
+                const text = encodeURIComponent('ゴルフアイアン適性診断で最適なクラブを見つけよう！');
+                window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+            });
+            
+            document.getElementById('shareFacebook').addEventListener('click', function(e) {
+                e.preventDefault();
+                const url = encodeURIComponent(window.location.href);
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+            });
+            
+            document.getElementById('shareLine').addEventListener('click', function(e) {
+                e.preventDefault();
+                const url = encodeURIComponent(window.location.href);
+                const text = encodeURIComponent('ゴルフアイアン適性診断で最適なクラブを見つけよう！');
+                window.open(`https://social-plugins.line.me/lineit/share?url=${url}&text=${text}`, '_blank');
+            });
+        });
+        
+        function startDiagnosis() {
+            console.log('[Diagnosis] Starting diagnosis');
+            currentStep = 1;
+            diagnosisData = {};
+            updateProgress(0, 7);
+            
+            document.querySelectorAll('#diagnosisContainer > div').forEach(div => {
+                div.classList.add('hidden');
+            });
+            document.getElementById('step-1').classList.remove('hidden');
+        }
+        
+        // Navigation functions
+        function nextStep() {
+            console.log(`[Diagnosis] Moving to step ${currentStep + 1}`);
+            
+            if (currentStep < 7) {
+                document.getElementById(`step-${currentStep}`).classList.add('hidden');
+                currentStep++;
+                document.getElementById(`step-${currentStep}`).classList.remove('hidden');
+                updateProgress(currentStep - 1, 7);
+            }
+        }
+        
+        function prevStep() {
+            console.log(`[Diagnosis] Moving back to step ${currentStep - 1}`);
+            
+            if (currentStep > 1) {
+                document.getElementById(`step-${currentStep}`).classList.add('hidden');
+                currentStep--;
+                document.getElementById(`step-${currentStep}`).classList.remove('hidden');
+                updateProgress(currentStep - 1, 7);
+            }
+        }
+        
+        // Step navigation event listeners
+        setTimeout(() => {
+            // Step 1
+            document.getElementById('next-1')?.addEventListener('click', function() {
+                diagnosisData.height = document.getElementById('height').value;
+                diagnosisData.weight = document.getElementById('weight').value;
+                diagnosisData.age = document.getElementById('age').value;
+                
+                if (!diagnosisData.height || !diagnosisData.weight || !diagnosisData.age) {
+                    showToast('すべての項目を入力してください', 'error');
+                    return;
+                }
+                
+                nextStep();
+            });
+            
+            // Step 2
+            document.getElementById('prev-2')?.addEventListener('click', prevStep);
+            document.getElementById('next-2')?.addEventListener('click', function() {
+                const selected = document.querySelector('#step-2 .quiz-option.selected');
+                if (!selected) {
+                    showToast('選択肢を選んでください', 'error');
+                    return;
+                }
+                diagnosisData.experience = selected.dataset.value;
+                nextStep();
+            });
+            
+            // Step 3
+            document.getElementById('prev-3')?.addEventListener('click', prevStep);
+            document.getElementById('next-3')?.addEventListener('click', function() {
+                const selected = document.querySelector('#step-3 .quiz-option.selected');
+                if (!selected) {
+                    showToast('選択肢を選んでください', 'error');
+                    return;
+                }
+                diagnosisData.swingSpeed = selected.dataset.value;
+                nextStep();
+            });
+            
+            // Step 4
+            document.getElementById('prev-4')?.addEventListener('click', prevStep);
+            document.getElementById('next-4')?.addEventListener('click', function() {
+                const selected = document.querySelector('#step-4 .quiz-option.selected');
+                if (!selected) {
+                    showToast('選択肢を選んでください', 'error');
+                    return;
+                }
+                diagnosisData.missTendency = selected.dataset.value;
+                nextStep();
+            });
+            
+            // Step 5
+            document.getElementById('prev-5')?.addEventListener('click', prevStep);
+            document.getElementById('next-5')?.addEventListener('click', function() {
+                const selected = document.querySelector('#step-5 .quiz-option.selected');
+                if (!selected) {
+                    showToast('選択肢を選んでください', 'error');
+                    return;
+                }
+                diagnosisData.ballFlight = selected.dataset.value;
+                nextStep();
+            });
+            
+            // Step 6
+            document.getElementById('prev-6')?.addEventListener('click', prevStep);
+            document.getElementById('next-6')?.addEventListener('click', function() {
+                const selected = document.querySelector('#step-6 .quiz-option.selected');
+                if (!selected) {
+                    showToast('選択肢を選んでください', 'error');
+                    return;
+                }
+                diagnosisData.priority = selected.dataset.value;
+                nextStep();
+            });
+            
+            // Step 7
+            document.getElementById('prev-7')?.addEventListener('click', prevStep);
+            document.getElementById('calculateBtn')?.addEventListener('click', function() {
+                const selected = document.querySelector('#step-7 .quiz-option.selected');
+                if (!selected) {
+                    showToast('選択肢を選んでください', 'error');
+                    return;
+                }
+                diagnosisData.budget = selected.dataset.value;
+                
+                showLoading();
+                setTimeout(() => {
+                    hideLoading();
+                    const results = calculateResults(diagnosisData);
+                    showResults(results);
+                }, 1500);
+            });
+            
+            // Quiz option selection
+            document.addEventListener('click', function(e) {
+                if (e.target.closest('.quiz-option')) {
+                    const option = e.target.closest('.quiz-option');
+                    const step = option.closest('[id^="step-"]');
+                    
+                    step.querySelectorAll('.quiz-option').forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+                    
+                    option.classList.add('selected');
+                }
+            });
+            
+            // Results actions
+            document.getElementById('shareResultsBtn')?.addEventListener('click', shareResults);
+            document.getElementById('saveResultsBtn')?.addEventListener('click', function() {
+                showToast('結果を保存しました');
+            });
+            document.getElementById('retakeBtn')?.addEventListener('click', function() {
+                startDiagnosis();
+            });
+            
+        }, 100);
+        
+        console.log('[App] Script loaded successfully');
     </script>
 </body>
 </html>
