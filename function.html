@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>機能仕様書 - ゴルフアイアン適性診断</title>
+    <meta name="description" content="ゴルフアイアン適性診断システムの詳細機能と技術仕様について説明します。">
+    <meta name="keywords" content="ゴルフ,アイアン,診断,機能,仕様書,技術">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+</head>
+<body>
+    <div id="app">
+        <!-- ヘッダー -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <img src="./assets/images/logo.svg" alt="ゴルフアイアン適性診断" />
+                        <a href="./lp.html">
+                            <h1>ゴルフアイアン適性診断</h1>
+                        </a>
+                    </div>
+                    <nav class="nav">
+                        <ul>
+                            <li><a href="./lp.html">ホーム</a></li>
+                            <li><a href="./index.html">診断開始</a></li>
+                            <li><a href="./contact.html">お問い合わせ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- メインコンテンツ -->
+        <main class="main">
+            <div class="container">
+                <!-- ページヘッダー -->
+                <section class="page-header">
+                    <h1>機能仕様書</h1>
+                    <p>ゴルフアイアン適性診断システムの詳細機能と技術仕様</p>
+                    <div class="spec-meta">
+                        <span class="version">Version 1.0</span>
+                        <span class="updated">更新日: 2024年12月</span>
+                    </div>
+                </section>
+
+                <!-- 目次 -->
+                <section class="table-of-contents">
+                    <h2>目次</h2>
+                    <ol>
+                        <li><a href="#overview">システム概要</a></li>
+                        <li><a href="#core-features">コア機能</a></li>
+                        <li><a href="#diagnosis-algorithm">診断アルゴリズム</a></li>
+                        <li><a href="#data-structure">データ構造</a></li>
+                        <li><a href="#technical-stack">技術スタック</a></li>
+                        <li><a href="#user-interface">ユーザーインターフェース</a></li>
+                        <li><a href="#performance">パフォーマンス仕様</a></li>
+                        <li><a href="#security">セキュリティ</a></li>
+                        <li><a href="#integrations">外部連携</a></li>
+                        <li><a href="#future-roadmap">今後の機能拡張予定</a></li>
+                    </ol>
+                </section>
+
+                <!-- システム概要 -->
+                <section id="overview" class="spec-section">
+                    <h2>1. システム概要</h2>
+                    
+                    <div class="spec-content">
+                        <h3>サービス概要</h3>
+                        <p>ゴルフアイアン適性診断は、ユーザーの身体特性、技術レベル、スイング特性を総合的に分析し、最適なアイアンクラブとシャフトの組み合わせを推奨するWebアプリケーションです。</p>
+                        
+                        <div class="key-features">
+                            <h4>主要特徴</h4>
+                            <ul>
+                                <li>科学的データに基づく診断アルゴリズム</li>
+                                <li>1000本以上のクラブデータベース</li>
+                                <li>主要メーカー50社以上をカバー</li>
+                                <li>レスポンシブ対応（スマホ・タブレット・PC）</li>
+                                <li>PWA対応によるオフライン機能</li>
+                                <li>多言語対応（日本語・英語）</li>
+                            </ul>
+                        </div>
+
+                        <div class="system-metrics">
+                            <h4>システム指標</h4>
+                            <div class="metrics-grid">
+                                <div class="metric-item">
+                                    <span class="metric-number">8</span>
+                                    <span class="metric-label">診断質問数</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-number">5分</span>
+                                    <span class="metric-label">平均診断時間</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-number">1000+</span>
+                                    <span class="metric-label">クラブデータ数</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-number">50+</span>
+                                    <span class="metric-label">対応メーカー数</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- コア機能 -->
+                <section id="core-features" class="spec-section">
+                    <h2>2. コア機能</h2>
+                    
+                    <div class="spec-content">
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <h3>2.1 適性診断機能</h3>
+                                <div class="feature-details">
+                                    <h4>機能概要</h4>
+                                    <p>ユーザーの入力情報を基に、最適なアイアンクラブを診断・推奨する機能</p>
+                                    
+                                    <h4>入力項目</h4>
+                                    <ul>
+                                        <li><strong>基本情報:</strong> 性別、身長、体重</li>
+                                        <li><strong>ゴルフ経験:</strong> ゴルフ歴、ハンディキャップ</li>
+                                        <li><strong>スイング特性:</strong> スイングスピード、弾道の高さ</li>
+                                        <li><strong>ミス傾向:</strong> スライス、フック、トップ、ダフリ</li>
+                                        <li><strong>重視ポイント:</strong> 飛距離、正確性、寛容性、打感</li>
+                                        <li><strong>予算:</strong> 価格帯の設定</li>
+                                        <li><strong>ブランド志向:</strong> 好みのメーカー</li>
+                                        <li><strong>その他:</strong> 見た目の志向、追加要望</li>
+                                    </ul>
+                                    
+                                    <h4>出力項目</h4>
+                                    <ul>
+                                        <li>推奨アイアンセット（上位3位まで）</li>
+                                        <li>適合度スコア（100点満点）</li>
+                                        <li>推奨理由の詳細説明</li>
+                                        <li>シャフト推奨</li>
+                                        <li>価格情報・購入リンク</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <h3>2.2 結果保存・履歴機能</h3>
+                                <div class="feature-details">
+                                    <h4>機能概要</h4>
+                                    <p>診断結果の保存、履歴管理、比較機能を提供</p>
+                                    
+                                    <h4>主要機能</h4>
+                                    <ul>
+                                        <li>診断結果のローカル保存</li>
+                                        <li>クラウド保存（Supabase連携）</li>
+                                        <li>診断履歴の一覧表示</li>
+                                        <li>過去診断との比較機能</li>
+                                        <li>PDFエクスポート機能</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <h3>2.3 結果共有機能</h3>
+                                <div class="feature-details">
+                                    <h4>機能概要</h4>
+                                    <p>診断結果を他者と共有するための機能</p>
+                                    
+                                    <h4>共有方法</h4>
+                                    <ul>
+                                        <li>SNSシェア（Twitter、Facebook、LINE）</li>
+                                        <li>メール送信</li>
+                                        <li>QRコード生成</li>
+                                        <li>URL共有</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="feature-item">
+                                <h3>2.4 購入サポート機能</h3>
+                                <div class="feature-details">
+                                    <h4>機能概要</h4>
+                                    <p>推奨クラブの購入をサポートする機能</p>
+                                    
+                                    <h4>サポート内容</h4>
+                                    <ul>
+                                        <li>提携ショップへのリンク</li>
+                                        <li>価格比較機能</li>
+                                        <li>在庫確認</li>
+                                        <li>試打予約リンク</li>
+                                        <li>アフィリエイト連携</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 診断アルゴリズム -->
+                <section id="diagnosis-algorithm" class="spec-section">
+                    <h2>3. 診断アルゴリズム</h2>
+                    
+                    <div class="spec-content">
+                        <h3>アルゴリズム概要</h3>
+                        <p>多変量解析と重み付けスコアリングを組み合わせた独自のマッチングアルゴリズムを採用</p>
+                        
+                        <div class="algorithm-flow">
+                            <h4>診断フロー</h4>
+                            <ol>
+                                <li><strong>データ前処理:</strong> 入力データの正規化と欠損値処理</li>
+                                <li><strong>プロファイル生成:</strong> ユーザープロファイルの数値化</li>
+                                <li><strong>クラブフィルタリング:</strong> 基本条件による絞り込み</li>
+                                <li><strong>スコア計算:</strong> 各クラブとの適合度算出</li>
+                                <li><strong>ランキング生成:</strong> スコア順でのランキング作成</li>
+                                <li><strong>結果最適化:</strong> バランス調整と最終推奨</li>
+                            </ol>
+                        </div>
+
+                        <div class="scoring-system">
+                            <h4>スコアリングシステム</h4>
+                            <div class="score-weights">
+                                <div class="weight-item">
+                                    <span class="weight-factor">身体適合性</span>
+                                    <span class="weight-value">25%</span>
+                                    <span class="weight-desc">身長・体重に基づくクラブ長・重量適合</span>
+                                </div>
+                                <div class="weight-item">
+                                    <span class="weight-factor">技術レベル適合性</span>
+                                    <span class="weight-value">30%</span>
+                                    <span class="weight-desc">経験・技術レベルに応じた寛容性</span>
+                                </div>
+                                <div class="weight-item">
+                                    <span class="weight-factor">スイング特性適合性</span>
+                                    <span class="weight-value">25%</span>
+                                    <span class="weight-desc">スイングスピード・弾道への適合</span>
+                                </div>
+                                <div class="weight-item">
+                                    <span class="weight-factor">ミス傾向対策</span>
+                                    <span class="weight-value">15%</span>
+                                    <span class="weight-desc">ミス改善効果の期待値</span>
+                                </div>
+                                <div class="weight-item">
+                                    <span class="weight-factor">志向・予算適合性</span>
+                                    <span class="weight-value">5%</span>
+                                    <span class="weight-desc">ブランド志向・予算との適合</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- データ構造 -->
+                <section id="data-structure" class="spec-section">
+                    <h2>4. データ構造</h2>
+                    
+                    <div class="spec-content">
+                        <h3>クラブデータベース構造</h3>
+                        <div class="data-schema">
+                            <h4>clubs.json</h4>
+                            <pre><code>{
+  "id": "string",
+  "manufacturer": "string",
+  "model": "string",
+  "category": "game_improvement|players|players_distance",
+  "construction": "cavity|muscle|hollow",
+  "target_handicap": "0-5|5-15|15-30|30+",
+  "price_range": "low|medium|high",
+  "weight": "number",
+  "lie_angle": "number",
+  "loft_7iron": "number",
+  "shaft_options": ["steel", "carbon"],
+  "features": {
+    "forgiveness": "1-10",
+    "workability": "1-10",
+    "distance": "1-10",
+    "feel": "1-10"
+  },
+  "specifications": {
+    "head_size": "compact|mid|large",
+    "sole_width": "narrow|medium|wide",
+    "offset": "minimal|moderate|strong"
+  }
+}</code></pre>
+                        </div>
+
+                        <div class="data-schema">
+                            <h4>診断結果データ構造</h4>
+                            <pre><code>{
+  "diagnosis_id": "string",
+  "user_profile": {
+    "gender": "male|female",
+    "height": "number",
+    "weight": "number",
+    "experience": "string",
+    "handicap": "number",
+    "swing_speed": "slow|average|fast",
+    "ball_height": "low|medium|high",
+    "miss_tendency": ["slice", "hook", "top", "fat"],
+    "priority": "distance|accuracy|forgiveness|feel",
+    "budget": "low|medium|high",
+    "preferred_brands": ["string"],
+    "appearance": "traditional|modern|no_preference"
+  },
+  "recommendations": [
+    {
+      "rank": "number",
+      "club": "object",
+      "score": "number",
+      "reasons": ["string"],
+      "shaft_recommendation": "string"
+    }
+  ],
+  "created_at": "datetime"
+}</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 技術スタック -->
+                <section id="technical-stack" class="spec-section">
+                    <h2>5. 技術スタック</h2>
+                    
+                    <div class="spec-content">
+                        <div class="tech-categories">
+                            <div class="tech-category">
+                                <h3>フロントエンド</h3>
+                                <ul>
+                                    <li><strong>HTML5:</strong> セマンティックマークアップ</li>
+                                    <li><strong>CSS3:</strong> Grid/Flexbox レスポンシブデザイン</li>
+                                    <li><strong>JavaScript (ES6+):</strong> Vanilla JS, モジュール設計</li>
+                                    <li><strong>PWA:</strong> Service Worker, Web App Manifest</li>
+                                </ul>
+                            </div>
+
+                            <div class="tech-category">
+                                <h3>バックエンド・データベース</h3>
+                                <ul>
+                                    <li><strong>Supabase:</strong> 認証・データベース・API</li>
+                                    <li><strong>PostgreSQL:</strong> リレーショナルデータベース</li>
+                                    <li><strong>Row Level Security:</strong> データアクセス制御</li>
+                                </ul>
+                            </div>
+
+                            <div class="tech-category">
+                                <h3>ホスティング・インフラ</h3>
+                                <ul>
+                                    <li><strong>GitHub Pages:</strong> 静的サイトホスティング</li>
+                                    <li><strong>CDN:</strong> コンテンツ配信最適化</li>
+                                    <li><strong>HTTPS:</strong> SSL/TLS暗号化</li>
+                                </ul>
+                            </div>
+
+                            <div class="tech-category">
+                                <h3>開発・運用ツール</h3>
+                                <ul>
+                                    <li><strong>Git/GitHub:</strong> バージョン管理・CI/CD</li>
+                                    <li><strong>GitHub Actions:</strong> 自動デプロイ</li>
+                                    <li><strong>Google Analytics:</strong> アクセス解析</li>
+                                    <li><strong>Google Search Console:</strong> SEO管理</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ユーザーインターフェース -->
+                <section id="user-interface" class="spec-section">
+                    <h2>6. ユーザーインターフェース</h2>
+                    
+                    <div class="spec-content">
+                        <h3>UIデザイン原則</h3>
+                        <ul>
+                            <li><strong>シンプル:</strong> 直感的で分かりやすいインターフェース</li>
+                            <li><strong>レスポンシブ:</strong> すべてのデバイスで最適表示</li>
+                            <li><strong>アクセシブル:</strong> WCAG 2.1準拠のアクセシビリティ</li>
+                            <li><strong>高速:</strong> 3秒以内のページ読み込み時間</li>
+                        </ul>
+
+                        <div class="ui-specifications">
+                            <h4>画面仕様</h4>
+                            <div class="screen-specs">
+                                <div class="screen-spec">
+                                    <h5>デスクトップ (1200px以上)</h5>
+                                    <ul>
+                                        <li>3カラムレイアウト</li>
+                                        <li>サイドナビゲーション</li>
+                                        <li>リアルタイムプレビュー</li>
+                                    </ul>
+                                </div>
+                                <div class="screen-spec">
+                                    <h5>タブレット (768px-1199px)</h5>
+                                    <ul>
+                                        <li>2カラムレイアウト</li>
+                                        <li>折りたたみメニュー</li>
+                                        <li>タッチ最適化</li>
+                                    </ul>
+                                </div>
+                                <div class="screen-spec">
+                                    <h5>スマートフォン (767px以下)</h5>
+                                    <ul>
+                                        <li>1カラムレイアウト</li>
+                                        <li>ハンバーガーメニュー</li>
+                                        <li>スワイプ操作対応</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- パフォーマンス仕様 -->
+                <section id="performance" class="spec-section">
+                    <h2>7. パフォーマンス仕様</h2>
+                    
+                    <div class="spec-content">
+                        <div class="performance-metrics">
+                            <h3>パフォーマンス目標</h3>
+                            <div class="perf-grid">
+                                <div class="perf-item">
+                                    <span class="perf-metric">First Contentful Paint</span>
+                                    <span class="perf-target">&lt; 1.5秒</span>
+                                </div>
+                                <div class="perf-item">
+                                    <span class="perf-metric">Largest Contentful Paint</span>
+                                    <span class="perf-target">&lt; 2.5秒</span>
+                                </div>
+                                <div class="perf-item">
+                                    <span class="perf-metric">Cumulative Layout Shift</span>
+                                    <span class="perf-target">&lt; 0.1</span>
+                                </div>
+                                <div class="perf-item">
+                                    <span class="perf-metric">Time to Interactive</span>
+                                    <span class="perf-target">&lt; 3.0秒</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="optimization-techniques">
+                            <h3>最適化手法</h3>
+                            <ul>
+                                <li><strong>画像最適化:</strong> WebP形式、遅延読み込み</li>
+                                <li><strong>CSS最適化:</strong> クリティカルCSS、minification</li>
+                                <li><strong>JavaScript最適化:</strong> コード分割、tree shaking</li>
+                                <li><strong>キャッシュ戦略:</strong> Service Worker、CDN活用</li>
+                                <li><strong>リソース圧縮:</strong> Gzip/Brotli圧縮</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- セキュリティ -->
+                <section id="security" class="spec-section">
+                    <h2>8. セキュリティ</h2>
+                    
+                    <div class="spec-content">
+                        <div class="security-measures">
+                            <h3>セキュリティ対策</h3>
+                            <div class="security-categories">
+                                <div class="security-category">
+                                    <h4>データ保護</h4>
+                                    <ul>
+                                        <li>HTTPS通信の強制</li>
+                                        <li>個人情報の暗号化保存</li>
+                                        <li>Row Level Security (RLS)</li>
+                                        <li>定期的なバックアップ</li>
+                                    </ul>
+                                </div>
+
+                                <div class="security-category">
+                                    <h4>アクセス制御</h4>
+                                    <ul>
+                                        <li>認証システム（Supabase Auth）</li>
+                                        <li>JWT トークン認証</li>
+                                        <li>セッション管理</li>
+                                        <li>不正アクセス検知</li>
+                                    </ul>
+                                </div>
+
+                                <div class="security-category">
+                                    <h4>脆弱性対策</h4>
+                                    <ul>
+                                        <li>XSS (Cross-Site Scripting) 対策</li>
+                                        <li>CSRF (Cross-Site Request Forgery) 対策</li>
+                                        <li>SQL インジェクション対策</li>
+                                        <li>定期的なセキュリティ監査</li>
+                                    </ul>
+                                </div>
+
+                                <div class="security-category">
+                                    <h4>プライバシー保護</h4>
+                                    <ul>
+                                        <li>個人情報保護法準拠</li>
+                                        <li>GDPR 準拠（将来対応）</li>
+                                        <li>データ削除権の保証</li>
+                                        <li>第三者提供の制限</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 外部連携 -->
+                <section id="integrations" class="spec-section">
+                    <h2>9. 外部連携</h2>
+                    
+                    <div class="spec-content">
+                        <div class="integration-list">
+                            <div class="integration-item">
+                                <h3>アフィリエイト連携</h3>
+                                <div class="integration-details">
+                                    <h4>A8.net</h4>
+                                    <ul>
+                                        <li>ゴルフショップ・メーカーとの提携</li>
+                                        <li>成果報酬型広告</li>
+                                        <li>購入トラッキング</li>
+                                    </ul>
+                                    
+                                    <h4>Amazon Associates</h4>
+                                    <ul>
+                                        <li>Amazon商品へのリンク</li>
+                                        <li>在庫確認API連携</li>
+                                        <li>価格情報取得</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="integration-item">
+                                <h3>分析・マーケティング</h3>
+                                <div class="integration-details">
+                                    <h4>Google Analytics 4</h4>
+                                    <ul>
+                                        <li>ユーザー行動分析</li>
+                                        <li>コンバージョン追跡</li>
+                                        <li>カスタムイベント計測</li>
+                                    </ul>
+                                    
+                                    <h4>Google Tag Manager</h4>
+                                    <ul>
+                                        <li>タグ管理の一元化</li>
+                                        <li>イベントトラッキング</li>
+                                        <li>A/Bテスト支援</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="integration-item">
+                                <h3>SNS・共有</h3>
+                                <div class="integration-details">
+                                    <h4>ソーシャルメディア</h4>
+                                    <ul>
+                                        <li>Twitter API（結果投稿）</li>
+                                        <li>Facebook Graph API</li>
+                                        <li>LINE Messaging API</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 今後の機能拡張予定 -->
+                <section id="future-roadmap" class="spec-section">
+                    <h2>10. 今後の機能拡張予定</h2>
+                    
+                    <div class="spec-content">
+                        <div class="roadmap">
+                            <div class="roadmap-phase">
+                                <h3>フェーズ2（2025年Q1-Q2）</h3>
+                                <ul>
+                                    <li>ウェッジ・ユーティリティ診断機能追加</li>
+                                    <li>AI チャットボット導入</li>
+                                    <li>ユーザーレビュー・評価機能</li>
+                                    <li>パーソナライズド推奨機能強化</li>
+                                </ul>
+                            </div>
+
+                            <div class="roadmap-phase">
+                                <h3>フェーズ3（2025年Q3-Q4）</h3>
+                                <ul>
+                                    <li>モバイルアプリ開発（iOS/Android）</li>
+                                    <li>ARクラブ試着機能</li>
+                                    <li>スイング動画解析機能</li>
+                                    <li>プロフィッター予約システム</li>
+                                </ul>
+                            </div>
+
+                            <div class="roadmap-phase">
+                                <h3>フェーズ4（2026年）</h3>
+                                <ul>
+                                    <li>機械学習による診断精度向上</li>
+                                    <li>VRクラブ体験機能</li>
+                                    <li>ゴルフコース連携</li>
+                                    <li>国際展開（アジア・欧米）</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="tech-evolution">
+                            <h3>技術進化計画</h3>
+                            <ul>
+                                <li><strong>AI/ML:</strong> TensorFlow.js による機械学習モデル導入</li>
+                                <li><strong>リアルタイム:</strong> WebRTC によるライブ相談機能</li>
+                                <li><strong>3D/AR:</strong> Three.js による3Dクラブ表示</li>
+                                <li><strong>エッジ:</strong> Edge Computing による高速化</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- システム運用情報 -->
+                <section class="system-info">
+                    <h2>システム運用情報</h2>
+                    <div class="system-details">
+                        <div class="system-item">
+                            <h3>📊 監視・メトリクス</h3>
+                            <ul>
+                                <li>稼働率監視 (Uptime Robot)</li>
+                                <li>パフォーマンス監視 (Google PageSpeed Insights)</li>
+                                <li>エラー監視 (Browser Error Tracking)</li>
+                                <li>ユーザー行動分析 (Google Analytics)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="system-item">
+                            <h3>🔄 更新・メンテナンス</h3>
+                            <ul>
+                                <li>定期的なクラブデータ更新 (月次)</li>
+                                <li>価格情報の自動更新 (週次)</li>
+                                <li>セキュリティパッチ適用 (随時)</li>
+                                <li>機能改善デプロイ (月2回)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="system-item">
+                            <h3>📞 サポート体制</h3>
+                            <ul>
+                                <li>メールサポート: 営業日2-3日以内回答</li>
+                                <li>FAQ・ヘルプページ: 24時間アクセス可能</li>
+                                <li>緊急時対応: システム障害時の迅速対応</li>
+                                <li>ユーザーフィードバック収集・改善</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- フッター -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <a href="./lp.html">ホーム</a>
+                        <a href="./terms.html">利用規約</a>
+                        <a href="./privacy.html">プライバシーポリシー</a>
+                        <a href="./contact.html">お問い合わせ</a>
+                    </div>
+                    <div class="footer-copy">
+                        <p>&copy; 2024 appadaycreator. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/utils.js"></script>
+    <script src="./assets/js/app.js"></script>
+    
+    <script>
+        // ページ内リンクのスムーススクロール
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

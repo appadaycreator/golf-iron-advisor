@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ - ゴルフアイアン適性診断</title>
+    <meta name="description" content="ゴルフアイアン適性診断に関するお問い合わせ、ご質問、ご要望はこちらから。迅速に対応いたします。">
+    <meta name="keywords" content="ゴルフ,アイアン,お問い合わせ,サポート,質問">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+</head>
+<body>
+    <div id="app">
+        <!-- ヘッダー -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <img src="./assets/images/logo.svg" alt="ゴルフアイアン適性診断" />
+                        <a href="./lp.html">
+                            <h1>ゴルフアイアン適性診断</h1>
+                        </a>
+                    </div>
+                    <nav class="nav">
+                        <ul>
+                            <li><a href="./lp.html">ホーム</a></li>
+                            <li><a href="./index.html">診断開始</a></li>
+                            <li><a href="./how-to-use.html">使い方</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- メインコンテンツ -->
+        <main class="main">
+            <div class="container">
+                <!-- ページヘッダー -->
+                <section class="page-header">
+                    <h1>お問い合わせ</h1>
+                    <p>ご質問、ご要望、不具合の報告など、お気軽にお問い合わせください</p>
+                </section>
+
+                <!-- お問い合わせ前の確認 -->
+                <section class="pre-contact-section">
+                    <h2>お問い合わせ前にご確認ください</h2>
+                    <div class="faq-quick">
+                        <div class="faq-item-quick">
+                            <h3>よくある質問</h3>
+                            <ul>
+                                <li><a href="./how-to-use.html#troubleshooting">診断結果について</a></li>
+                                <li><a href="./how-to-use.html#understanding-results">結果の見方がわからない</a></li>
+                                <li><a href="./terms.html">利用規約について</a></li>
+                                <li><a href="./privacy.html">個人情報の取り扱い</a></li>
+                            </ul>
+                        </div>
+                        <div class="response-time">
+                            <h3>📧 お返事について</h3>
+                            <p>通常、営業日2-3日以内にご返信いたします。お急ぎの場合はその旨をお書きください。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- お問い合わせフォーム -->
+                <section class="contact-form-section">
+                    <div class="form-container">
+                        <form id="contact-form" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="inquiry-type" class="required">お問い合わせ種別</label>
+                                <select id="inquiry-type" name="inquiry_type" required>
+                                    <option value="">選択してください</option>
+                                    <option value="question">ご質問</option>
+                                    <option value="bug-report">不具合の報告</option>
+                                    <option value="feature-request">機能のご要望</option>
+                                    <option value="diagnosis-question">診断結果について</option>
+                                    <option value="technical-support">技術的な問題</option>
+                                    <option value="privacy">個人情報について</option>
+                                    <option value="partnership">提携・協業について</option>
+                                    <option value="other">その他</option>
+                                </select>
+                                <div class="error-message" id="inquiry-type-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name" class="required">お名前</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required 
+                                    maxlength="50"
+                                    placeholder="山田太郎"
+                                >
+                                <div class="error-message" id="name-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="required">メールアドレス</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required 
+                                    maxlength="100"
+                                    placeholder="example@email.com"
+                                >
+                                <p class="field-note">返信先として使用いたします。正確にご入力ください。</p>
+                                <div class="error-message" id="email-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="required">件名</label>
+                                <input 
+                                    type="text" 
+                                    id="subject" 
+                                    name="subject" 
+                                    required 
+                                    maxlength="100"
+                                    placeholder="診断結果について質問があります"
+                                >
+                                <div class="error-message" id="subject-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="required">お問い合わせ内容</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    required 
+                                    rows="8" 
+                                    maxlength="2000"
+                                    placeholder="お問い合わせ内容をできるだけ詳しくご記入ください。
+
+【不具合報告の場合】
+・発生した状況
+・使用している端末・ブラウザ
+・エラーメッセージ（あれば）
+
+【診断結果についての質問の場合】
+・診断時の入力内容
+・疑問に思った点"
+                                ></textarea>
+                                <div class="char-count">
+                                    <span id="char-current">0</span> / 2000文字
+                                </div>
+                                <div class="error-message" id="message-error"></div>
+                            </div>
+
+                            <!-- 診断結果に関する問い合わせの場合の追加フィールド -->
+                            <div class="form-group diagnosis-details" id="diagnosis-details" style="display: none;">
+                                <label for="diagnosis-id">診断ID（あれば）</label>
+                                <input 
+                                    type="text" 
+                                    id="diagnosis-id" 
+                                    name="diagnosis_id" 
+                                    maxlength="50"
+                                    placeholder="例: DIAG-2024-001234"
+                                >
+                                <p class="field-note">診断結果画面に表示されているIDをご入力ください。より迅速な対応が可能になります。</p>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="privacy-agreement" name="privacy_agreement" required>
+                                    <label for="privacy-agreement">
+                                        <a href="./privacy.html" target="_blank">プライバシーポリシー</a>に同意します
+                                    </label>
+                                </div>
+                                <div class="error-message" id="privacy-agreement-error"></div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-large" id="submit-btn">
+                                    送信する
+                                </button>
+                                <button type="reset" class="btn btn-secondary" id="reset-btn">
+                                    リセット
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- 送信完了メッセージ -->
+                        <div class="success-message" id="success-message" style="display: none;">
+                            <div class="success-content">
+                                <h3>✅ お問い合わせを受け付けました</h3>
+                                <p>ありがとうございます。お問い合わせを正常に受け付けました。</p>
+                                <p>通常、営業日2-3日以内にご返信いたします。しばらくお待ちください。</p>
+                                <div class="success-actions">
+                                    <a href="./lp.html" class="btn btn-primary">ホームに戻る</a>
+                                    <button id="send-another" class="btn btn-outline">別の問い合わせをする</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- その他のサポート情報 -->
+                <section class="support-info-section">
+                    <h2>その他のサポート情報</h2>
+                    <div class="support-grid">
+                        <div class="support-card">
+                            <h3>📚 使い方ガイド</h3>
+                            <p>診断の受け方から結果の活用方法まで詳しく解説</p>
+                            <a href="./how-to-use.html" class="btn btn-outline">ガイドを見る</a>
+                        </div>
+                        
+                        <div class="support-card">
+                            <h3>🔧 よくある問題</h3>
+                            <p>技術的な問題やトラブルシューティング</p>
+                            <a href="./how-to-use.html#troubleshooting" class="btn btn-outline">解決方法を見る</a>
+                        </div>
+                        
+                        <div class="support-card">
+                            <h3>📋 機能紹介</h3>
+                            <p>サービスの詳細機能と技術仕様</p>
+                            <a href="./function.html" class="btn btn-outline">機能詳細を見る</a>
+                        </div>
+
+                        <div class="support-card">
+                            <h3>🏪 推奨ショップ</h3>
+                            <p>診断結果を活用できる信頼できるゴルフショップ</p>
+                            <a href="#partner-shops" class="btn btn-outline">ショップ一覧</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 営業時間・連絡先情報 -->
+                <section class="contact-info-section">
+                    <h2>サポート情報</h2>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h3>📞 サポート対応時間</h3>
+                            <p>平日 9:00-18:00（土日祝日・年末年始を除く）</p>
+                            <p class="note">※メールでのお問い合わせは24時間受け付けております</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h3>⚡ 緊急時の対応</h3>
+                            <p>システム障害等の緊急事態については、サービス内でお知らせいたします。</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h3>🏢 運営会社</h3>
+                            <p><strong>appadaycreator</strong></p>
+                            <p>ゴルフアイアン適性診断サービス運営チーム</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- フッター -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <a href="./lp.html">ホーム</a>
+                        <a href="./terms.html">利用規約</a>
+                        <a href="./privacy.html">プライバシーポリシー</a>
+                    </div>
+                    <div class="footer-copy">
+                        <p>&copy; 2024 appadaycreator. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 読み込み中オーバーレイ -->
+    <div id="loading-overlay" class="loading-overlay" style="display: none;">
+        <div class="spinner"></div>
+        <p>送信中...</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/utils.js"></script>
+    <script src="./assets/js/supabase-client.js"></script>
+    <script src="./assets/js/app.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const inquiryType = document.getElementById('inquiry-type');
+            const diagnosisDetails = document.getElementById('diagnosis-details');
+            const messageField = document.getElementById('message');
+            const charCurrent = document.getElementById('char-current');
+            const successMessage = document.getElementById('success-message');
+            const loadingOverlay = document.getElementById('loading-overlay');
+
+            // 問い合わせ種別による表示切り替え
+            inquiryType.addEventListener('change', function() {
+                if (this.value === 'diagnosis-question') {
+                    diagnosisDetails.style.display = 'block';
+                } else {
+                    diagnosisDetails.style.display = 'none';
+                }
+            });
+
+            // 文字数カウント
+            messageField.addEventListener('input', function() {
+                charCurrent.textContent = this.value.length;
+            });
+
+            // フォームバリデーション
+            function validateForm() {
+                let isValid = true;
+                const errors = {};
+
+                // 各フィールドのバリデーション
+                const requiredFields = ['inquiry_type', 'name', 'email', 'subject', 'message'];
+                requiredFields.forEach(field => {
+                    const element = document.getElementById(field.replace('_', '-'));
+                    const value = element.value.trim();
+                    
+                    if (!value) {
+                        errors[field] = 'この項目は必須です。';
+                        isValid = false;
+                    }
+                });
+
+                // メールアドレスの形式チェック
+                const email = document.getElementById('email').value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (email && !emailRegex.test(email)) {
+                    errors.email = '正しいメールアドレスの形式で入力してください。';
+                    isValid = false;
+                }
+
+                // プライバシーポリシー同意チェック
+                const privacyAgreement = document.getElementById('privacy-agreement');
+                if (!privacyAgreement.checked) {
+                    errors.privacy_agreement = 'プライバシーポリシーへの同意が必要です。';
+                    isValid = false;
+                }
+
+                // エラーメッセージの表示
+                Object.keys(errors).forEach(field => {
+                    const errorElement = document.getElementById(field.replace('_', '-') + '-error');
+                    if (errorElement) {
+                        errorElement.textContent = errors[field];
+                        errorElement.style.display = 'block';
+                    }
+                });
+
+                // エラーメッセージのクリア
+                const allErrorElements = document.querySelectorAll('.error-message');
+                allErrorElements.forEach(element => {
+                    const fieldName = element.id.replace('-error', '').replace('-', '_');
+                    if (!errors[fieldName]) {
+                        element.style.display = 'none';
+                        element.textContent = '';
+                    }
+                });
+
+                return isValid;
+            }
+
+            // フォーム送信処理
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                if (!validateForm()) {
+                    return;
+                }
+
+                loadingOverlay.style.display = 'flex';
+
+                try {
+                    // フォームデータの収集
+                    const formData = new FormData(form);
+                    const data = Object.fromEntries(formData.entries());
+                    
+                    // チェックボックスの処理
+                    data.privacy_agreement = document.getElementById('privacy-agreement').checked;
+
+                    // 送信処理（実際の実装では、Supabaseやメール送信サービスを使用）
+                    await submitContactForm(data);
+
+                    // 成功時の処理
+                    form.style.display = 'none';
+                    successMessage.style.display = 'block';
+                    
+                    // ページトップにスクロール
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                } catch (error) {
+                    console.error('送信エラー:', error);
+                    alert('送信に失敗しました。しばらく時間をおいて再度お試しください。');
+                } finally {
+                    loadingOverlay.style.display = 'none';
+                }
+            });
+
+            // リセット処理
+            document.getElementById('reset-btn').addEventListener('click', function() {
+                // エラーメッセージのクリア
+                const errorElements = document.querySelectorAll('.error-message');
+                errorElements.forEach(element => {
+                    element.style.display = 'none';
+                    element.textContent = '';
+                });
+                
+                // 文字数カウントのリセット
+                charCurrent.textContent = '0';
+                
+                // 診断詳細フィールドの非表示
+                diagnosisDetails.style.display = 'none';
+            });
+
+            // 別の問い合わせをする
+            document.getElementById('send-another').addEventListener('click', function() {
+                successMessage.style.display = 'none';
+                form.style.display = 'block';
+                form.reset();
+                
+                // エラーメッセージのクリア
+                const errorElements = document.querySelectorAll('.error-message');
+                errorElements.forEach(element => {
+                    element.style.display = 'none';
+                    element.textContent = '';
+                });
+                
+                charCurrent.textContent = '0';
+                diagnosisDetails.style.display = 'none';
+            });
+
+            // 実際の送信処理関数（ダミー実装）
+            async function submitContactForm(data) {
+                // 実際の実装では、ここでSupabaseやメール送信サービスを呼び出す
+                console.log('送信データ:', data);
+                
+                // シミュレートのための遅延
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                
+                // 成功をシミュレート
+                return { success: true };
+            }
+        });
+    </script>
+</body>
+</html>
