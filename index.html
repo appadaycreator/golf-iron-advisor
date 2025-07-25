@@ -343,11 +343,11 @@
                             <div class="space-y-6">
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="height">身長 (cm)</label>
-                                    <input type="number" id="height" min="140" max="200" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500" placeholder="170">
+                                    <input type="number" id="height" min="140" max="200" step="1" inputmode="decimal" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500" placeholder="170">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="weight">体重 (kg)</label>
-                                    <input type="number" id="weight" min="40" max="120" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500" placeholder="70">
+                                    <input type="number" id="weight" min="40" max="120" step="1" inputmode="decimal" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500" placeholder="70">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-2" data-translate="age">年齢</label>
@@ -3206,6 +3206,43 @@
             translatePage();
             updateHistoryDisplay();
             loadRecommendedProducts();
+            
+            // Debug: Add input event listeners for number fields
+            setTimeout(() => {
+                const heightInput = document.getElementById('height');
+                const weightInput = document.getElementById('weight');
+                
+                if (heightInput) {
+                    console.log('[Debug] Height input found, adding event listeners');
+                    heightInput.addEventListener('input', (e) => {
+                        console.log('[Debug] Height input event:', e.target.value);
+                    });
+                    heightInput.addEventListener('keydown', (e) => {
+                        console.log('[Debug] Height keydown event:', e.key, e.code);
+                    });
+                    heightInput.addEventListener('focus', () => {
+                        console.log('[Debug] Height input focused');
+                    });
+                } else {
+                    console.error('[Debug] Height input not found');
+                }
+                
+                if (weightInput) {
+                    console.log('[Debug] Weight input found, adding event listeners');
+                    weightInput.addEventListener('input', (e) => {
+                        console.log('[Debug] Weight input event:', e.target.value);
+                    });
+                    weightInput.addEventListener('keydown', (e) => {
+                        console.log('[Debug] Weight keydown event:', e.key, e.code);
+                    });
+                    weightInput.addEventListener('focus', () => {
+                        console.log('[Debug] Weight input focused');
+                    });
+                } else {
+                    console.error('[Debug] Weight input not found');
+                }
+            }, 1000);
+        
             
             // Register service worker
             if ('serviceWorker' in navigator) {
