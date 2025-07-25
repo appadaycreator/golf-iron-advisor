@@ -2393,6 +2393,12 @@
             console.log(`[Toast] ${type}: ${message}`);
             const toast = document.getElementById('toast');
             const toastMessage = document.getElementById('toastMessage');
+            
+            if (!toast || !toastMessage) {
+                console.error('[Toast] Toast elements not found');
+                return;
+            }
+            
             toastMessage.textContent = message;
             toast.classList.remove('translate-y-full');
             toast.classList.add('translate-y-0');
@@ -2405,19 +2411,41 @@
         
         function showLoading() {
             console.log('[Loading] Showing loading overlay');
-            document.getElementById('loadingOverlay').classList.remove('hidden');
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.classList.remove('hidden');
+            } else {
+                console.error('[Loading] Loading overlay element not found');
+            }
         }
         
         function hideLoading() {
             console.log('[Loading] Hiding loading overlay');
-            document.getElementById('loadingOverlay').classList.add('hidden');
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.classList.add('hidden');
+            } else {
+                console.error('[Loading] Loading overlay element not found');
+            }
         }
         
         function updateProgress(step, total = 7) {
             console.log(`[Progress] Step ${step} of ${total}`);
             const percentage = (step / total) * 100;
-            document.getElementById('progressBar').style.width = `${percentage}%`;
-            document.getElementById('progressText').textContent = `${step}/${total}`;
+            const progressBar = document.getElementById('progressBar');
+            const progressText = document.getElementById('progressText');
+            
+            if (progressBar) {
+                progressBar.style.width = `${percentage}%`;
+            } else {
+                console.error('[Progress] Progress bar element not found');
+            }
+            
+            if (progressText) {
+                progressText.textContent = `${step}/${total}`;
+            } else {
+                console.error('[Progress] Progress text element not found');
+            }
         }
         
         function translatePage() {
@@ -2462,6 +2490,11 @@
             const recentContainer = document.getElementById('recentDiagnosisContainer');
             const historyContainer = document.getElementById('historyContainer');
             
+            if (!recentContainer || !historyContainer) {
+                console.error('[History] History container elements not found');
+                return;
+            }
+            
             // Update recent diagnosis in sidebar
             recentContainer.innerHTML = '';
             history.slice(0, 3).forEach(item => {
@@ -2505,7 +2538,10 @@
             console.log('[History] Showing history item:', item.id);
             diagnosisData = item.data;
             showResults(item.results);
-            document.getElementById('diagnosis').scrollIntoView({ behavior: 'smooth' });
+            const diagnosisSection = document.getElementById('diagnosis');
+            if (diagnosisSection) {
+                diagnosisSection.scrollIntoView({ behavior: 'smooth' });
+            }
         }
         
         function calculateResults(data) {
@@ -2681,6 +2717,7 @@
             
             // Populate results
             const container = document.getElementById('resultsContainer');
+            if (!container) return;
             container.innerHTML = '';
             
             // Add user input summary
@@ -3045,7 +3082,9 @@
         
         function createCompatibilityChart(recommendations) {
             console.log('[Chart] Creating compatibility chart');
-            const ctx = document.getElementById('compatibilityChart').getContext('2d');
+            const chartElement = document.getElementById('compatibilityChart');
+            if (!chartElement) return;
+            const ctx = chartElement.getContext('2d');
             
             new Chart(ctx, {
                 type: 'radar',
@@ -3101,9 +3140,19 @@
             const savedFontSize = localStorage.getItem('fontSize') || 'md';
             
             currentLanguage = savedLanguage;
-            document.getElementById('languageSelector').value = savedLanguage;
-            document.getElementById('fontSizeSelector').value = savedFontSize;
-            document.getElementById('mobileFontSizeSelector').value = savedFontSize;
+            const languageSelector = document.getElementById('languageSelector');
+            const fontSizeSelector = document.getElementById('fontSizeSelector');
+            const mobileFontSizeSelector = document.getElementById('mobileFontSizeSelector');
+            
+            if (languageSelector) {
+                languageSelector.value = savedLanguage;
+            }
+            if (fontSizeSelector) {
+                fontSizeSelector.value = savedFontSize;
+            }
+            if (mobileFontSizeSelector) {
+                mobileFontSizeSelector.value = savedFontSize;
+            }
             
             changeFontSize(savedFontSize);
             translatePage();
@@ -3123,6 +3172,7 @@
         function loadRecommendedProducts() {
             console.log('[Products] Loading recommended products');
             const container = document.getElementById('recommendedProducts');
+            if (!container) return;
             
             clubDatabase.forEach(club => {
                 const div = document.createElement('div');
@@ -3152,58 +3202,88 @@
             initializeApp();
             
             // Mobile menu toggle
-            document.getElementById('mobileMenuButton').addEventListener('click', function() {
-                document.getElementById('mobileSidebar').style.transform = 'translateX(0)';
-            });
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const mobileSidebar = document.getElementById('mobileSidebar');
+            if (mobileMenuButton && mobileSidebar) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileSidebar.style.transform = 'translateX(0)';
+                });
+            }
             
-            document.getElementById('closeMobileSidebar').addEventListener('click', function() {
-                document.getElementById('mobileSidebar').style.transform = 'translateX(100%)';
-            });
+            const closeMobileSidebar = document.getElementById('closeMobileSidebar');
+            if (closeMobileSidebar && mobileSidebar) {
+                closeMobileSidebar.addEventListener('click', function() {
+                    mobileSidebar.style.transform = 'translateX(100%)';
+                });
+            }
             
             // Language selector
-            document.getElementById('languageSelector').addEventListener('change', function() {
-                currentLanguage = this.value;
-                localStorage.setItem('language', currentLanguage);
-                translatePage();
-            });
+            if (languageSelector) {
+                languageSelector.addEventListener('change', function() {
+                    currentLanguage = this.value;
+                    localStorage.setItem('language', currentLanguage);
+                    translatePage();
+                });
+            }
             
             // Font size selectors
-            document.getElementById('fontSizeSelector').addEventListener('change', function() {
-                changeFontSize(this.value);
-                document.getElementById('mobileFontSizeSelector').value = this.value;
-            });
+            if (fontSizeSelector && mobileFontSizeSelector) {
+                fontSizeSelector.addEventListener('change', function() {
+                    changeFontSize(this.value);
+                    mobileFontSizeSelector.value = this.value;
+                });
+            }
             
-            document.getElementById('mobileFontSizeSelector').addEventListener('change', function() {
-                changeFontSize(this.value);
-                document.getElementById('fontSizeSelector').value = this.value;
-            });
+            if (mobileFontSizeSelector && fontSizeSelector) {
+                mobileFontSizeSelector.addEventListener('change', function() {
+                    changeFontSize(this.value);
+                    fontSizeSelector.value = this.value;
+                });
+            }
             
             // Start diagnosis buttons
-            document.getElementById('startDiagnosisBtn').addEventListener('click', function() {
-                document.getElementById('diagnosis').scrollIntoView({ behavior: 'smooth' });
-                setTimeout(() => startDiagnosis(), 500);
-            });
+            const startDiagnosisBtn = document.getElementById('startDiagnosisBtn');
+            const diagnosisSection = document.getElementById('diagnosis');
+            if (startDiagnosisBtn && diagnosisSection) {
+                startDiagnosisBtn.addEventListener('click', function() {
+                    diagnosisSection.scrollIntoView({ behavior: 'smooth' });
+                    setTimeout(() => startDiagnosis(), 500);
+                });
+            }
             
-            document.getElementById('startBtn').addEventListener('click', startDiagnosis);
+            const startBtn = document.getElementById('startBtn');
+            if (startBtn) {
+                startBtn.addEventListener('click', startDiagnosis);
+            }
             
             // View history button
-            document.getElementById('viewHistoryBtn').addEventListener('click', function() {
-                document.getElementById('history').scrollIntoView({ behavior: 'smooth' });
-            });
+            const viewHistoryBtn = document.getElementById('viewHistoryBtn');
+            const historySection = document.getElementById('history');
+            if (viewHistoryBtn && historySection) {
+                viewHistoryBtn.addEventListener('click', function() {
+                    historySection.scrollIntoView({ behavior: 'smooth' });
+                });
+            }
             
             // Social sharing
-            document.getElementById('shareTwitter').addEventListener('click', function(e) {
-                e.preventDefault();
-                const url = encodeURIComponent(window.location.href);
-                const text = encodeURIComponent('ゴルフアイアン適性診断で最適なクラブを見つけよう！');
-                window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
-            });
+            const shareTwitter = document.getElementById('shareTwitter');
+            if (shareTwitter) {
+                shareTwitter.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const url = encodeURIComponent(window.location.href);
+                    const text = encodeURIComponent('ゴルフアイアン適性診断で最適なクラブを見つけよう！');
+                    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+                });
+            }
             
-            document.getElementById('shareFacebook').addEventListener('click', function(e) {
-                e.preventDefault();
-                const url = encodeURIComponent(window.location.href);
-                window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
-            });
+            const shareFacebook = document.getElementById('shareFacebook');
+            if (shareFacebook) {
+                shareFacebook.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const url = encodeURIComponent(window.location.href);
+                    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+                });
+            }
             
             document.getElementById('shareLine').addEventListener('click', function(e) {
                 e.preventDefault();
@@ -3318,9 +3398,15 @@
             console.log(`[Diagnosis] Moving to step ${currentStep + 1}`);
             
             if (currentStep < 7) {
-                document.getElementById(`step-${currentStep}`).classList.add('hidden');
+                const currentStepElement = document.getElementById(`step-${currentStep}`);
+                if (currentStepElement) {
+                    currentStepElement.classList.add('hidden');
+                }
                 currentStep++;
-                document.getElementById(`step-${currentStep}`).classList.remove('hidden');
+                const nextStepElement = document.getElementById(`step-${currentStep}`);
+                if (nextStepElement) {
+                    nextStepElement.classList.remove('hidden');
+                }
                 updateProgress(currentStep - 1, 7);
             }
         }
@@ -3329,9 +3415,15 @@
             console.log(`[Diagnosis] Moving back to step ${currentStep - 1}`);
             
             if (currentStep > 1) {
-                document.getElementById(`step-${currentStep}`).classList.add('hidden');
+                const currentStepElement = document.getElementById(`step-${currentStep}`);
+                if (currentStepElement) {
+                    currentStepElement.classList.add('hidden');
+                }
                 currentStep--;
-                document.getElementById(`step-${currentStep}`).classList.remove('hidden');
+                const prevStepElement = document.getElementById(`step-${currentStep}`);
+                if (prevStepElement) {
+                    prevStepElement.classList.remove('hidden');
+                }
                 updateProgress(currentStep - 1, 7);
             }
         }
@@ -3340,9 +3432,18 @@
         function setupStepNavigation() {
             // Step 1
             document.getElementById('next-1')?.addEventListener('click', function() {
-                diagnosisData.height = document.getElementById('height').value;
-                diagnosisData.weight = document.getElementById('weight').value;
-                diagnosisData.age = document.getElementById('age').value;
+                const heightInput = document.getElementById('height');
+                const weightInput = document.getElementById('weight');
+                const ageInput = document.getElementById('age');
+                
+                if (!heightInput || !weightInput || !ageInput) {
+                    showToast('フォーム要素が見つかりません', 'error');
+                    return;
+                }
+                
+                diagnosisData.height = heightInput.value;
+                diagnosisData.weight = weightInput.value;
+                diagnosisData.age = ageInput.value;
                 
                 if (!diagnosisData.height || !diagnosisData.weight || !diagnosisData.age) {
                     showToast('すべての項目を入力してください', 'error');
