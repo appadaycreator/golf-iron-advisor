@@ -85,9 +85,8 @@ const testSuite = new RefactorTestSuite();
 
 // Test 1: Core HTML Structure
 testSuite.test('Core HTML Elements Exist', () => {
-    testSuite.assert(testSuite.elementExists('#app'), 'Main app container missing');
-    testSuite.assert(testSuite.elementExists('#diagnosis-form'), 'Diagnosis form missing');
-    testSuite.assert(testSuite.elementExists('#results-section'), 'Results section missing');
+    testSuite.assert(testSuite.elementExists('#diagnosis'), 'Main diagnosis section missing');
+    testSuite.assert(testSuite.elementExists('#results'), 'Results section missing');
     testSuite.assert(testSuite.elementExists('#recommended'), 'Recommended section missing');
 });
 
@@ -100,13 +99,13 @@ testSuite.test('Navigation Elements', () => {
 
 // Test 3: Form Elements
 testSuite.test('Diagnosis Form Elements', () => {
-    testSuite.assert(testSuite.elementExists('#question-1'), 'Question 1 missing');
-    testSuite.assert(testSuite.elementExists('#question-2'), 'Question 2 missing');
-    testSuite.assert(testSuite.elementExists('#question-3'), 'Question 3 missing');
-    testSuite.assert(testSuite.elementExists('#question-4'), 'Question 4 missing');
-    testSuite.assert(testSuite.elementExists('#question-5'), 'Question 5 missing');
-    testSuite.assert(testSuite.elementExists('#question-6'), 'Question 6 missing');
-    testSuite.assert(testSuite.elementExists('#question-7'), 'Question 7 missing');
+    testSuite.assert(testSuite.elementExists('#step-1'), 'Step 1 missing');
+    testSuite.assert(testSuite.elementExists('#step-2'), 'Step 2 missing');
+    testSuite.assert(testSuite.elementExists('#step-3'), 'Step 3 missing');
+    testSuite.assert(testSuite.elementExists('#step-4'), 'Step 4 missing');
+    testSuite.assert(testSuite.elementExists('#step-5'), 'Step 5 missing');
+    testSuite.assert(testSuite.elementExists('#step-6'), 'Step 6 missing');
+    testSuite.assert(testSuite.elementExists('#step-7'), 'Step 7 missing');
 });
 
 // Test 4: JavaScript Functions
@@ -120,15 +119,15 @@ testSuite.test('Core JavaScript Functions', () => {
 
 // Test 5: Club Database
 testSuite.test('Club Database Availability', () => {
-    testSuite.assert(typeof clubDatabase !== 'undefined', 'Club database not defined');
-    testSuite.assert(Array.isArray(clubDatabase), 'Club database is not an array');
-    testSuite.assert(clubDatabase.length > 0, 'Club database is empty');
-    testSuite.assert(clubDatabase.length >= 100, 'Club database has less than 100 entries');
+    testSuite.assert(typeof window.clubDatabase !== 'undefined', 'Club database not defined');
+    testSuite.assert(Array.isArray(window.clubDatabase), 'Club database is not an array');
+    testSuite.assert(window.clubDatabase.length > 0, 'Club database is empty');
+    testSuite.assert(window.clubDatabase.length >= 100, 'Club database has less than 100 entries');
 });
 
 // Test 6: Club Database Structure
 testSuite.test('Club Database Structure', () => {
-    const sampleClub = clubDatabase[0];
+    const sampleClub = window.clubDatabase[0];
     testSuite.assert(sampleClub.hasOwnProperty('name'), 'Club missing name property');
     testSuite.assert(sampleClub.hasOwnProperty('brand'), 'Club missing brand property');
     testSuite.assert(sampleClub.hasOwnProperty('type'), 'Club missing type property');
@@ -167,8 +166,8 @@ testSuite.test('UI State Management', () => {
 // Functional Tests
 testSuite.test('Diagnosis Flow Simulation', async () => {
     // Reset to initial state
-    if (typeof currentQuestion !== 'undefined') {
-        currentQuestion = 1;
+    if (typeof currentStep !== 'undefined') {
+        currentStep = 0;
     }
     
     // Start diagnosis
@@ -176,9 +175,9 @@ testSuite.test('Diagnosis Flow Simulation', async () => {
         startDiagnosis();
     }
     
-    // Check if question 1 is visible
-    const q1 = document.getElementById('question-1');
-    testSuite.assert(q1 && !q1.classList.contains('hidden'), 'Question 1 should be visible after start');
+    // Check if step 1 is visible
+    const step1 = document.getElementById('step-1');
+    testSuite.assert(step1 && !step1.classList.contains('hidden'), 'Step 1 should be visible after start');
 });
 
 testSuite.test('Club Scoring Algorithm', () => {
@@ -195,7 +194,7 @@ testSuite.test('Club Scoring Algorithm', () => {
             budget: 'medium'
         };
         
-        const sampleClub = clubDatabase[0];
+        const sampleClub = window.clubDatabase[0];
         const score = calculateClubScore(sampleUser, sampleClub);
         
         testSuite.assert(typeof score === 'number', 'Score should be a number');
