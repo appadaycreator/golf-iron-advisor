@@ -203,6 +203,36 @@ testSuite.test('Club Scoring Algorithm', () => {
     }
 });
 
+// Test 11: History Functionality
+testSuite.test('History Save and Retrieve', () => {
+    // Clear existing history
+    localStorage.removeItem('diagnosisHistory');
+    
+    // Test saveToHistory function
+    const testData = {
+        height: 175,
+        weight: 70,
+        experience: 'intermediate',
+        swingSpeed: 'average',
+        missTendency: 'slice',
+        ballHeight: 'medium',
+        priority: 'accuracy',
+        budget: 'medium'
+    };
+    
+    if (testSuite.functionExists('saveToHistory')) {
+        saveToHistory(testData);
+        
+        // Check if history was saved
+        const savedHistory = JSON.parse(localStorage.getItem('diagnosisHistory') || '[]');
+        testSuite.assert(Array.isArray(savedHistory), 'History should be an array');
+        testSuite.assert(savedHistory.length === 1, 'History should contain one item');
+        testSuite.assert(savedHistory[0].data, 'History item should have data property');
+        testSuite.assert(savedHistory[0].results, 'History item should have results property');
+        testSuite.assert(savedHistory[0].timestamp, 'History item should have timestamp');
+    }
+});
+
 // Export for use in browser
 if (typeof window !== 'undefined') {
     window.RefactorTestSuite = RefactorTestSuite;

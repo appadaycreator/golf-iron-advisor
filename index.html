@@ -2476,7 +2476,14 @@
         }
         
         function saveToHistory(data) {
-            console.log('[History] Saving diagnosis result');
+            console.log('[History] Saving diagnosis result with data:', data);
+            
+            // Validate input data
+            if (!data || typeof data !== 'object') {
+                console.error('[History] Invalid data provided to saveToHistory:', data);
+                return;
+            }
+            
             let history;
             try {
                 history = JSON.parse(localStorage.getItem('diagnosisHistory') || '[]');
@@ -2488,16 +2495,25 @@
                 console.error('[History] Failed to parse history data in saveToHistory:', e);
                 history = [];
             }
-            const result = {
-                id: Date.now(),
-                timestamp: new Date().toISOString(),
-                data: data,
-                results: calculateResults(data)
-            };
-            history.unshift(result);
-            history = history.slice(0, 10); // Keep only last 10 results
-            localStorage.setItem('diagnosisHistory', JSON.stringify(history));
-            updateHistoryDisplay();
+            
+            try {
+                const result = {
+                    id: Date.now(),
+                    timestamp: new Date().toISOString(),
+                    data: data,
+                    results: calculateResults(data)
+                };
+                
+                history.unshift(result);
+                history = history.slice(0, 10); // Keep only last 10 results
+                
+                localStorage.setItem('diagnosisHistory', JSON.stringify(history));
+                console.log('[History] Successfully saved result to history. Total history items:', history.length);
+                
+                updateHistoryDisplay();
+            } catch (e) {
+                console.error('[History] Failed to save result to history:', e);
+            }
         }
         
         function updateHistoryDisplay() {
@@ -2866,8 +2882,13 @@
             // Create chart
             createCompatibilityChart(recommendations);
             
-            // Save to history
-            saveToHistory(diagnosisData);
+            // Save to history - ensure diagnosisData is properly populated
+            if (diagnosisData && Object.keys(diagnosisData).length > 0) {
+                console.log('[History] Saving diagnosis result to history:', diagnosisData);
+                saveToHistory(diagnosisData);
+            } else {
+                console.warn('[History] diagnosisData is empty, cannot save to history');
+            }
         }
         
         function createUserInputSummary() {
