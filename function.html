@@ -45,7 +45,7 @@
                     <h1>機能仕様書</h1>
                     <p>ゴルフアイアン適性診断システムの詳細機能と技術仕様</p>
                     <div class="spec-meta">
-                        <span class="version">Version 1.2</span>
+                        <span class="version">Version 1.3</span>
                         <span class="updated">更新日: 2025年1月</span>
                     </div>
                 </section>
@@ -63,6 +63,7 @@
                         <li><a href="#performance">パフォーマンス仕様</a></li>
                         <li><a href="#security">セキュリティ</a></li>
                         <li><a href="#integrations">外部連携</a></li>
+                        <li><a href="#unimplemented-features">未実装機能一覧</a></li>
                         <li><a href="#future-roadmap">今後の機能拡張予定</a></li>
                     </ol>
                 </section>
@@ -77,8 +78,8 @@
                                 <span class="metric-label">診断質問実装</span>
                             </div>
                             <div class="metric-item">
-                                <span class="metric-number">100%</span>
-                                <span class="metric-label">基本診断機能</span>
+                                <span class="metric-number">100種類</span>
+                                <span class="metric-label">クラブデータ</span>
                             </div>
                             <div class="metric-item">
                                 <span class="metric-number">実装済</span>
@@ -89,7 +90,42 @@
                                 <span class="metric-label">SNSシェア機能</span>
                             </div>
                         </div>
-                        <p style="margin-top: 20px;"><strong>最終更新:</strong> 2025年1月 - Enterキーでの選択機能追加、クラブデータベースを100種類に拡張</p>
+                        
+                        <div style="margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div style="background-color: #dcfce7; padding: 15px; border-radius: 8px;">
+                                <h4 style="color: #16a34a; margin-bottom: 10px;">✅ 実装済み機能</h4>
+                                <ul style="margin: 0; padding-left: 20px; font-size: 14px;">
+                                    <li>基本診断機能（7つの質問）</li>
+                                    <li>100種類のクラブデータベース</li>
+                                    <li>科学的診断アルゴリズム</li>
+                                    <li>診断結果の詳細表示</li>
+                                    <li>ローカル履歴保存（最大10件）</li>
+                                    <li>SNSシェア機能（Twitter/Facebook/LINE）</li>
+                                    <li>レスポンシブデザイン</li>
+                                    <li>多言語対応（日本語/英語）</li>
+                                    <li>Enterキーナビゲーション</li>
+                                    <li>PWA基本機能（Service Worker）</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="background-color: #fee2e2; padding: 15px; border-radius: 8px;">
+                                <h4 style="color: #dc2626; margin-bottom: 10px;">🚧 主な未実装機能</h4>
+                                <ul style="margin: 0; padding-left: 20px; font-size: 14px;">
+                                    <li>クラウド保存（ユーザー認証）</li>
+                                    <li>PDFエクスポート</li>
+                                    <li>価格比較・在庫確認</li>
+                                    <li>試打予約システム</li>
+                                    <li>メール送信・QRコード</li>
+                                    <li>AIチャットボット</li>
+                                    <li>スイング動画解析</li>
+                                    <li>レビュー・評価機能</li>
+                                    <li>AR/VR機能</li>
+                                    <li>IoT連携</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <p style="margin-top: 20px;"><strong>最終更新:</strong> 2025年1月 - Enterキーでの選択機能追加、クラブデータベースを100種類に拡張、未実装機能を整理</p>
                     </div>
                 </section>
 
@@ -648,9 +684,171 @@
                     </div>
                 </section>
 
+                <!-- 未実装機能一覧 -->
+                <section id="unimplemented-features" class="spec-section" style="background-color: #fef3c7; border: 2px solid #f59e0b; padding: 20px; margin-bottom: 30px;">
+                    <h2>📋 未実装機能一覧</h2>
+                    
+                    <div class="spec-content">
+                        <h3>優先度：高（2025年Q1-Q2実装予定）</h3>
+                        <div class="unimplemented-list">
+                            <h4>1. データ管理・保存機能</h4>
+                            <ul>
+                                <li><strong>クラウド保存（Supabase連携）</strong>
+                                    <ul>
+                                        <li>ユーザー認証システム</li>
+                                        <li>診断結果のクラウド同期</li>
+                                        <li>複数デバイス間でのデータ共有</li>
+                                    </ul>
+                                </li>
+                                <li><strong>PDFエクスポート機能</strong>
+                                    <ul>
+                                        <li>診断結果の印刷用フォーマット</li>
+                                        <li>ショップへの持参用レポート</li>
+                                        <li>詳細スペックシート生成</li>
+                                    </ul>
+                                </li>
+                                <li><strong>過去診断との比較機能</strong>
+                                    <ul>
+                                        <li>スイング改善の経過追跡</li>
+                                        <li>推奨クラブの変化分析</li>
+                                        <li>成長グラフ表示</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <h4>2. 購入支援機能</h4>
+                            <ul>
+                                <li><strong>価格比較機能</strong>
+                                    <ul>
+                                        <li>複数ECサイトの価格追跡</li>
+                                        <li>価格変動アラート</li>
+                                        <li>最安値ショップ表示</li>
+                                    </ul>
+                                </li>
+                                <li><strong>在庫確認システム</strong>
+                                    <ul>
+                                        <li>リアルタイム在庫表示</li>
+                                        <li>取寄せ可否情報</li>
+                                        <li>納期目安表示</li>
+                                    </ul>
+                                </li>
+                                <li><strong>試打予約機能</strong>
+                                    <ul>
+                                        <li>近隣ショップ検索</li>
+                                        <li>試打可能店舗マップ</li>
+                                        <li>予約カレンダー連携</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <h4>3. コミュニケーション機能</h4>
+                            <ul>
+                                <li><strong>メール送信機能</strong>
+                                    <ul>
+                                        <li>診断結果のメール送信</li>
+                                        <li>友人への共有</li>
+                                        <li>プロショップへの相談メール</li>
+                                    </ul>
+                                </li>
+                                <li><strong>QRコード生成</strong>
+                                    <ul>
+                                        <li>診断結果の即時共有</li>
+                                        <li>ショップでの簡単表示</li>
+                                        <li>イベント・展示会での活用</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h3>優先度：中（2025年Q3-Q4実装予定）</h3>
+                        <div class="unimplemented-list">
+                            <h4>4. 高度な診断機能</h4>
+                            <ul>
+                                <li><strong>ウェッジ・ユーティリティ診断</strong>
+                                    <ul>
+                                        <li>アプローチ特性分析</li>
+                                        <li>バンカー適性診断</li>
+                                        <li>距離別ウェッジ推奨</li>
+                                    </ul>
+                                </li>
+                                <li><strong>AIチャットボット</strong>
+                                    <ul>
+                                        <li>診断補助AI</li>
+                                        <li>クラブ選択相談</li>
+                                        <li>FAQ自動応答</li>
+                                    </ul>
+                                </li>
+                                <li><strong>スイング動画解析</strong>
+                                    <ul>
+                                        <li>動画アップロード機能</li>
+                                        <li>AI姿勢分析</li>
+                                        <li>改善ポイント提案</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <h4>5. ユーザーエンゲージメント</h4>
+                            <ul>
+                                <li><strong>レビュー・評価システム</strong>
+                                    <ul>
+                                        <li>推奨クラブの実使用レビュー</li>
+                                        <li>5段階評価システム</li>
+                                        <li>写真付きレビュー</li>
+                                    </ul>
+                                </li>
+                                <li><strong>コミュニティ機能</strong>
+                                    <ul>
+                                        <li>ユーザー間の情報交換</li>
+                                        <li>クラブ交換会情報</li>
+                                        <li>ゴルフ仲間マッチング</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h3>優先度：低（2026年以降検討）</h3>
+                        <div class="unimplemented-list">
+                            <h4>6. 先進技術機能</h4>
+                            <ul>
+                                <li><strong>AR/VR機能</strong>
+                                    <ul>
+                                        <li>ARクラブ試着</li>
+                                        <li>VRスイング体験</li>
+                                        <li>3Dクラブビューワー</li>
+                                    </ul>
+                                </li>
+                                <li><strong>機械学習強化</strong>
+                                    <ul>
+                                        <li>個人最適化アルゴリズム</li>
+                                        <li>予測精度向上</li>
+                                        <li>トレンド分析</li>
+                                    </ul>
+                                </li>
+                                <li><strong>IoT連携</strong>
+                                    <ul>
+                                        <li>スマートクラブ連携</li>
+                                        <li>スイングセンサー統合</li>
+                                        <li>練習データ自動取得</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="implementation-note" style="margin-top: 30px; padding: 15px; background-color: #dbeafe; border-radius: 8px;">
+                            <h4>実装に関する注意事項</h4>
+                            <ul>
+                                <li>GitHub Pages（静的サイト）の制約により、バックエンド機能は外部サービス連携が必要</li>
+                                <li>Supabase、Firebase等のBaaSを活用した実装を検討</li>
+                                <li>ユーザーデータ保護とプライバシー対策を最優先</li>
+                                <li>段階的な機能追加により、安定性を維持</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- 今後の機能拡張予定 -->
                 <section id="future-roadmap" class="spec-section">
-                    <h2>10. 今後の機能拡張予定</h2>
+                    <h2>11. 今後の機能拡張予定</h2>
                     
                     <div class="spec-content">
                         <div class="roadmap">
