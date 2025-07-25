@@ -55,7 +55,7 @@ class ClubDataService {
             this.loaded = true;
             this.loading = false;
 
-            console.log(`[ClubDataService] Loaded ${this.clubs.length} clubs`);
+            console.log(`[ClubDataService] Successfully loaded ${this.clubs.length} clubs from JSON file`);
             this.eventBus.emit('clubsLoaded', { 
                 clubs: this.clubs, 
                 count: this.clubs.length 
@@ -69,7 +69,7 @@ class ClubDataService {
             // Try fallback data
             const fallbackClubs = this.getFallbackData();
             if (fallbackClubs.length > 0) {
-                console.warn('[ClubDataService] Using fallback data');
+                console.warn(`[ClubDataService] Using fallback hardcoded data (${fallbackClubs.length} clubs)`);
                 this.clubs = fallbackClubs;
                 this.loaded = true;
                 this.eventBus.emit('clubsLoaded', { 
