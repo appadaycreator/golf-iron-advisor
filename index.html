@@ -3571,5 +3571,43 @@
         
         console.log('[App] Script loaded successfully');
     </script>
+    
+    <!-- Core Modules -->
+    <script src="./assets/js/core/EventBus.js"></script>
+    <script src="./assets/js/core/StateManager.js"></script>
+    <script src="./assets/js/services/ClubDataService.js"></script>
+    
+    <!-- Test Suite -->
+    <script src="./tests/refactor-test.js"></script>
+    
+    <!-- Initialize Refactored Modules -->
+    <script>
+        // Initialize refactored architecture
+        if (typeof EventBus !== 'undefined' && typeof StateManager !== 'undefined') {
+            console.log('[Refactor] Initializing new architecture...');
+            window.eventBus = new EventBus();
+            window.stateManager = new StateManager(window.eventBus);
+            window.clubDataService = new ClubDataService(window.eventBus);
+            
+            // Load club data
+            window.clubDataService.loadClubs().then(clubs => {
+                console.log(`[Refactor] Loaded ${clubs.length} clubs via ClubDataService`);
+                
+                // Run tests if available
+                if (typeof refactorTests !== 'undefined') {
+                    console.log('[Testing] Running refactor test suite...');
+                    refactorTests.runAll().then(success => {
+                        if (success) {
+                            console.log('✅ All refactor tests passed!');
+                        } else {
+                            console.warn('⚠️ Some refactor tests failed - check console for details');
+                        }
+                    });
+                }
+            }).catch(error => {
+                console.warn('[Refactor] Failed to load clubs via service, falling back to legacy data:', error);
+            });
+        }
+    </script>
 </body>
 </html>

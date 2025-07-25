@@ -1,0 +1,6414 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "created": "2025-07-26T05:42:16.423700",
+    "total_clubs": 104,
+    "sources": [
+      "index.html",
+      "clubs.html",
+      "diagnosis.js"
+    ],
+    "description": "Unified golf iron club database for Golf Iron Advisor application"
+  },
+  "clubs": [
+    {
+      "id": 1,
+      "source": "index.html",
+      "basic_info": {
+        "name": "PING G425",
+        "brand": "PING",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 120000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 6,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "beginner",
+          "amateur"
+        ],
+        "swing_speed": [
+          "slow",
+          "moderate"
+        ],
+        "priority": [
+          "forgiveness",
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' fill='%23f3f4f6'%3E%3Crect width='200' height='100'/%3E%3Ctext x='100' y='55' text-anchor='middle' fill='%236b7280'%3EPING G425%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example1",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example1/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423102",
+        "updated": "2025-07-26T05:42:16.423119"
+      }
+    },
+    {
+      "id": 2,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Titleist T100",
+        "brand": "Titleist",
+        "model": "",
+        "type": "players",
+        "category": "",
+        "difficulty": "上級者向け",
+        "target_golfer": "上級者",
+        "description": "多くのプロが愛用するタイトリストの代表作。精密性と美しさを兼ね備えたアイアン。"
+      },
+      "specifications": {
+        "price": 180000,
+        "weight": 270,
+        "material": "1025軟鉄",
+        "finish": "ツアークローム",
+        "construction": "",
+        "loft": {
+          "7": 34
+        },
+        "lie": {
+          "7": 62
+        },
+        "offset": 2.8,
+        "topline": "薄い",
+        "sole": "狭い",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 6,
+        "workability": 9,
+        "distance": 7,
+        "feel": 5,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate",
+          "advanced"
+        ],
+        "swing_speed": [
+          "moderate",
+          "fast"
+        ],
+        "priority": [
+          "control",
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [
+        "美しいデザイン",
+        "精密性",
+        "プロ使用モデル"
+      ],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' fill='%23f3f4f6'%3E%3Crect width='200' height='100'/%3E%3Ctext x='100' y='55' text-anchor='middle' fill='%236b7280'%3ETitleist T100%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example2",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example2/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423131",
+        "updated": "2025-07-26T05:42:16.423132"
+      }
+    },
+    {
+      "id": 3,
+      "source": "index.html",
+      "basic_info": {
+        "name": "TaylorMade P790",
+        "brand": "TaylorMade",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 150000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 8,
+        "workability": 7,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur",
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate",
+          "fast"
+        ],
+        "priority": [
+          "distance",
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' fill='%23f3f4f6'%3E%3Crect width='200' height='100'/%3E%3Ctext x='100' y='55' text-anchor='middle' fill='%236b7280'%3ETaylorMade P790%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example3",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example3/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423139",
+        "updated": "2025-07-26T05:42:16.423140"
+      }
+    },
+    {
+      "id": 4,
+      "source": "index.html",
+      "basic_info": {
+        "name": "PING inpres 100",
+        "brand": "PING",
+        "model": "",
+        "type": "super-game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 125000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 4,
+        "distance": 10,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur",
+          "beginner"
+        ],
+        "swing_speed": [
+          "slow"
+        ],
+        "priority": [
+          "forgiveness",
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EPING inpres 100%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example4",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example4/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423146",
+        "updated": "2025-07-26T05:42:16.423147"
+      }
+    },
+    {
+      "id": 5,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Bridgestone X 2021",
+        "brand": "Bridgestone",
+        "model": "",
+        "type": "players-distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 162000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 6,
+        "workability": 7,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate",
+          "advanced"
+        ],
+        "swing_speed": [
+          "fast",
+          "moderate"
+        ],
+        "priority": [
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EBridgestone X 2021%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example5",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example5/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423150",
+        "updated": "2025-07-26T05:42:16.423151"
+      }
+    },
+    {
+      "id": 6,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Mizuno Hot Metal 2023",
+        "brand": "Mizuno",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 99000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 10,
+        "workability": 5,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur",
+          "beginner"
+        ],
+        "swing_speed": [
+          "moderate",
+          "slow"
+        ],
+        "priority": [
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EMizuno Hot Metal 2023%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example6",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example6/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423155",
+        "updated": "2025-07-26T05:42:16.423156"
+      }
+    },
+    {
+      "id": 7,
+      "source": "index.html",
+      "basic_info": {
+        "name": "XXIO Epic 2023",
+        "brand": "XXIO",
+        "model": "",
+        "type": "tour",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 178000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 6,
+        "workability": 10,
+        "distance": 7,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EXXIO Epic 2023%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example7",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example7/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423158",
+        "updated": "2025-07-26T05:42:16.423159"
+      }
+    },
+    {
+      "id": 8,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Miura Big Bertha 500",
+        "brand": "Miura",
+        "model": "",
+        "type": "tour",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 231000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 6,
+        "workability": 10,
+        "distance": 7,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "control",
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EMiura Big Bertha 500%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example8",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example8/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423162",
+        "updated": "2025-07-26T05:42:16.423163"
+      }
+    },
+    {
+      "id": 9,
+      "source": "index.html",
+      "basic_info": {
+        "name": "PING D1 700",
+        "brand": "PING",
+        "model": "",
+        "type": "players",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 120000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 5,
+        "workability": 10,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate"
+        ],
+        "swing_speed": [
+          "fast",
+          "moderate"
+        ],
+        "priority": [
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EPING D1 700%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example9",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example9/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423166",
+        "updated": "2025-07-26T05:42:16.423167"
+      }
+    },
+    {
+      "id": 10,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Titleist T 2024",
+        "brand": "Titleist",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 81000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 7,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "beginner"
+        ],
+        "swing_speed": [
+          "slow"
+        ],
+        "priority": [
+          "forgiveness",
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ETitleist T 2024%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example10",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example10/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423169",
+        "updated": "2025-07-26T05:42:16.423170"
+      }
+    },
+    {
+      "id": 11,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Yamaha MB 2023",
+        "brand": "Yamaha",
+        "model": "",
+        "type": "players",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 133000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 5,
+        "workability": 8,
+        "distance": 7,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced"
+        ],
+        "swing_speed": [
+          "moderate",
+          "fast"
+        ],
+        "priority": [
+          "accuracy",
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EYamaha MB 2023%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example11",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example11/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423174",
+        "updated": "2025-07-26T05:42:16.423175"
+      }
+    },
+    {
+      "id": 12,
+      "source": "index.html",
+      "basic_info": {
+        "name": "TaylorMade Apex 2021",
+        "brand": "TaylorMade",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 120000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 8,
+        "workability": 7,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "beginner"
+        ],
+        "swing_speed": [
+          "slow"
+        ],
+        "priority": [
+          "distance",
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ETaylorMade Apex 2021%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example12",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example12/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423177",
+        "updated": "2025-07-26T05:42:16.423178"
+      }
+    },
+    {
+      "id": 13,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Yamaha CB 2022",
+        "brand": "Yamaha",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 89000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 7,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "beginner",
+          "amateur"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EYamaha CB 2022%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example13",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example13/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423181",
+        "updated": "2025-07-26T05:42:16.423182"
+      }
+    },
+    {
+      "id": 14,
+      "source": "index.html",
+      "basic_info": {
+        "name": "DUNLOP JPX 400",
+        "brand": "DUNLOP",
+        "model": "",
+        "type": "players",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 130000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 5,
+        "workability": 9,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced",
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "accuracy",
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EDUNLOP JPX 400%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example14",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example14/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423184",
+        "updated": "2025-07-26T05:42:16.423185"
+      }
+    },
+    {
+      "id": 15,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Wilson G 2023",
+        "brand": "Wilson",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 89000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 10,
+        "workability": 7,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "beginner",
+          "amateur"
+        ],
+        "swing_speed": [
+          "slow"
+        ],
+        "priority": [
+          "distance",
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EWilson G 2023%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example15",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example15/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423188",
+        "updated": "2025-07-26T05:42:16.423188"
+      }
+    },
+    {
+      "id": 16,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Yamaha Stealth 500",
+        "brand": "Yamaha",
+        "model": "",
+        "type": "players-distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 182000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 8,
+        "workability": 9,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate",
+          "fast"
+        ],
+        "priority": [
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EYamaha Stealth 500%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example16",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example16/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423191",
+        "updated": "2025-07-26T05:42:16.423192"
+      }
+    },
+    {
+      "id": 17,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Miura Forged 2024",
+        "brand": "Miura",
+        "model": "",
+        "type": "players",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 191000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 5,
+        "workability": 10,
+        "distance": 6,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate",
+          "advanced"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "accuracy",
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EMiura Forged 2024%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example17",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example17/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423194",
+        "updated": "2025-07-26T05:42:16.423195"
+      }
+    },
+    {
+      "id": 18,
+      "source": "index.html",
+      "basic_info": {
+        "name": "NIKE ZX 2020",
+        "brand": "NIKE",
+        "model": "",
+        "type": "super-game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 87000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 6,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur",
+          "beginner"
+        ],
+        "swing_speed": [
+          "slow"
+        ],
+        "priority": [
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ENIKE ZX 2020%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example18",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example18/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423199",
+        "updated": "2025-07-26T05:42:16.423200"
+      }
+    },
+    {
+      "id": 19,
+      "source": "index.html",
+      "basic_info": {
+        "name": "PRGR Cavity 2022",
+        "brand": "PRGR",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 124000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 10,
+        "workability": 7,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur",
+          "beginner"
+        ],
+        "swing_speed": [
+          "slow"
+        ],
+        "priority": [
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EPRGR Cavity 2022%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example19",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example19/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423202",
+        "updated": "2025-07-26T05:42:16.423203"
+      }
+    },
+    {
+      "id": 20,
+      "source": "index.html",
+      "basic_info": {
+        "name": "TaylorMade CB 2022",
+        "brand": "TaylorMade",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 179000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 7,
+        "workability": 7,
+        "distance": 10,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ETaylorMade CB 2022%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example20",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example20/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423206",
+        "updated": "2025-07-26T05:42:16.423206"
+      }
+    },
+    {
+      "id": 21,
+      "source": "index.html",
+      "basic_info": {
+        "name": "DUNLOP Speed 2023",
+        "brand": "DUNLOP",
+        "model": "",
+        "type": "players-distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 162000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 8,
+        "workability": 7,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced",
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "control",
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EDUNLOP Speed 2023%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example21",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example21/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423209",
+        "updated": "2025-07-26T05:42:16.423210"
+      }
+    },
+    {
+      "id": 22,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Maruman King 2024",
+        "brand": "Maruman",
+        "model": "",
+        "type": "super-game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 122000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 10,
+        "workability": 4,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur",
+          "beginner"
+        ],
+        "swing_speed": [
+          "slow"
+        ],
+        "priority": [
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EMaruman King 2024%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example22",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example22/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423212",
+        "updated": "2025-07-26T05:42:16.423213"
+      }
+    },
+    {
+      "id": 23,
+      "source": "index.html",
+      "basic_info": {
+        "name": "DUNLOP Forged 2020",
+        "brand": "DUNLOP",
+        "model": "",
+        "type": "super-game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 111000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 5,
+        "distance": 10,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "beginner",
+          "amateur"
+        ],
+        "swing_speed": [
+          "slow"
+        ],
+        "priority": [
+          "distance",
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EDUNLOP Forged 2020%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example23",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example23/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423216",
+        "updated": "2025-07-26T05:42:16.423217"
+      }
+    },
+    {
+      "id": 24,
+      "source": "index.html",
+      "basic_info": {
+        "name": "XXIO JPX 500",
+        "brand": "XXIO",
+        "model": "",
+        "type": "super-game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 105000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 10,
+        "workability": 5,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "beginner",
+          "amateur"
+        ],
+        "swing_speed": [
+          "slow",
+          "moderate"
+        ],
+        "priority": [
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EXXIO JPX 500%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example24",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example24/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423220",
+        "updated": "2025-07-26T05:42:16.423221"
+      }
+    },
+    {
+      "id": 25,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Callaway Apex 600",
+        "brand": "Callaway",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 102000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 8,
+        "workability": 7,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate",
+          "fast"
+        ],
+        "priority": [
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ECallaway Apex 600%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example25",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example25/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423226",
+        "updated": "2025-07-26T05:42:16.423227"
+      }
+    },
+    {
+      "id": 26,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Yamaha Forged 600",
+        "brand": "Yamaha",
+        "model": "",
+        "type": "players",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 155000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 5,
+        "workability": 9,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced",
+          "intermediate"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EYamaha Forged 600%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example26",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example26/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423229",
+        "updated": "2025-07-26T05:42:16.423388"
+      }
+    },
+    {
+      "id": 27,
+      "source": "index.html",
+      "basic_info": {
+        "name": "FOURTEEN SIM 600",
+        "brand": "FOURTEEN",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 86000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 8,
+        "workability": 6,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur"
+        ],
+        "swing_speed": [
+          "slow"
+        ],
+        "priority": [
+          "distance",
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EFOURTEEN SIM 600%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example27",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example27/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423391",
+        "updated": "2025-07-26T05:42:16.423392"
+      }
+    },
+    {
+      "id": 28,
+      "source": "index.html",
+      "basic_info": {
+        "name": "DUNLOP G 200",
+        "brand": "DUNLOP",
+        "model": "",
+        "type": "players-distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 135000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 7,
+        "workability": 7,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EDUNLOP G 200%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example28",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example28/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423395",
+        "updated": "2025-07-26T05:42:16.423397"
+      }
+    },
+    {
+      "id": 29,
+      "source": "index.html",
+      "basic_info": {
+        "name": "XXIO Max 2022",
+        "brand": "XXIO",
+        "model": "",
+        "type": "players",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 181000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 5,
+        "workability": 8,
+        "distance": 7,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced",
+          "intermediate"
+        ],
+        "swing_speed": [
+          "fast",
+          "moderate"
+        ],
+        "priority": [
+          "accuracy",
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EXXIO Max 2022%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example29",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example29/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423399",
+        "updated": "2025-07-26T05:42:16.423400"
+      }
+    },
+    {
+      "id": 30,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Bridgestone X 900",
+        "brand": "Bridgestone",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 128000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 7,
+        "workability": 7,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur",
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate",
+          "fast"
+        ],
+        "priority": [
+          "distance",
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EBridgestone X 900%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example30",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example30/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423403",
+        "updated": "2025-07-26T05:42:16.423404"
+      }
+    },
+    {
+      "id": 31,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Miura Epic 2022",
+        "brand": "Miura",
+        "model": "",
+        "type": "players",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 187000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 5,
+        "workability": 10,
+        "distance": 6,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced",
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate",
+          "fast"
+        ],
+        "priority": [
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EMiura Epic 2022%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example31",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example31/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423407",
+        "updated": "2025-07-26T05:42:16.423407"
+      }
+    },
+    {
+      "id": 32,
+      "source": "index.html",
+      "basic_info": {
+        "name": "PING MP 400",
+        "brand": "PING",
+        "model": "",
+        "type": "players-distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 172000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 7,
+        "workability": 9,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate",
+          "advanced"
+        ],
+        "swing_speed": [
+          "fast",
+          "moderate"
+        ],
+        "priority": [
+          "control",
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EPING MP 400%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example32",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example32/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423410",
+        "updated": "2025-07-26T05:42:16.423411"
+      }
+    },
+    {
+      "id": 33,
+      "source": "index.html",
+      "basic_info": {
+        "name": "PRGR Rogue 900",
+        "brand": "PRGR",
+        "model": "",
+        "type": "players",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 199000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 7,
+        "workability": 8,
+        "distance": 6,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate",
+          "fast"
+        ],
+        "priority": [
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EPRGR Rogue 900%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example33",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example33/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423414",
+        "updated": "2025-07-26T05:42:16.423414"
+      }
+    },
+    {
+      "id": 34,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Callaway Cavity 500",
+        "brand": "Callaway",
+        "model": "",
+        "type": "super-game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 115000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 6,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "beginner"
+        ],
+        "swing_speed": [
+          "slow"
+        ],
+        "priority": [
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ECallaway Cavity 500%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example34",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example34/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423417",
+        "updated": "2025-07-26T05:42:16.423417"
+      }
+    },
+    {
+      "id": 35,
+      "source": "index.html",
+      "basic_info": {
+        "name": "PRGR Z 2023",
+        "brand": "PRGR",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 135000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 8,
+        "workability": 7,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "beginner"
+        ],
+        "swing_speed": [
+          "slow",
+          "moderate"
+        ],
+        "priority": [
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EPRGR Z 2023%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example35",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example35/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423420",
+        "updated": "2025-07-26T05:42:16.423420"
+      }
+    },
+    {
+      "id": 36,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Titleist ZX 2023",
+        "brand": "Titleist",
+        "model": "",
+        "type": "super-game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 96000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 10,
+        "workability": 5,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ETitleist ZX 2023%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example36",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example36/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423423",
+        "updated": "2025-07-26T05:42:16.423423"
+      }
+    },
+    {
+      "id": 37,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Titleist inpres 2023",
+        "brand": "Titleist",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 130000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 7,
+        "workability": 6,
+        "distance": 10,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur"
+        ],
+        "swing_speed": [
+          "fast",
+          "moderate"
+        ],
+        "priority": [
+          "distance",
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ETitleist inpres 2023%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example37",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example37/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423426",
+        "updated": "2025-07-26T05:42:16.423426"
+      }
+    },
+    {
+      "id": 38,
+      "source": "index.html",
+      "basic_info": {
+        "name": "ONOFF Silver 2023",
+        "brand": "ONOFF",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 113000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 7,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "beginner"
+        ],
+        "swing_speed": [
+          "moderate",
+          "slow"
+        ],
+        "priority": [
+          "distance",
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EONOFF Silver 2023%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example38",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example38/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423429",
+        "updated": "2025-07-26T05:42:16.423430"
+      }
+    },
+    {
+      "id": 39,
+      "source": "index.html",
+      "basic_info": {
+        "name": "PRGR ZX 2020",
+        "brand": "PRGR",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 141000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 10,
+        "workability": 5,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur",
+          "beginner"
+        ],
+        "swing_speed": [
+          "moderate",
+          "slow"
+        ],
+        "priority": [
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EPRGR ZX 2020%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example39",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example39/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423432",
+        "updated": "2025-07-26T05:42:16.423433"
+      }
+    },
+    {
+      "id": 40,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Mizuno Speed 2024",
+        "brand": "Mizuno",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 126000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 8,
+        "workability": 6,
+        "distance": 10,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur"
+        ],
+        "swing_speed": [
+          "moderate",
+          "fast"
+        ],
+        "priority": [
+          "accuracy",
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EMizuno Speed 2024%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example40",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example40/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423435",
+        "updated": "2025-07-26T05:42:16.423436"
+      }
+    },
+    {
+      "id": 41,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Callaway Stealth 2023",
+        "brand": "Callaway",
+        "model": "",
+        "type": "players-distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 145000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 7,
+        "workability": 8,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ECallaway Stealth 2023%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example41",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example41/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423438",
+        "updated": "2025-07-26T05:42:16.423439"
+      }
+    },
+    {
+      "id": 42,
+      "source": "index.html",
+      "basic_info": {
+        "name": "HONMA Blade 900",
+        "brand": "HONMA",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 162000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 8,
+        "workability": 7,
+        "distance": 10,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate",
+          "amateur"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EHONMA Blade 900%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example42",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example42/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423442",
+        "updated": "2025-07-26T05:42:16.423443"
+      }
+    },
+    {
+      "id": 43,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Miura M 900",
+        "brand": "Miura",
+        "model": "",
+        "type": "tour",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 168000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 5,
+        "workability": 9,
+        "distance": 7,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "accuracy",
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EMiura M 900%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example43",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example43/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423445",
+        "updated": "2025-07-26T05:42:16.423446"
+      }
+    },
+    {
+      "id": 44,
+      "source": "index.html",
+      "basic_info": {
+        "name": "HONMA Forged 900",
+        "brand": "HONMA",
+        "model": "",
+        "type": "tour",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 173000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 6,
+        "workability": 9,
+        "distance": 7,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "accuracy",
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EHONMA Forged 900%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example44",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example44/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423448",
+        "updated": "2025-07-26T05:42:16.423449"
+      }
+    },
+    {
+      "id": 45,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Wilson Staff 100",
+        "brand": "Wilson",
+        "model": "",
+        "type": "tour",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 169000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 5,
+        "workability": 9,
+        "distance": 7,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "control",
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EWilson Staff 100%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example45",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example45/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423453",
+        "updated": "2025-07-26T05:42:16.423453"
+      }
+    },
+    {
+      "id": 46,
+      "source": "index.html",
+      "basic_info": {
+        "name": "HONMA Blade 2021",
+        "brand": "HONMA",
+        "model": "",
+        "type": "players-distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 151000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 7,
+        "workability": 7,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate",
+          "advanced"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "distance",
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EHONMA Blade 2021%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example46",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example46/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423456",
+        "updated": "2025-07-26T05:42:16.423456"
+      }
+    },
+    {
+      "id": 47,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Srixon Z 2022",
+        "brand": "Srixon",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 111000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 7,
+        "workability": 7,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur",
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate",
+          "fast"
+        ],
+        "priority": [
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ESrixon Z 2022%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example47",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example47/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423459",
+        "updated": "2025-07-26T05:42:16.423460"
+      }
+    },
+    {
+      "id": 48,
+      "source": "index.html",
+      "basic_info": {
+        "name": "PRGR Black 2020",
+        "brand": "PRGR",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 84000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 10,
+        "workability": 6,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "beginner",
+          "amateur"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "distance",
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EPRGR Black 2020%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example48",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example48/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423462",
+        "updated": "2025-07-26T05:42:16.423463"
+      }
+    },
+    {
+      "id": 49,
+      "source": "index.html",
+      "basic_info": {
+        "name": "HONMA MP 2023",
+        "brand": "HONMA",
+        "model": "",
+        "type": "super-game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 82000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 4,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur",
+          "beginner"
+        ],
+        "swing_speed": [
+          "slow"
+        ],
+        "priority": [
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EHONMA MP 2023%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example49",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example49/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423465",
+        "updated": "2025-07-26T05:42:16.423466"
+      }
+    },
+    {
+      "id": 50,
+      "source": "index.html",
+      "basic_info": {
+        "name": "PRGR Forged 2024",
+        "brand": "PRGR",
+        "model": "",
+        "type": "players",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 122000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 7,
+        "workability": 8,
+        "distance": 7,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced",
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EPRGR Forged 2024%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example50",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example50/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423468",
+        "updated": "2025-07-26T05:42:16.423469"
+      }
+    },
+    {
+      "id": 51,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Wilson M 2023",
+        "brand": "Wilson",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 167000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 7,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur",
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EWilson M 2023%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example51",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example51/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423471",
+        "updated": "2025-07-26T05:42:16.423472"
+      }
+    },
+    {
+      "id": 52,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Miura JPX 200",
+        "brand": "Miura",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 167000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 6,
+        "distance": 10,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate",
+          "fast"
+        ],
+        "priority": [
+          "accuracy",
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EMiura JPX 200%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example52",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example52/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423474",
+        "updated": "2025-07-26T05:42:16.423475"
+      }
+    },
+    {
+      "id": 53,
+      "source": "index.html",
+      "basic_info": {
+        "name": "DUNLOP Max 2023",
+        "brand": "DUNLOP",
+        "model": "",
+        "type": "super-game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 111000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 4,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur",
+          "beginner"
+        ],
+        "swing_speed": [
+          "slow"
+        ],
+        "priority": [
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EDUNLOP Max 2023%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example53",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example53/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423478",
+        "updated": "2025-07-26T05:42:16.423479"
+      }
+    },
+    {
+      "id": 54,
+      "source": "index.html",
+      "basic_info": {
+        "name": "FOURTEEN Blade 600",
+        "brand": "FOURTEEN",
+        "model": "",
+        "type": "tour",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 214000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 5,
+        "workability": 9,
+        "distance": 7,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EFOURTEEN Blade 600%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example54",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example54/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423482",
+        "updated": "2025-07-26T05:42:16.423483"
+      }
+    },
+    {
+      "id": 55,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Yamaha X 600",
+        "brand": "Yamaha",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 92000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 5,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "beginner",
+          "amateur"
+        ],
+        "swing_speed": [
+          "moderate",
+          "slow"
+        ],
+        "priority": [
+          "forgiveness",
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EYamaha X 600%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example55",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example55/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423486",
+        "updated": "2025-07-26T05:42:16.423486"
+      }
+    },
+    {
+      "id": 56,
+      "source": "index.html",
+      "basic_info": {
+        "name": "ONOFF SIM 900",
+        "brand": "ONOFF",
+        "model": "",
+        "type": "tour",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 221000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 4,
+        "workability": 9,
+        "distance": 7,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "accuracy",
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EONOFF SIM 900%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example56",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example56/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423490",
+        "updated": "2025-07-26T05:42:16.423490"
+      }
+    },
+    {
+      "id": 57,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Wilson RAD 600",
+        "brand": "Wilson",
+        "model": "",
+        "type": "players",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 136000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 5,
+        "workability": 9,
+        "distance": 6,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced",
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate",
+          "fast"
+        ],
+        "priority": [
+          "accuracy",
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EWilson RAD 600%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example57",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example57/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423493",
+        "updated": "2025-07-26T05:42:16.423493"
+      }
+    },
+    {
+      "id": 58,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Srixon RAD 2020",
+        "brand": "Srixon",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 90000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 8,
+        "workability": 7,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "beginner",
+          "amateur"
+        ],
+        "swing_speed": [
+          "slow"
+        ],
+        "priority": [
+          "distance",
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ESrixon RAD 2020%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example58",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example58/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423496",
+        "updated": "2025-07-26T05:42:16.423497"
+      }
+    },
+    {
+      "id": 59,
+      "source": "index.html",
+      "basic_info": {
+        "name": "TaylorMade ZX 100",
+        "brand": "TaylorMade",
+        "model": "",
+        "type": "players-distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 140000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 7,
+        "workability": 7,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced",
+          "intermediate"
+        ],
+        "swing_speed": [
+          "fast",
+          "moderate"
+        ],
+        "priority": [
+          "control",
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ETaylorMade ZX 100%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example59",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example59/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423499",
+        "updated": "2025-07-26T05:42:16.423500"
+      }
+    },
+    {
+      "id": 60,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Maruman Z 2020",
+        "brand": "Maruman",
+        "model": "",
+        "type": "tour",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 167000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 6,
+        "workability": 9,
+        "distance": 7,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EMaruman Z 2020%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example60",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example60/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423502",
+        "updated": "2025-07-26T05:42:16.423503"
+      }
+    },
+    {
+      "id": 61,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Maruman X 2024",
+        "brand": "Maruman",
+        "model": "",
+        "type": "tour",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 160000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 5,
+        "workability": 10,
+        "distance": 6,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "control",
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EMaruman X 2024%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example61",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example61/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423506",
+        "updated": "2025-07-26T05:42:16.423507"
+      }
+    },
+    {
+      "id": 62,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Callaway Speed 500",
+        "brand": "Callaway",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 104000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 8,
+        "workability": 7,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ECallaway Speed 500%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example62",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example62/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423509",
+        "updated": "2025-07-26T05:42:16.423510"
+      }
+    },
+    {
+      "id": 63,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Srixon SIM 200",
+        "brand": "Srixon",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 154000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 7,
+        "workability": 6,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur"
+        ],
+        "swing_speed": [
+          "fast",
+          "moderate"
+        ],
+        "priority": [
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ESrixon SIM 200%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example63",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example63/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423512",
+        "updated": "2025-07-26T05:42:16.423513"
+      }
+    },
+    {
+      "id": 64,
+      "source": "index.html",
+      "basic_info": {
+        "name": "PRGR Big Bertha 200",
+        "brand": "PRGR",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 167000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 8,
+        "workability": 6,
+        "distance": 10,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate",
+          "fast"
+        ],
+        "priority": [
+          "distance",
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EPRGR Big Bertha 200%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example64",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example64/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423516",
+        "updated": "2025-07-26T05:42:16.423517"
+      }
+    },
+    {
+      "id": 65,
+      "source": "index.html",
+      "basic_info": {
+        "name": "NIKE Blade 300",
+        "brand": "NIKE",
+        "model": "",
+        "type": "tour",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 211000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 5,
+        "workability": 9,
+        "distance": 7,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "accuracy",
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ENIKE Blade 300%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example65",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example65/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423519",
+        "updated": "2025-07-26T05:42:16.423520"
+      }
+    },
+    {
+      "id": 66,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Maruman VG 100",
+        "brand": "Maruman",
+        "model": "",
+        "type": "super-game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 113000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 5,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur",
+          "beginner"
+        ],
+        "swing_speed": [
+          "slow",
+          "moderate"
+        ],
+        "priority": [
+          "distance",
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EMaruman VG 100%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example66",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example66/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423523",
+        "updated": "2025-07-26T05:42:16.423523"
+      }
+    },
+    {
+      "id": 67,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Cobra Apex 2022",
+        "brand": "Cobra",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 108000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 6,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate",
+          "amateur"
+        ],
+        "swing_speed": [
+          "moderate",
+          "fast"
+        ],
+        "priority": [
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ECobra Apex 2022%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example67",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example67/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423527",
+        "updated": "2025-07-26T05:42:16.423528"
+      }
+    },
+    {
+      "id": 68,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Miura MB 2024",
+        "brand": "Miura",
+        "model": "",
+        "type": "super-game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 128000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 10,
+        "workability": 4,
+        "distance": 10,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur",
+          "beginner"
+        ],
+        "swing_speed": [
+          "moderate",
+          "slow"
+        ],
+        "priority": [
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EMiura MB 2024%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example68",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example68/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423530",
+        "updated": "2025-07-26T05:42:16.423531"
+      }
+    },
+    {
+      "id": 69,
+      "source": "index.html",
+      "basic_info": {
+        "name": "XXIO Speed 2020",
+        "brand": "XXIO",
+        "model": "",
+        "type": "players-distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 132000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 6,
+        "workability": 9,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate",
+          "advanced"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "control",
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EXXIO Speed 2020%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example69",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example69/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423533",
+        "updated": "2025-07-26T05:42:16.423534"
+      }
+    },
+    {
+      "id": 70,
+      "source": "index.html",
+      "basic_info": {
+        "name": "FOURTEEN i 900",
+        "brand": "FOURTEEN",
+        "model": "",
+        "type": "tour",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 189000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 6,
+        "workability": 10,
+        "distance": 7,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EFOURTEEN i 900%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example70",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example70/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423536",
+        "updated": "2025-07-26T05:42:16.423537"
+      }
+    },
+    {
+      "id": 71,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Callaway CB 2024",
+        "brand": "Callaway",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 132000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 8,
+        "workability": 7,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "distance",
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ECallaway CB 2024%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example71",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example71/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423539",
+        "updated": "2025-07-26T05:42:16.423540"
+      }
+    },
+    {
+      "id": 72,
+      "source": "index.html",
+      "basic_info": {
+        "name": "DUNLOP MB 500",
+        "brand": "DUNLOP",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 123000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 10,
+        "workability": 6,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "beginner"
+        ],
+        "swing_speed": [
+          "moderate",
+          "slow"
+        ],
+        "priority": [
+          "distance",
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EDUNLOP MB 500%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example72",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example72/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423542",
+        "updated": "2025-07-26T05:42:16.423543"
+      }
+    },
+    {
+      "id": 73,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Wilson AP 500",
+        "brand": "Wilson",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 138000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 5,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "beginner",
+          "amateur"
+        ],
+        "swing_speed": [
+          "moderate",
+          "slow"
+        ],
+        "priority": [
+          "forgiveness",
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EWilson AP 500%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example73",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example73/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423545",
+        "updated": "2025-07-26T05:42:16.423546"
+      }
+    },
+    {
+      "id": 74,
+      "source": "index.html",
+      "basic_info": {
+        "name": "PRGR ZX 2020",
+        "brand": "PRGR",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 174000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 7,
+        "workability": 7,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate",
+          "amateur"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "accuracy",
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EPRGR ZX 2020%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example74",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example74/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423548",
+        "updated": "2025-07-26T05:42:16.423549"
+      }
+    },
+    {
+      "id": 75,
+      "source": "index.html",
+      "basic_info": {
+        "name": "HONMA Pro 2022",
+        "brand": "HONMA",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 113000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 10,
+        "workability": 7,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur"
+        ],
+        "swing_speed": [
+          "slow"
+        ],
+        "priority": [
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EHONMA Pro 2022%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example75",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example75/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423552",
+        "updated": "2025-07-26T05:42:16.423553"
+      }
+    },
+    {
+      "id": 76,
+      "source": "index.html",
+      "basic_info": {
+        "name": "DUNLOP Epic 400",
+        "brand": "DUNLOP",
+        "model": "",
+        "type": "players",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 170000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 6,
+        "workability": 8,
+        "distance": 7,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EDUNLOP Epic 400%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example76",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example76/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423555",
+        "updated": "2025-07-26T05:42:16.423556"
+      }
+    },
+    {
+      "id": 77,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Callaway Pro 2020",
+        "brand": "Callaway",
+        "model": "",
+        "type": "super-game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 95000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 10,
+        "workability": 5,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "beginner",
+          "amateur"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "forgiveness",
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ECallaway Pro 2020%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example77",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example77/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423558",
+        "updated": "2025-07-26T05:42:16.423559"
+      }
+    },
+    {
+      "id": 78,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Wilson Rouge 700",
+        "brand": "Wilson",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 87000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 10,
+        "workability": 6,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur"
+        ],
+        "swing_speed": [
+          "slow"
+        ],
+        "priority": [
+          "forgiveness",
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EWilson Rouge 700%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example78",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example78/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423562",
+        "updated": "2025-07-26T05:42:16.423563"
+      }
+    },
+    {
+      "id": 79,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Bridgestone Big Bertha 2021",
+        "brand": "Bridgestone",
+        "model": "",
+        "type": "players",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 131000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 7,
+        "workability": 10,
+        "distance": 7,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced"
+        ],
+        "swing_speed": [
+          "fast",
+          "moderate"
+        ],
+        "priority": [
+          "accuracy",
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EBridgestone Big Bertha 2021%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example79",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example79/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423565",
+        "updated": "2025-07-26T05:42:16.423566"
+      }
+    },
+    {
+      "id": 80,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Titleist Rogue 100",
+        "brand": "Titleist",
+        "model": "",
+        "type": "tour",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 168000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 6,
+        "workability": 10,
+        "distance": 7,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ETitleist Rogue 100%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example80",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example80/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423568",
+        "updated": "2025-07-26T05:42:16.423569"
+      }
+    },
+    {
+      "id": 81,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Yamaha AP 2024",
+        "brand": "Yamaha",
+        "model": "",
+        "type": "super-game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 125000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 4,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur"
+        ],
+        "swing_speed": [
+          "slow",
+          "moderate"
+        ],
+        "priority": [
+          "distance",
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EYamaha AP 2024%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example81",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example81/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423571",
+        "updated": "2025-07-26T05:42:16.423572"
+      }
+    },
+    {
+      "id": 82,
+      "source": "index.html",
+      "basic_info": {
+        "name": "DUNLOP G 700",
+        "brand": "DUNLOP",
+        "model": "",
+        "type": "super-game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 100000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 4,
+        "distance": 10,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur",
+          "beginner"
+        ],
+        "swing_speed": [
+          "moderate",
+          "slow"
+        ],
+        "priority": [
+          "forgiveness",
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EDUNLOP G 700%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example82",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example82/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423575",
+        "updated": "2025-07-26T05:42:16.423576"
+      }
+    },
+    {
+      "id": 83,
+      "source": "index.html",
+      "basic_info": {
+        "name": "HONMA X 2022",
+        "brand": "HONMA",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 109000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 10,
+        "workability": 7,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur",
+          "beginner"
+        ],
+        "swing_speed": [
+          "slow",
+          "moderate"
+        ],
+        "priority": [
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EHONMA X 2022%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example83",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example83/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423578",
+        "updated": "2025-07-26T05:42:16.423579"
+      }
+    },
+    {
+      "id": 84,
+      "source": "index.html",
+      "basic_info": {
+        "name": "NIKE inpres 500",
+        "brand": "NIKE",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 116000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 7,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur",
+          "beginner"
+        ],
+        "swing_speed": [
+          "slow"
+        ],
+        "priority": [
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ENIKE inpres 500%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example84",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example84/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423581",
+        "updated": "2025-07-26T05:42:16.423582"
+      }
+    },
+    {
+      "id": 85,
+      "source": "index.html",
+      "basic_info": {
+        "name": "NIKE P 2020",
+        "brand": "NIKE",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 87000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 8,
+        "workability": 5,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur",
+          "beginner"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ENIKE P 2020%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example85",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example85/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423584",
+        "updated": "2025-07-26T05:42:16.423585"
+      }
+    },
+    {
+      "id": 86,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Mizuno egg 500",
+        "brand": "Mizuno",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 149000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 7,
+        "workability": 7,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate",
+          "amateur"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EMizuno egg 500%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example86",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example86/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423587",
+        "updated": "2025-07-26T05:42:16.423588"
+      }
+    },
+    {
+      "id": 87,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Cleveland ZX 900",
+        "brand": "Cleveland",
+        "model": "",
+        "type": "players",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 181000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 6,
+        "workability": 8,
+        "distance": 6,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced"
+        ],
+        "swing_speed": [
+          "moderate",
+          "fast"
+        ],
+        "priority": [
+          "accuracy",
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ECleveland ZX 900%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example87",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example87/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423590",
+        "updated": "2025-07-26T05:42:16.423591"
+      }
+    },
+    {
+      "id": 88,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Cobra White 800",
+        "brand": "Cobra",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 147000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 7,
+        "workability": 6,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ECobra White 800%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example88",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example88/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423593",
+        "updated": "2025-07-26T05:42:16.423594"
+      }
+    },
+    {
+      "id": 89,
+      "source": "index.html",
+      "basic_info": {
+        "name": "NIKE egg 500",
+        "brand": "NIKE",
+        "model": "",
+        "type": "game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 127000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 6,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "beginner",
+          "amateur"
+        ],
+        "swing_speed": [
+          "slow"
+        ],
+        "priority": [
+          "distance",
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ENIKE egg 500%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example89",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example89/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423597",
+        "updated": "2025-07-26T05:42:16.423597"
+      }
+    },
+    {
+      "id": 90,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Srixon D1 2024",
+        "brand": "Srixon",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 129000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 6,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ESrixon D1 2024%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example90",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example90/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423600",
+        "updated": "2025-07-26T05:42:16.423600"
+      }
+    },
+    {
+      "id": 91,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Maruman JPX 100",
+        "brand": "Maruman",
+        "model": "",
+        "type": "super-game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 119000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 4,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "beginner",
+          "amateur"
+        ],
+        "swing_speed": [
+          "slow"
+        ],
+        "priority": [
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EMaruman JPX 100%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example91",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example91/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423603",
+        "updated": "2025-07-26T05:42:16.423603"
+      }
+    },
+    {
+      "id": 92,
+      "source": "index.html",
+      "basic_info": {
+        "name": "HONMA D1 400",
+        "brand": "HONMA",
+        "model": "",
+        "type": "players-distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 181000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 6,
+        "workability": 8,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EHONMA D1 400%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example92",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example92/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423606",
+        "updated": "2025-07-26T05:42:16.423606"
+      }
+    },
+    {
+      "id": 93,
+      "source": "index.html",
+      "basic_info": {
+        "name": "FOURTEEN i 2024",
+        "brand": "FOURTEEN",
+        "model": "",
+        "type": "super-game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 123000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 10,
+        "workability": 6,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur"
+        ],
+        "swing_speed": [
+          "slow",
+          "moderate"
+        ],
+        "priority": [
+          "forgiveness",
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EFOURTEEN i 2024%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example93",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example93/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423609",
+        "updated": "2025-07-26T05:42:16.423609"
+      }
+    },
+    {
+      "id": 94,
+      "source": "index.html",
+      "basic_info": {
+        "name": "XXIO ZX 2022",
+        "brand": "XXIO",
+        "model": "",
+        "type": "super-game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 78000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 6,
+        "distance": 10,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "beginner",
+          "amateur"
+        ],
+        "swing_speed": [
+          "moderate",
+          "slow"
+        ],
+        "priority": [
+          "distance",
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EXXIO ZX 2022%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example94",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example94/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423612",
+        "updated": "2025-07-26T05:42:16.423613"
+      }
+    },
+    {
+      "id": 95,
+      "source": "index.html",
+      "basic_info": {
+        "name": "ONOFF Epic 2023",
+        "brand": "ONOFF",
+        "model": "",
+        "type": "players-distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 157000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 6,
+        "workability": 7,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "control"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EONOFF Epic 2023%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example95",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example95/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423615",
+        "updated": "2025-07-26T05:42:16.423616"
+      }
+    },
+    {
+      "id": 96,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Cleveland Forged 2024",
+        "brand": "Cleveland",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 155000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 7,
+        "workability": 7,
+        "distance": 10,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur",
+          "intermediate"
+        ],
+        "swing_speed": [
+          "moderate"
+        ],
+        "priority": [
+          "accuracy",
+          "distance"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ECleveland Forged 2024%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example96",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example96/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423619",
+        "updated": "2025-07-26T05:42:16.423620"
+      }
+    },
+    {
+      "id": 97,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Cobra JPX 2023",
+        "brand": "Cobra",
+        "model": "",
+        "type": "players",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 177000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 5,
+        "workability": 8,
+        "distance": 6,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced",
+          "intermediate"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "control",
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ECobra JPX 2023%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example97",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example97/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423622",
+        "updated": "2025-07-26T05:42:16.423623"
+      }
+    },
+    {
+      "id": 98,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Cleveland ZX 2021",
+        "brand": "Cleveland",
+        "model": "",
+        "type": "super-game-improvement",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 70000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 9,
+        "workability": 5,
+        "distance": 8,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "amateur"
+        ],
+        "swing_speed": [
+          "slow"
+        ],
+        "priority": [
+          "distance",
+          "forgiveness"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ECleveland ZX 2021%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example98",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example98/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423626",
+        "updated": "2025-07-26T05:42:16.423626"
+      }
+    },
+    {
+      "id": 99,
+      "source": "index.html",
+      "basic_info": {
+        "name": "Srixon Forged 2024",
+        "brand": "Srixon",
+        "model": "",
+        "type": "distance",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 147000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 8,
+        "workability": 6,
+        "distance": 9,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "intermediate",
+          "amateur"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3ESrixon Forged 2024%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example99",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example99/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423629",
+        "updated": "2025-07-26T05:42:16.423629"
+      }
+    },
+    {
+      "id": 100,
+      "source": "index.html",
+      "basic_info": {
+        "name": "HONMA Blade 400",
+        "brand": "HONMA",
+        "model": "",
+        "type": "tour",
+        "category": "",
+        "difficulty": "",
+        "target_golfer": "",
+        "description": ""
+      },
+      "specifications": {
+        "price": 221000,
+        "weight": 0,
+        "material": "",
+        "finish": "",
+        "construction": "",
+        "loft": {},
+        "lie": {},
+        "offset": 0,
+        "topline": "",
+        "sole": "",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 4,
+        "workability": 10,
+        "distance": 6,
+        "feel": 0,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [
+          "advanced"
+        ],
+        "swing_speed": [
+          "fast"
+        ],
+        "priority": [
+          "accuracy"
+        ],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [],
+      "shaft_options": [],
+      "links": {
+        "image": "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 100\" fill=\"%23f3f4f6\"%3E%3Crect width=\"200\" height=\"100\"/%3E%3Ctext x=\"100\" y=\"55\" text-anchor=\"middle\" fill=\"%236b7280\"%3EHONMA Blade 400%3C/text%3E%3C/svg%3E",
+        "affiliate_amazon": "https://amzn.to/example100",
+        "affiliate_rakuten": "https://item.rakuten.co.jp/example100/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423632",
+        "updated": "2025-07-26T05:42:16.423632"
+      }
+    },
+    {
+      "id": 101,
+      "source": "clubs.html",
+      "basic_info": {
+        "name": "TaylorMade P7MC",
+        "brand": "TaylorMade",
+        "model": "",
+        "type": "マッスルバック",
+        "category": "",
+        "difficulty": "上級者向け",
+        "target_golfer": "シングルプレーヤー",
+        "description": "最高級の軟鉄を使用したマッスルバックアイアン。究極の打感と操作性を追求したプロ仕様。"
+      },
+      "specifications": {
+        "price": 165000,
+        "weight": 268,
+        "material": "軟鉄",
+        "finish": "サテン",
+        "construction": "",
+        "loft": {
+          "7": 34
+        },
+        "lie": {
+          "7": 62.5
+        },
+        "offset": 2.5,
+        "topline": "薄い",
+        "sole": "狭い",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 2,
+        "workability": 5,
+        "distance": 4,
+        "feel": 5,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [],
+        "swing_speed": [],
+        "priority": [],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [
+        "精密なフィーリング",
+        "優れた操作性",
+        "美しい形状"
+      ],
+      "shaft_options": [],
+      "links": {
+        "image": "",
+        "affiliate_amazon": "https://www.amazon.co.jp/s?k=TaylorMade+P7MC",
+        "affiliate_rakuten": "https://search.rakuten.co.jp/search/mall/TaylorMade+P7MC/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423643",
+        "updated": "2025-07-26T05:42:16.423644"
+      }
+    },
+    {
+      "id": 102,
+      "source": "clubs.html",
+      "basic_info": {
+        "name": "Callaway Apex Pro 21",
+        "brand": "Callaway",
+        "model": "",
+        "type": "キャビティバック",
+        "category": "",
+        "difficulty": "上級者向け",
+        "target_golfer": "上級者",
+        "description": "1025軟鉄をフォージドしたキャビティバック。上級者に求められる性能を全て備えたアイアン。"
+      },
+      "specifications": {
+        "price": 158000,
+        "weight": 272,
+        "material": "1025軟鉄",
+        "finish": "ツアークローム",
+        "construction": "",
+        "loft": {
+          "7": 34
+        },
+        "lie": {
+          "7": 62
+        },
+        "offset": 3,
+        "topline": "薄い",
+        "sole": "中程度",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 3,
+        "workability": 4,
+        "distance": 4,
+        "feel": 5,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [],
+        "swing_speed": [],
+        "priority": [],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [
+        "フォージド構造",
+        "ツアー仕様",
+        "優れた打感"
+      ],
+      "shaft_options": [],
+      "links": {
+        "image": "",
+        "affiliate_amazon": "https://www.amazon.co.jp/s?k=Callaway+Apex+Pro+21",
+        "affiliate_rakuten": "https://search.rakuten.co.jp/search/mall/Callaway+Apex+Pro+21/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423655",
+        "updated": "2025-07-26T05:42:16.423656"
+      }
+    },
+    {
+      "id": 103,
+      "source": "clubs.html",
+      "basic_info": {
+        "name": "PING i525",
+        "brand": "PING",
+        "model": "",
+        "type": "中空構造",
+        "category": "",
+        "difficulty": "中級者向け",
+        "target_golfer": "中級者",
+        "description": "中空構造により飛距離と許容性を両立。中級者のスコアアップをサポートするアイアン。"
+      },
+      "specifications": {
+        "price": 145000,
+        "weight": 275,
+        "material": "17-4ステンレス",
+        "finish": "ハイドロパール",
+        "construction": "",
+        "loft": {
+          "7": 31.5
+        },
+        "lie": {
+          "7": 62.25
+        },
+        "offset": 4,
+        "topline": "中程度",
+        "sole": "中程度",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 4,
+        "workability": 3,
+        "distance": 5,
+        "feel": 4,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [],
+        "swing_speed": [],
+        "priority": [],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [
+        "中空構造",
+        "高い飛距離性能",
+        "許容性"
+      ],
+      "shaft_options": [],
+      "links": {
+        "image": "",
+        "affiliate_amazon": "https://www.amazon.co.jp/s?k=PING+i525",
+        "affiliate_rakuten": "https://search.rakuten.co.jp/search/mall/PING+i525/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423668",
+        "updated": "2025-07-26T05:42:16.423668"
+      }
+    },
+    {
+      "id": 104,
+      "source": "clubs.html",
+      "basic_info": {
+        "name": "Mizuno MP-20",
+        "brand": "Mizuno",
+        "model": "",
+        "type": "マッスルバック",
+        "category": "",
+        "difficulty": "上級者向け",
+        "target_golfer": "上級者",
+        "description": "ミズノの職人技が生み出す最高峰のマッスルバック。究極の打感を求める上級者のためのアイアン。"
+      },
+      "specifications": {
+        "price": 155000,
+        "weight": 265,
+        "material": "軟鉄",
+        "finish": "サテン",
+        "construction": "",
+        "loft": {
+          "7": 34
+        },
+        "lie": {
+          "7": 62
+        },
+        "offset": 2,
+        "topline": "薄い",
+        "sole": "狭い",
+        "head_size": "",
+        "sole_width": ""
+      },
+      "performance": {
+        "forgiveness": 2,
+        "workability": 5,
+        "distance": 4,
+        "feel": 5,
+        "accuracy": 0,
+        "control": 0
+      },
+      "suitability": {
+        "suitable_for": [],
+        "swing_speed": [],
+        "priority": [],
+        "target_handicap": "",
+        "experience_level": []
+      },
+      "features": [
+        "最高の打感",
+        "伝統的な形状",
+        "職人技"
+      ],
+      "shaft_options": [],
+      "links": {
+        "image": "",
+        "affiliate_amazon": "https://www.amazon.co.jp/s?k=Mizuno+MP-20",
+        "affiliate_rakuten": "https://search.rakuten.co.jp/search/mall/Mizuno+MP-20/"
+      },
+      "metadata": {
+        "created": "2025-07-26T05:42:16.423694",
+        "updated": "2025-07-26T05:42:16.423695"
+      }
+    }
+  ]
+}
