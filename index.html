@@ -963,11 +963,21 @@
             clubDatabase.forEach(club => {
                 let score = 0;
                 let reasons = [];
+                let detailedReasons = [];
                 
                 // Experience level matching
                 if (club.suitable_for.includes(data.experience)) {
                     score += 30;
                     reasons.push('経験レベルに適合');
+                    if (data.experience === 'beginner') {
+                        detailedReasons.push('初心者の方に最適な、ミスを許容し上達をサポートする設計です');
+                    } else if (data.experience === 'amateur') {
+                        detailedReasons.push('アマチュアゴルファーのスキルレベルに合わせた、バランスの良い性能を持っています');
+                    } else if (data.experience === 'intermediate') {
+                        detailedReasons.push('中級者のさらなるレベルアップを支援する、高性能なクラブです');
+                    } else if (data.experience === 'advanced') {
+                        detailedReasons.push('上級者の繊細な要求に応える、プロ仕様の高精度クラブです');
+                    }
                 } else {
                     score += 10;
                 }
@@ -976,6 +986,13 @@
                 if (club.swing_speed.includes(data.swingSpeed)) {
                     score += 25;
                     reasons.push('スイングスピードに適合');
+                    if (data.swingSpeed === 'slow') {
+                        detailedReasons.push('ゆっくりとしたスイングでも十分な飛距離が得られる軽量設計です');
+                    } else if (data.swingSpeed === 'moderate') {
+                        detailedReasons.push('標準的なスイングスピードに最適化され、安定した飛距離を実現します');
+                    } else if (data.swingSpeed === 'fast') {
+                        detailedReasons.push('パワフルなスイングをしっかりと受け止め、飛距離とコントロールを両立します');
+                    }
                 } else {
                     score += 5;
                 }
@@ -984,6 +1001,15 @@
                 if (club.priority.includes(data.priority)) {
                     score += 25;
                     reasons.push('優先項目に適合');
+                    if (data.priority === 'distance') {
+                        detailedReasons.push('飛距離性能に特化した設計で、今より確実に飛距離アップが期待できます');
+                    } else if (data.priority === 'accuracy') {
+                        detailedReasons.push('方向性の安定に優れ、狙った場所に正確にボールを運べます');
+                    } else if (data.priority === 'control') {
+                        detailedReasons.push('高い操作性により、意図した球筋や弾道をコントロールできます');
+                    } else if (data.priority === 'forgiveness') {
+                        detailedReasons.push('ミスヒットに寛容で、多少の打点のズレでも安定した結果が得られます');
+                    }
                 } else {
                     score += 5;
                 }
@@ -992,9 +1018,38 @@
                 if (data.missTendency === 'slice' && club.forgiveness >= 8) {
                     score += 15;
                     reasons.push('スライス対策に有効');
+                    detailedReasons.push('スライスを軽減する重心設計により、自然とストレートボールが打ちやすくなります');
                 } else if (data.missTendency === 'hook' && club.workability >= 7) {
                     score += 15;
                     reasons.push('操作性に優れる');
+                    detailedReasons.push('フックを抑制し、ニュートラルな球筋で安定したショットが可能です');
+                } else if (data.missTendency === 'top' && club.forgiveness >= 7) {
+                    score += 12;
+                    reasons.push('トップのミスに強い');
+                    detailedReasons.push('低重心設計によりトップのミスでも球が上がりやすく、飛距離ロスを最小限に抑えます');
+                } else if (data.missTendency === 'fat' && club.forgiveness >= 7) {
+                    score += 12;
+                    reasons.push('ダフリのミスに強い');
+                    detailedReasons.push('ワイドソール設計でダフリのミスでも滑りやすく、致命的なミスを防げます');
+                }
+                
+                // Ball flight matching
+                if (data.ballFlight === 'low' && club.distance >= 8) {
+                    score += 10;
+                    detailedReasons.push('低弾道を活かしてランでの飛距離アップが期待できる設計です');
+                } else if (data.ballFlight === 'high' && club.forgiveness >= 7) {
+                    score += 10;
+                    detailedReasons.push('高弾道を活かしてピンをデッドに狙える高精度アプローチが可能です');
+                }
+                
+                // Physical characteristics
+                const height = parseInt(data.height);
+                if (height >= 175 && club.workability >= 7) {
+                    score += 8;
+                    detailedReasons.push('体格を活かしたパワフルなスイングに対応する頑丈な設計です');
+                } else if (height <= 165 && club.forgiveness >= 8) {
+                    score += 8;
+                    detailedReasons.push('体格に合わせて扱いやすく、効率的にパワーを伝える設計です');
                 }
                 
                 // Budget consideration
@@ -1009,16 +1064,22 @@
                 if (club.price >= range[0] && club.price <= range[1]) {
                     score += 20;
                     reasons.push('予算範囲内');
+                    detailedReasons.push('ご予算内で最高のコストパフォーマンスを実現する選択です');
                 } else if (club.price > range[1]) {
                     score -= 10;
                 } else {
                     score += 5;
                 }
                 
+                // Generate shaft recommendation
+                const shaftRecommendation = generateShaftRecommendation(data, club);
+                
                 recommendations.push({
                     ...club,
                     compatibility: Math.min(Math.max(score, 0), 100),
-                    reasons: reasons
+                    reasons: reasons,
+                    detailedReasons: detailedReasons,
+                    shaftRecommendation: shaftRecommendation
                 });
             });
             
@@ -1028,6 +1089,29 @@
             
             console.log('[Calculation] Top recommendations:', topRecommendations);
             return topRecommendations;
+        }
+        
+        function generateShaftRecommendation(data, club) {
+            const recommendations = [];
+            
+            if (data.swingSpeed === 'slow') {
+                recommendations.push('軽量カーボンシャフト（R/SR フレックス）で飛距離アップ');
+                recommendations.push('シャフト重量: 50-60g程度');
+            } else if (data.swingSpeed === 'moderate') {
+                recommendations.push('スチールシャフト（R/S フレックス）または軽量スチール');
+                recommendations.push('シャフト重量: 80-100g程度');
+            } else if (data.swingSpeed === 'fast') {
+                recommendations.push('重量級スチールシャフト（S/X フレックス）でコントロール重視');
+                recommendations.push('シャフト重量: 110-130g程度');
+            }
+            
+            if (data.experience === 'beginner') {
+                recommendations.push('初心者向けの軽量で振りやすいシャフトがおすすめ');
+            } else if (data.experience === 'advanced') {
+                recommendations.push('上級者向けの精密なフィードバックが得られるシャフト');
+            }
+            
+            return recommendations.join('、');
         }
         
         function showResults(recommendations) {
@@ -1046,53 +1130,114 @@
             const container = document.getElementById('resultsContainer');
             container.innerHTML = '';
             
+            // Add user input summary
+            const userSummary = createUserInputSummary();
+            container.appendChild(userSummary);
+            
+            // Add overall diagnosis summary
+            const diagnosisSummary = createDiagnosisSummary(recommendations);
+            container.appendChild(diagnosisSummary);
+            
+            // Add detailed recommendations
             recommendations.forEach((club, index) => {
                 const div = document.createElement('div');
                 div.className = 'card border-l-4 border-green-500 slide-in';
-                div.style.animationDelay = `${index * 0.2}s`;
+                div.style.animationDelay = `${(index + 2) * 0.2}s`;
                 
                 div.innerHTML = `
-                    <div class="flex flex-col md:flex-row gap-6">
-                        <div class="md:w-48 flex-shrink-0">
-                            <img src="${club.image}" alt="${club.name}" class="w-full h-32 object-contain bg-gray-50 rounded-lg">
+                    <div class="flex flex-col lg:flex-row gap-6">
+                        <div class="lg:w-64 flex-shrink-0">
+                            <img src="${club.image}" alt="${club.name}" class="w-full h-40 object-contain bg-gray-50 rounded-lg mb-4">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-green-600 mb-1">${club.compatibility}%</div>
+                                <div class="text-sm text-gray-600">適合度</div>
+                            </div>
                         </div>
                         <div class="flex-1">
-                            <div class="flex items-center gap-3 mb-3">
-                                <h3 class="text-xl font-bold">${index + 1}. ${club.name}</h3>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-semibold">${club.compatibility}% 適合</span>
-                            </div>
-                            <p class="text-gray-600 mb-2">${club.brand} | ${club.type}</p>
-                            <p class="text-2xl font-bold text-green-600 mb-3">¥${club.price.toLocaleString()}</p>
-                            
-                            <div class="grid grid-cols-3 gap-4 mb-4">
-                                <div class="text-center">
-                                    <div class="text-sm text-gray-500">やさしさ</div>
-                                    <div class="font-semibold">${club.forgiveness}/10</div>
-                                </div>
-                                <div class="text-center">
-                                    <div class="text-sm text-gray-500">操作性</div>
-                                    <div class="font-semibold">${club.workability}/10</div>
-                                </div>
-                                <div class="text-center">
-                                    <div class="text-sm text-gray-500">飛距離</div>
-                                    <div class="font-semibold">${club.distance}/10</div>
-                                </div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="flex items-center justify-center w-8 h-8 bg-green-600 text-white rounded-full font-bold">${index + 1}</span>
+                                <h3 class="text-2xl font-bold text-gray-800">${club.name}</h3>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">${club.brand}</span>
                             </div>
                             
                             <div class="mb-4">
-                                <h4 class="font-semibold text-sm text-gray-700 mb-2">適合理由:</h4>
-                                <ul class="text-sm text-gray-600">
-                                    ${club.reasons.map(reason => `<li>• ${reason}</li>`).join('')}
-                                </ul>
+                                <span class="inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm mr-2">${getClubTypeLabel(club.type)}</span>
+                                <span class="text-2xl font-bold text-green-600">¥${club.price.toLocaleString()}</span>
                             </div>
                             
-                            <div class="flex flex-wrap gap-2">
-                                <a href="${club.affiliate_amazon}" target="_blank" rel="nofollow" class="btn-primary text-sm">
-                                    <i class="fab fa-amazon mr-1"></i>Amazon
+                            <!-- Performance metrics -->
+                            <div class="grid grid-cols-3 gap-4 mb-6 p-4 bg-gray-50 rounded-lg">
+                                <div class="text-center">
+                                    <div class="text-sm text-gray-500 mb-1">やさしさ</div>
+                                    <div class="flex items-center justify-center">
+                                        <div class="font-bold text-lg mr-1">${club.forgiveness}</div>
+                                        <div class="text-sm text-gray-400">/10</div>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2 mt-1">
+                                        <div class="bg-blue-500 h-2 rounded-full" style="width: ${club.forgiveness * 10}%"></div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-sm text-gray-500 mb-1">操作性</div>
+                                    <div class="flex items-center justify-center">
+                                        <div class="font-bold text-lg mr-1">${club.workability}</div>
+                                        <div class="text-sm text-gray-400">/10</div>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2 mt-1">
+                                        <div class="bg-yellow-500 h-2 rounded-full" style="width: ${club.workability * 10}%"></div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-sm text-gray-500 mb-1">飛距離</div>
+                                    <div class="flex items-center justify-center">
+                                        <div class="font-bold text-lg mr-1">${club.distance}</div>
+                                        <div class="text-sm text-gray-400">/10</div>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2 mt-1">
+                                        <div class="bg-green-500 h-2 rounded-full" style="width: ${club.distance * 10}%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Detailed reasoning -->
+                            <div class="mb-6">
+                                <h4 class="font-bold text-lg text-gray-800 mb-3 flex items-center">
+                                    <i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
+                                    なぜこのクラブがおすすめなのか
+                                </h4>
+                                <div class="bg-blue-50 p-4 rounded-lg">
+                                    <ul class="space-y-2">
+                                        ${club.detailedReasons.map(reason => `
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-green-500 mr-2 mt-1 flex-shrink-0"></i>
+                                                <span class="text-gray-700">${reason}</span>
+                                            </li>
+                                        `).join('')}
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Recommended shaft and setup -->
+                            ${club.shaftRecommendation ? `
+                                <div class="mb-6 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg">
+                                    <h5 class="font-semibold text-yellow-800 mb-2">
+                                        <i class="fas fa-tools mr-2"></i>推奨シャフト・セットアップ
+                                    </h5>
+                                    <p class="text-yellow-700 text-sm">${club.shaftRecommendation}</p>
+                                </div>
+                            ` : ''}
+                            
+                            <!-- Purchase options -->
+                            <div class="flex flex-wrap gap-3">
+                                <a href="${club.affiliate_amazon}" target="_blank" rel="nofollow" class="btn-primary text-sm flex items-center">
+                                    <i class="fab fa-amazon mr-2"></i>Amazon で見る
                                 </a>
-                                <a href="${club.affiliate_rakuten}" target="_blank" rel="nofollow" class="btn-secondary text-sm">
-                                    <i class="fas fa-shopping-cart mr-1"></i>楽天
+                                <a href="${club.affiliate_rakuten}" target="_blank" rel="nofollow" class="btn-secondary text-sm flex items-center">
+                                    <i class="fas fa-shopping-cart mr-2"></i>楽天市場で見る
                                 </a>
+                                <button onclick="shareClub('${club.name}')" class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded text-sm flex items-center">
+                                    <i class="fas fa-share mr-2"></i>シェア
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1106,6 +1251,243 @@
             
             // Save to history
             saveToHistory(diagnosisData);
+        }
+        
+        function createUserInputSummary() {
+            const div = document.createElement('div');
+            div.className = 'card bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 slide-in mb-6';
+            div.style.animationDelay = '0s';
+            
+            const getExperienceLabel = (exp) => {
+                const labels = {
+                    'beginner': '初心者（1年未満）',
+                    'amateur': 'アマチュア（1-5年）', 
+                    'intermediate': '中級者（5年以上）',
+                    'advanced': '上級者'
+                };
+                return labels[exp] || exp;
+            };
+            
+            const getSpeedLabel = (speed) => {
+                const labels = {
+                    'slow': 'ゆっくり（7番130Y以下）',
+                    'moderate': '標準（7番130-150Y）',
+                    'fast': '速い（7番150Y以上）' 
+                };
+                return labels[speed] || speed;
+            };
+            
+            const getMissLabel = (miss) => {
+                const labels = {
+                    'slice': 'スライス（右に曲がる）',
+                    'hook': 'フック（左に曲がる）',
+                    'top': 'トップ（ボール上部を叩く）',
+                    'fat': 'ダフリ（ボール手前を叩く）'
+                };
+                return labels[miss] || miss;
+            };
+            
+            const getFlightLabel = (flight) => {
+                const labels = {
+                    'low': '低い弾道',
+                    'mid': '中程度の弾道', 
+                    'high': '高い弾道'
+                };
+                return labels[flight] || flight;
+            };
+            
+            const getPriorityLabel = (priority) => {
+                const labels = {
+                    'distance': '飛距離重視',
+                    'accuracy': '正確性重視',
+                    'control': '操作性重視',
+                    'forgiveness': 'やさしさ重視'
+                };
+                return labels[priority] || priority;
+            };
+            
+            const getBudgetLabel = (budget) => {
+                const labels = {
+                    'budget1': '5万円以下',
+                    'budget2': '5-10万円',
+                    'budget3': '10-15万円',
+                    'budget4': '15万円以上'
+                };
+                return labels[budget] || budget;
+            };
+            
+            div.innerHTML = `
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-user text-blue-600 text-2xl mr-3"></i>
+                    <h3 class="text-xl font-bold text-blue-800">あなたのプロフィール</h3>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-white p-3 rounded-lg border">
+                        <div class="text-sm text-gray-500 mb-1">基本情報</div>
+                        <div class="font-semibold">身長 ${diagnosisData.height}cm / 体重 ${diagnosisData.weight}kg</div>
+                        <div class="text-sm text-gray-600">${getAgeLabel(diagnosisData.age)}</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg border">
+                        <div class="text-sm text-gray-500 mb-1">ゴルフ経験</div>
+                        <div class="font-semibold">${getExperienceLabel(diagnosisData.experience)}</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg border">
+                        <div class="text-sm text-gray-500 mb-1">スイングスピード</div>
+                        <div class="font-semibold">${getSpeedLabel(diagnosisData.swingSpeed)}</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg border">
+                        <div class="text-sm text-gray-500 mb-1">よくあるミス</div>
+                        <div class="font-semibold">${getMissLabel(diagnosisData.missTendency)}</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg border">
+                        <div class="text-sm text-gray-500 mb-1">弾道の高さ</div>
+                        <div class="font-semibold">${getFlightLabel(diagnosisData.ballFlight)}</div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg border">
+                        <div class="text-sm text-gray-500 mb-1">重視ポイント</div>
+                        <div class="font-semibold">${getPriorityLabel(diagnosisData.priority)}</div>
+                    </div>
+                </div>
+                <div class="mt-4 text-center">
+                    <span class="inline-block px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-semibold">
+                        予算: ${getBudgetLabel(diagnosisData.budget)}
+                    </span>
+                </div>
+            `;
+            
+            return div;
+        }
+        
+        function createDiagnosisSummary(recommendations) {
+            const div = document.createElement('div');
+            div.className = 'card bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 slide-in mb-6';
+            div.style.animationDelay = '0.2s';
+            
+            const topClub = recommendations[0];
+            const avgScore = Math.round(recommendations.reduce((sum, club) => sum + club.compatibility, 0) / recommendations.length);
+            
+            div.innerHTML = `
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-clipboard-check text-green-600 text-2xl mr-3"></i>
+                    <h3 class="text-xl font-bold text-green-800">診断結果サマリー</h3>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold text-green-700 mb-3">あなたのゴルファータイプ</h4>
+                        <div class="bg-white p-4 rounded-lg border">
+                            <div class="text-lg font-bold text-gray-800 mb-2">${getGolferType()}</div>
+                            <p class="text-sm text-gray-600">${getGolferTypeDescription()}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-green-700 mb-3">推奨クラブタイプ</h4>
+                        <div class="bg-white p-4 rounded-lg border">
+                            <div class="text-lg font-bold text-gray-800 mb-2">${getClubTypeLabel(topClub.type)}</div>
+                            <p class="text-sm text-gray-600">適合度平均: ${avgScore}%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 p-4 bg-white rounded-lg border">
+                    <h4 class="font-semibold text-green-700 mb-2">
+                        <i class="fas fa-key text-yellow-500 mr-2"></i>診断のポイント
+                    </h4>
+                    <p class="text-gray-700">${getDiagnosisKeyPoints()}</p>
+                </div>
+            `;
+            
+            return div;
+        }
+        
+        function getAgeLabel(age) {
+            const labels = {
+                'teen': '10代',
+                '20s': '20代',
+                '30s': '30代', 
+                '40s': '40代',
+                '50s': '50代',
+                '60plus': '60代以上'
+            };
+            return labels[age] || age;
+        }
+        
+        function getGolferType() {
+            const exp = diagnosisData.experience;
+            const speed = diagnosisData.swingSpeed;
+            const priority = diagnosisData.priority;
+            
+            if (exp === 'beginner') return 'ゴルフ入門者';
+            if (exp === 'amateur' && priority === 'forgiveness') return 'スコア重視ゴルファー';
+            if (exp === 'intermediate' && speed === 'fast') return 'パワー系中級者';
+            if (exp === 'intermediate' && priority === 'accuracy') return 'テクニック系中級者';
+            if (exp === 'advanced') return 'エキスパートゴルファー';
+            return 'バランス重視ゴルファー';
+        }
+        
+        function getGolferTypeDescription() {
+            const type = getGolferType();
+            const descriptions = {
+                'ゴルフ入門者': 'まずは基本を身に着け、楽しくプレーすることを重視',
+                'スコア重視ゴルファー': 'ミスを減らし、安定したスコアアップを目指すタイプ',
+                'パワー系中級者': '飛距離を活かし、より高いレベルを目指すタイプ',
+                'テクニック系中級者': '正確性と操作性を重視し、精密なゴルフを追求',
+                'エキスパートゴルファー': '高い技術レベルで細かな調整と最適化を求める',
+                'バランス重視ゴルファー': '飛距離と正確性のバランスを重視するタイプ'
+            };
+            return descriptions[type] || 'あなたに最適なクラブをお選びしました';
+        }
+        
+        function getDiagnosisKeyPoints() {
+            const points = [];
+            
+            if (diagnosisData.experience === 'beginner') {
+                points.push('初心者の方には、ミスに強く寛容性の高いクラブを重視して選定');
+            }
+            
+            if (diagnosisData.swingSpeed === 'slow') {
+                points.push('スイングスピードに合わせて、飛距離アップに効果的なクラブを厳選');
+            } else if (diagnosisData.swingSpeed === 'fast') {
+                points.push('パワフルなスイングに対応できる、コントロール性重視のクラブを選定');
+            }
+            
+            if (diagnosisData.missTendency === 'slice') {
+                points.push('スライスを軽減する設計のクラブを優先的に推奨');
+            } else if (diagnosisData.missTendency === 'hook') {
+                points.push('フックを抑制し、ストレートボールが打ちやすいクラブを選定');
+            }
+            
+            if (diagnosisData.priority === 'distance') {
+                points.push('飛距離性能に優れたクラブを中心に、あなたの予算内で最適化');
+            } else if (diagnosisData.priority === 'accuracy') {
+                points.push('方向性と正確性を重視したクラブ選定で、安定したショットをサポート');
+            }
+            
+            return points.join('、') + '。';
+        }
+        
+        function getClubTypeLabel(type) {
+            const labels = {
+                'game-improvement': 'ゲームインプルーブメント',
+                'players': 'プレーヤーズ',
+                'distance': 'ディスタンス',
+                'players-distance': 'プレーヤーズディスタンス'
+            };
+            return labels[type] || type;
+        }
+        
+        function shareClub(clubName) {
+            const text = `${clubName}がおすすめされました！ゴルフアイアン適性診断で最適なクラブを見つけよう`;
+            const url = window.location.href;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Golf Iron Advisor',
+                    text: text,
+                    url: url
+                });
+            } else {
+                navigator.clipboard.writeText(`${text} ${url}`);
+                showToast('クラブ情報をコピーしました');
+            }
         }
         
         function createCompatibilityChart(recommendations) {
