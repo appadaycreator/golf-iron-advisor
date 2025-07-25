@@ -41,12 +41,17 @@ class ClubDataService {
 
             const data = await response.json();
             
-            // Validate data structure
-            if (!Array.isArray(data)) {
-                throw new Error('Invalid data format: expected array');
+            // Handle different data formats
+            let clubsArray;
+            if (Array.isArray(data)) {
+                clubsArray = data;
+            } else if (data && Array.isArray(data.clubs)) {
+                clubsArray = data.clubs;
+            } else {
+                throw new Error('Invalid data format: expected array or object with clubs property');
             }
 
-            this.clubs = this.processClubData(data);
+            this.clubs = this.processClubData(clubsArray);
             this.loaded = true;
             this.loading = false;
 
