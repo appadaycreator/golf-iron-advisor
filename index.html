@@ -2471,7 +2471,17 @@
         
         function saveToHistory(data) {
             console.log('[History] Saving diagnosis result');
-            let history = JSON.parse(localStorage.getItem('diagnosisHistory') || '[]');
+            let history;
+            try {
+                history = JSON.parse(localStorage.getItem('diagnosisHistory') || '[]');
+                if (!Array.isArray(history)) {
+                    console.warn('[History] Invalid history data in saveToHistory, resetting to empty array');
+                    history = [];
+                }
+            } catch (e) {
+                console.error('[History] Failed to parse history data in saveToHistory:', e);
+                history = [];
+            }
             const result = {
                 id: Date.now(),
                 timestamp: new Date().toISOString(),
@@ -2486,7 +2496,18 @@
         
         function updateHistoryDisplay() {
             console.log('[History] Updating display');
-            const diagnosisHistory = JSON.parse(localStorage.getItem('diagnosisHistory') || '[]');
+            let diagnosisHistory;
+            try {
+                diagnosisHistory = JSON.parse(localStorage.getItem('diagnosisHistory') || '[]');
+                if (!Array.isArray(diagnosisHistory)) {
+                    console.warn('[History] Invalid history data, resetting to empty array');
+                    diagnosisHistory = [];
+                }
+            } catch (e) {
+                console.error('[History] Failed to parse history data:', e);
+                diagnosisHistory = [];
+            }
+            
             const recentContainer = document.getElementById('recentDiagnosisContainer');
             const historyContainer = document.getElementById('historyContainer');
             
