@@ -725,7 +725,8 @@
                 'privacy': 'プライバシーポリシー',
                 'disclaimer': '免責事項',
                 'copyright': '© 2024 Golf Iron Advisor. All rights reserved.',
-                'calculating': '診断結果を計算しています...'
+                'calculating': '診断結果を計算しています...',
+                'similar-pro-golfers': '同じタイプのプロゴルファー:'
             },
             en: {
                 'site-title': 'Golf Iron Advisor',
@@ -785,7 +786,8 @@
                 'privacy': 'Privacy Policy',
                 'disclaimer': 'Disclaimer',
                 'copyright': '© 2024 Golf Iron Advisor. All rights reserved.',
-                'calculating': 'Calculating diagnosis results...'
+                'calculating': 'Calculating diagnosis results...',
+                'similar-pro-golfers': 'Similar Pro Golfers:'
             }
         };
         
@@ -3014,7 +3016,13 @@
                         <h4 class="font-semibold text-green-700 mb-3">あなたのゴルファータイプ</h4>
                         <div class="bg-white p-4 rounded-lg border">
                             <div class="text-lg font-bold text-gray-800 mb-2">${getGolferType()}</div>
-                            <p class="text-sm text-gray-600">${getGolferTypeDescription()}</p>
+                            <p class="text-sm text-gray-600 mb-3">${getGolferTypeDescription()}</p>
+                            <div class="pt-2 border-t border-gray-200">
+                                <p class="text-xs text-gray-500 mb-2" data-translate="similar-pro-golfers">同じタイプのプロゴルファー:</p>
+                                <div class="flex flex-wrap gap-1">
+                                    ${getProGolfers().map(golfer => `<span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">${golfer}</span>`).join('')}
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -3072,6 +3080,30 @@
                 'バランス重視ゴルファー': '飛距離と正確性のバランスを重視するタイプ'
             };
             return descriptions[type] || 'あなたに最適なクラブをお選びしました';
+        }
+        
+        function getProGolfers() {
+            const type = getGolferType();
+            const proGolfersJa = {
+                'ゴルフ入門者': ['松山英樹（親しみやすいスイング）', '石川遼（基本に忠実）', '古江彩佳（安定感重視）'],
+                'スコア重視ゴルファー': ['今平周吾（確実性重視）', '稲森佑貴（安定したプレー）', '渋野日向子（メンタル重視）'],
+                'パワー系中級者': ['松山英樹（パワフルなスイング）', '小平智（飛距離とパワー）', '畑岡奈紗（力強いショット）'],
+                'テクニック系中級者': ['池田勇太（技術派）', '谷原秀人（正確性重視）', '鈴木愛（精密なゴルフ）'],
+                'エキスパートゴルファー': ['松山英樹（世界レベル）', '小平智（高い技術力）', '畑岡奈紗（プロフェッショナル）'],
+                'バランス重視ゴルファー': ['谷原秀人（バランス型）', '今平周吾（オールラウンド）', '古江彩佳（総合力）']
+            };
+            
+            const proGolfersEn = {
+                'ゴルフ入門者': ['Hideki Matsuyama (Friendly Swing)', 'Ryo Ishikawa (Basic Faithful)', 'Ayaka Furue (Stability Focus)'],
+                'スコア重視ゴルファー': ['Shugo Imahira (Reliability)', 'Yuki Inamori (Steady Play)', 'Hinako Shibuno (Mental Focus)'],
+                'パワー系中級者': ['Hideki Matsuyama (Powerful)', 'Satoshi Kodaira (Distance)', 'Nasa Hataoka (Strong Shots)'],
+                'テクニック系中級者': ['Yuta Ikeda (Technical)', 'Hideto Tanihara (Accuracy)', 'Ai Suzuki (Precision)'],
+                'エキスパートゴルファー': ['Hideki Matsuyama (World Class)', 'Satoshi Kodaira (High Skills)', 'Nasa Hataoka (Professional)'],
+                'バランス重視ゴルファー': ['Hideto Tanihara (Balanced)', 'Shugo Imahira (All-around)', 'Ayaka Furue (Overall)']
+            };
+            
+            const golfers = currentLanguage === 'en' ? proGolfersEn : proGolfersJa;
+            return golfers[type] || ['松山英樹', '石川遼', '渋野日向子'];
         }
         
         function getDiagnosisKeyPoints() {
