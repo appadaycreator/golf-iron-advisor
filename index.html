@@ -3207,43 +3207,6 @@
             updateHistoryDisplay();
             loadRecommendedProducts();
             
-            // Debug: Add input event listeners for number fields
-            setTimeout(() => {
-                const heightInput = document.getElementById('height');
-                const weightInput = document.getElementById('weight');
-                
-                if (heightInput) {
-                    console.log('[Debug] Height input found, adding event listeners');
-                    heightInput.addEventListener('input', (e) => {
-                        console.log('[Debug] Height input event:', e.target.value);
-                    });
-                    heightInput.addEventListener('keydown', (e) => {
-                        console.log('[Debug] Height keydown event:', e.key, e.code);
-                    });
-                    heightInput.addEventListener('focus', () => {
-                        console.log('[Debug] Height input focused');
-                    });
-                } else {
-                    console.error('[Debug] Height input not found');
-                }
-                
-                if (weightInput) {
-                    console.log('[Debug] Weight input found, adding event listeners');
-                    weightInput.addEventListener('input', (e) => {
-                        console.log('[Debug] Weight input event:', e.target.value);
-                    });
-                    weightInput.addEventListener('keydown', (e) => {
-                        console.log('[Debug] Weight keydown event:', e.key, e.code);
-                    });
-                    weightInput.addEventListener('focus', () => {
-                        console.log('[Debug] Weight input focused');
-                    });
-                } else {
-                    console.error('[Debug] Weight input not found');
-                }
-            }, 1000);
-        
-            
             // Register service worker
             if ('serviceWorker' in navigator) {
                 navigator.serviceWorker.register('./sw.js')
