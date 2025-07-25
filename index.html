@@ -105,11 +105,22 @@
         }
         
         .quiz-option {
-            @apply p-4 border-2 border-gray-200 rounded-lg cursor-pointer transition duration-300 hover:border-green-500 hover:bg-green-50;
+            padding: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-color: white;
+        }
+        
+        .quiz-option:hover {
+            border-color: #10b981;
+            background-color: #ecfdf5;
         }
         
         .quiz-option.selected {
-            @apply border-green-600 bg-green-100;
+            border-color: #059669;
+            background-color: #d1fae5;
         }
         
         .progress-bar {
@@ -1268,16 +1279,24 @@
             
             // Quiz option selection - MOVED HERE FOR IMMEDIATE AVAILABILITY
             document.addEventListener('click', function(e) {
+                console.log('Click event detected:', e.target);
+                
                 if (e.target.closest('.quiz-option')) {
                     const option = e.target.closest('.quiz-option');
                     const step = option.closest('[id^="step-"]');
                     
+                    console.log('Quiz option clicked:', option);
+                    console.log('Step:', step ? step.id : 'No step found');
+                    
                     if (step) {
+                        // Remove selected class from all options in this step
                         step.querySelectorAll('.quiz-option').forEach(opt => {
                             opt.classList.remove('selected');
                         });
                         
+                        // Add selected class to clicked option
                         option.classList.add('selected');
+                        console.log('Selected option:', option.dataset.value);
                     }
                 }
             });
@@ -1295,7 +1314,15 @@
             document.querySelectorAll('#diagnosisContainer > div').forEach(div => {
                 div.classList.add('hidden');
             });
-            document.getElementById('step-1').classList.remove('hidden');
+            
+            const step1 = document.getElementById('step-1');
+            console.log('Step 1 element:', step1);
+            if (step1) {
+                step1.classList.remove('hidden');
+                console.log('Step 1 shown');
+            } else {
+                console.error('Step 1 element not found!');
+            }
         }
         
         // Navigation functions
