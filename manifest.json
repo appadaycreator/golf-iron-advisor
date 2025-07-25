@@ -1,0 +1,21 @@
+{
+  "name": "Golf Iron Advisor",
+  "short_name": "GolfIronAdvisor",
+  "description": "ゴルフアイアン適性診断システム - あなたに最適なゴルフアイアンを見つけよう",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4CAF50",
+  "icons": [
+    {
+      "src": "./favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "./icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
