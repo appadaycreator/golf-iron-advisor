@@ -158,6 +158,7 @@
                 <div class="hidden lg:flex items-center space-x-6">
                     <a href="#home" class="text-gray-700 hover:text-green-600 transition" data-translate="nav-home">ホーム</a>
                     <a href="#diagnosis" class="text-gray-700 hover:text-green-600 transition" data-translate="nav-diagnosis">診断</a>
+                    <a href="./clubs.html" class="text-gray-700 hover:text-green-600 transition" data-translate="nav-clubs">クラブ一覧</a>
                     <a href="#usage" class="text-gray-700 hover:text-green-600 transition" data-translate="nav-usage">使い方</a>
                     <a href="./lp.html" class="text-gray-700 hover:text-green-600 transition" data-translate="nav-lp">LP</a>
                     <a href="#contact" class="text-gray-700 hover:text-green-600 transition" data-translate="nav-contact">お問い合わせ</a>
@@ -231,6 +232,7 @@
                 <a href="#diagnosis" class="block py-2 px-4 text-sm text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition" data-translate="sidebar-start">診断を始める</a>
                 <a href="#features" class="block py-2 px-4 text-sm text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition" data-translate="sidebar-features">機能紹介</a>
                 <a href="#recommended" class="block py-2 px-4 text-sm text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition" data-translate="sidebar-recommended">おすすめ商品</a>
+                <a href="./clubs.html" class="block py-2 px-4 text-sm text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition" data-translate="sidebar-clubs">クラブ一覧</a>
                 <a href="#history" class="block py-2 px-4 text-sm text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition" data-translate="sidebar-history">診断履歴</a>
             </nav>
             
@@ -669,6 +671,7 @@
                 'site-title': 'Golf Iron Advisor',
                 'nav-home': 'ホーム',
                 'nav-diagnosis': '診断',
+                'nav-clubs': 'クラブ一覧',
                 'nav-usage': '使い方',
                 'nav-lp': 'LP',
                 'nav-contact': 'お問い合わせ',
@@ -683,6 +686,7 @@
                 'sidebar-start': '診断を始める',
                 'sidebar-features': '機能紹介',
                 'sidebar-recommended': 'おすすめ商品',
+                'sidebar-clubs': 'クラブ一覧',
                 'sidebar-history': '診断履歴',
                 'recent-diagnosis': '最近の診断',
                 'hero-title': 'あなたに最適な<br>アイアンを見つけよう',
@@ -727,6 +731,7 @@
                 'site-title': 'Golf Iron Advisor',
                 'nav-home': 'Home',
                 'nav-diagnosis': 'Diagnosis',
+                'nav-clubs': 'Club List',
                 'nav-usage': 'How to Use',
                 'nav-lp': 'LP',
                 'nav-contact': 'Contact',
@@ -741,6 +746,7 @@
                 'sidebar-start': 'Start Diagnosis',
                 'sidebar-features': 'Features',
                 'sidebar-recommended': 'Recommended',
+                'sidebar-clubs': 'Club List',
                 'sidebar-history': 'History',
                 'recent-diagnosis': 'Recent Diagnosis',
                 'hero-title': 'Find Your Perfect<br>Golf Iron',
@@ -3195,7 +3201,8 @@
             const container = document.getElementById('recommendedProducts');
             if (!container) return;
             
-            clubDatabase.forEach(club => {
+            // Display only the first 3 products as recommendations
+            clubDatabase.slice(0, 3).forEach(club => {
                 const div = document.createElement('div');
                 div.className = 'card';
                 

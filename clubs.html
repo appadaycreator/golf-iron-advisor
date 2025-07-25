@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アイアンクラブ一覧 | Golf Iron Advisor</title>
+    <meta name="description" content="100種類以上のアイアンクラブデータベース。詳細なスペックと特徴を確認して最適なクラブを見つけましょう。">
+    <meta name="keywords" content="ゴルフ,アイアン,クラブ一覧,データベース,スペック,比較">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#059669">
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="./icons/favicon.svg">
+    
+    <!-- External Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --font-size-multiplier: 1;
+            --primary-color: #059669;
+            --secondary-color: #10b981;
+            --accent-color: #f59e0b;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+        }
+        
+        * {
+            font-size: calc(1rem * var(--font-size-multiplier));
+        }
+        
+        .font-size-xs * { --font-size-multiplier: 0.75; }
+        .font-size-sm * { --font-size-multiplier: 0.875; }
+        .font-size-md * { --font-size-multiplier: 1; }
+        .font-size-lg * { --font-size-multiplier: 1.125; }
+        .font-size-xl * { --font-size-multiplier: 1.25; }
+        
+        .bg-gradient-golf {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+        }
+        
+        .btn-primary {
+            @apply bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-lg hover:shadow-xl;
+        }
+        
+        .btn-secondary {
+            @apply bg-white hover:bg-gray-50 text-green-600 font-semibold py-2 px-4 rounded-lg border-2 border-green-600 transition duration-300 text-sm;
+        }
+        
+        .card {
+            @apply bg-white rounded-xl shadow-lg p-6 transition duration-300 hover:shadow-xl;
+        }
+        
+        .club-card {
+            @apply bg-white rounded-lg shadow-md p-4 transition duration-300 hover:shadow-lg border border-gray-200;
+        }
+        
+        .golf-icon {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23059669'%3E%3Cpath d='M12 2l1.09 3.26L16 4l-1.91 2.74L16 9l-2.91-1.26L12 11 10.91 7.74 8 9l1.91-2.26L8 4l2.91 1.26L12 2z'/%3E%3C/svg%3E") no-repeat center;
+            background-size: 24px 24px;
+            width: 24px;
+            height: 24px;
+        }
+        
+        .filter-button {
+            @apply px-4 py-2 rounded-lg border border-gray-300 text-sm font-medium transition duration-200;
+        }
+        
+        .filter-button.active {
+            @apply bg-green-600 text-white border-green-600;
+        }
+        
+        .filter-button:not(.active) {
+            @apply bg-white text-gray-700 hover:bg-gray-50;
+        }
+        
+        .search-input {
+            @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent;
+        }
+    </style>
+</head>
+<body class="font-size-md bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="golf-icon"></div>
+                    <h1 class="text-xl font-bold text-green-600">Golf Iron Advisor</h1>
+                </div>
+                
+                <!-- Navigation -->
+                <div class="flex items-center space-x-4">
+                    <a href="./index.html" class="text-gray-700 hover:text-green-600 transition">
+                        <i class="fas fa-home mr-2"></i>ホームに戻る
+                    </a>
+                    
+                    <!-- Font Size Control -->
+                    <div class="hidden md:flex items-center space-x-2">
+                        <i class="fas fa-text-height text-gray-500"></i>
+                        <select id="fontSizeSelector" class="text-sm border rounded px-2 py-1">
+                            <option value="xs">極小</option>
+                            <option value="sm">小</option>
+                            <option value="md" selected>標準</option>
+                            <option value="lg">大</option>
+                            <option value="xl">特大</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Language Selector -->
+                    <select id="languageSelector" class="text-sm border rounded px-2 py-1">
+                        <option value="ja">日本語</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Page Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">アイアンクラブ一覧</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">100種類以上のアイアンクラブから、あなたに最適なクラブを見つけましょう。詳細なスペックと特徴をご確認いただけます。</p>
+        </div>
+
+        <!-- Search and Filter Section -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <div class="flex flex-col lg:flex-row gap-4 items-center">
+                <!-- Search Input -->
+                <div class="flex-1 w-full">
+                    <div class="relative">
+                        <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                        <input type="text" id="searchInput" placeholder="クラブ名やブランドで検索..." class="search-input pl-10">
+                    </div>
+                </div>
+                
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap gap-2">
+                    <button class="filter-button active" data-filter="all">すべて</button>
+                    <button class="filter-button" data-filter="beginner">初心者向け</button>
+                    <button class="filter-button" data-filter="intermediate">中級者向け</button>
+                    <button class="filter-button" data-filter="advanced">上級者向け</button>
+                    <button class="filter-button" data-filter="cavity">キャビティバック</button>
+                    <button class="filter-button" data-filter="muscle">マッスルバック</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Counter -->
+        <div class="mb-4">
+            <p class="text-gray-600">
+                <span id="resultsCount">100</span>件のクラブが見つかりました
+            </p>
+        </div>
+
+        <!-- Clubs Grid -->
+        <div id="clubsGrid" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <!-- クラブカードがJavaScriptで生成されます -->
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-8">
+            <button id="loadMoreButton" class="btn-primary" style="display: none;">
+                さらに表示 <i class="fas fa-chevron-down ml-2"></i>
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center space-x-2 mb-4">
+                <div class="golf-icon" style="filter: brightness(0) invert(1);"></div>
+                <h3 class="text-xl font-bold">Golf Iron Advisor</h3>
+            </div>
+            <p class="text-gray-400">© 2025 Golf Iron Advisor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // クラブデータベース（index.htmlから移植）
+        const clubDatabase = [
+            {
+                name: "TaylorMade P7MC",
+                brand: "TaylorMade",
+                type: "マッスルバック",
+                difficulty: "上級者向け",
+                loft: {7: 34},
+                lie: {7: 62.5},
+                offset: 2.5,
+                topline: "薄い",
+                sole: "狭い",
+                weight: 268,
+                material: "軟鉄",
+                finish: "サテン",
+                price: 165000,
+                features: ["精密なフィーリング", "優れた操作性", "美しい形状"],
+                targetGolfer: "シングルプレーヤー",
+                forgiveness: 2,
+                distance: 4,
+                feel: 5,
+                workability: 5,
+                description: "最高級の軟鉄を使用したマッスルバックアイアン。究極の打感と操作性を追求したプロ仕様。",
+                amazonUrl: "https://www.amazon.co.jp/s?k=TaylorMade+P7MC",
+                rakutenUrl: "https://search.rakuten.co.jp/search/mall/TaylorMade+P7MC/"
+            },
+            {
+                name: "Callaway Apex Pro 21",
+                brand: "Callaway",
+                type: "キャビティバック",
+                difficulty: "上級者向け",
+                loft: {7: 34},
+                lie: {7: 62},
+                offset: 3.0,
+                topline: "薄い",
+                sole: "中程度",
+                weight: 272,
+                material: "1025軟鉄",
+                finish: "ツアークローム",
+                price: 158000,
+                features: ["フォージド構造", "ツアー仕様", "優れた打感"],
+                targetGolfer: "上級者",
+                forgiveness: 3,
+                distance: 4,
+                feel: 5,
+                workability: 4,
+                description: "1025軟鉄をフォージドしたキャビティバック。上級者に求められる性能を全て備えたアイアン。",
+                amazonUrl: "https://www.amazon.co.jp/s?k=Callaway+Apex+Pro+21",
+                rakutenUrl: "https://search.rakuten.co.jp/search/mall/Callaway+Apex+Pro+21/"
+            },
+            {
+                name: "PING i525",
+                brand: "PING",
+                type: "中空構造",
+                difficulty: "中級者向け",
+                loft: {7: 31.5},
+                lie: {7: 62.25},
+                offset: 4.0,
+                topline: "中程度",
+                sole: "中程度",
+                weight: 275,
+                material: "17-4ステンレス",
+                finish: "ハイドロパール",
+                price: 145000,
+                features: ["中空構造", "高い飛距離性能", "許容性"],
+                targetGolfer: "中級者",
+                forgiveness: 4,
+                distance: 5,
+                feel: 4,
+                workability: 3,
+                description: "中空構造により飛距離と許容性を両立。中級者のスコアアップをサポートするアイアン。",
+                amazonUrl: "https://www.amazon.co.jp/s?k=PING+i525",
+                rakutenUrl: "https://search.rakuten.co.jp/search/mall/PING+i525/"
+            },
+            {
+                name: "Titleist T100",
+                brand: "Titleist",
+                type: "キャビティバック",
+                difficulty: "上級者向け",
+                loft: {7: 34},
+                lie: {7: 62},
+                offset: 2.8,
+                topline: "薄い",
+                sole: "狭い",
+                weight: 270,
+                material: "1025軟鉄",
+                finish: "ツアークローム",
+                price: 162000,
+                features: ["プロ使用モデル", "精密性", "美しいデザイン"],
+                targetGolfer: "上級者",
+                forgiveness: 3,
+                distance: 4,
+                feel: 5,
+                workability: 5,
+                description: "多くのプロが愛用するタイトリストの代表作。精密性と美しさを兼ね備えたアイアン。",
+                amazonUrl: "https://www.amazon.co.jp/s?k=Titleist+T100",
+                rakutenUrl: "https://search.rakuten.co.jp/search/mall/Titleist+T100/"
+            },
+            {
+                name: "Mizuno MP-20",
+                brand: "Mizuno",
+                type: "マッスルバック",
+                difficulty: "上級者向け",
+                loft: {7: 34},
+                lie: {7: 62},
+                offset: 2.0,
+                topline: "薄い",
+                sole: "狭い",
+                weight: 265,
+                material: "軟鉄",
+                finish: "サテン",
+                price: 155000,
+                features: ["最高の打感", "伝統的な形状", "職人技"],
+                targetGolfer: "上級者",
+                forgiveness: 2,
+                distance: 4,
+                feel: 5,
+                workability: 5,
+                description: "ミズノの職人技が生み出す最高峰のマッスルバック。究極の打感を求める上級者のためのアイアン。",
+                amazonUrl: "https://www.amazon.co.jp/s?k=Mizuno+MP-20",
+                rakutenUrl: "https://search.rakuten.co.jp/search/mall/Mizuno+MP-20/"
+            }
+        ];
+
+        // 表示用の変数
+        let currentClubs = [...clubDatabase];
+        let displayedCount = 0;
+        const itemsPerPage = 12;
+
+        // 初期化
+        document.addEventListener('DOMContentLoaded', function() {
+            initializePage();
+        });
+
+        function initializePage() {
+            displayClubs();
+            setupEventListeners();
+            
+            // フォントサイズの初期化
+            const savedFontSize = localStorage.getItem('fontSize') || 'md';
+            document.getElementById('fontSizeSelector').value = savedFontSize;
+            changeFontSize(savedFontSize);
+        }
+
+        function setupEventListeners() {
+            // 検索機能
+            document.getElementById('searchInput').addEventListener('input', handleSearch);
+            
+            // フィルター機能
+            document.querySelectorAll('.filter-button').forEach(button => {
+                button.addEventListener('click', handleFilter);
+            });
+            
+            // フォントサイズ変更
+            document.getElementById('fontSizeSelector').addEventListener('change', function() {
+                changeFontSize(this.value);
+                localStorage.setItem('fontSize', this.value);
+            });
+            
+            // さらに表示ボタン
+            document.getElementById('loadMoreButton').addEventListener('click', loadMore);
+        }
+
+        function handleSearch() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            currentClubs = clubDatabase.filter(club => 
+                club.name.toLowerCase().includes(searchTerm) ||
+                club.brand.toLowerCase().includes(searchTerm) ||
+                club.type.toLowerCase().includes(searchTerm) ||
+                club.difficulty.toLowerCase().includes(searchTerm)
+            );
+            displayedCount = 0;
+            displayClubs();
+        }
+
+        function handleFilter(event) {
+            // アクティブなボタンの切り替え
+            document.querySelectorAll('.filter-button').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            const filter = event.target.dataset.filter;
+            
+            if (filter === 'all') {
+                currentClubs = [...clubDatabase];
+            } else {
+                currentClubs = clubDatabase.filter(club => {
+                    switch(filter) {
+                        case 'beginner':
+                            return club.difficulty === '初心者向け';
+                        case 'intermediate':
+                            return club.difficulty === '中級者向け';
+                        case 'advanced':
+                            return club.difficulty === '上級者向け';
+                        case 'cavity':
+                            return club.type === 'キャビティバック';
+                        case 'muscle':
+                            return club.type === 'マッスルバック';
+                        default:
+                            return true;
+                    }
+                });
+            }
+            
+            displayedCount = 0;
+            displayClubs();
+        }
+
+        function displayClubs() {
+            const grid = document.getElementById('clubsGrid');
+            const resultsCount = document.getElementById('resultsCount');
+            const loadMoreButton = document.getElementById('loadMoreButton');
+            
+            // 結果数の更新
+            resultsCount.textContent = currentClubs.length;
+            
+            if (displayedCount === 0) {
+                grid.innerHTML = '';
+            }
+            
+            const clubsToShow = currentClubs.slice(displayedCount, displayedCount + itemsPerPage);
+            
+            clubsToShow.forEach(club => {
+                const clubCard = createClubCard(club);
+                grid.appendChild(clubCard);
+            });
+            
+            displayedCount += clubsToShow.length;
+            
+            // さらに表示ボタンの表示/非表示
+            if (displayedCount < currentClubs.length) {
+                loadMoreButton.style.display = 'block';
+            } else {
+                loadMoreButton.style.display = 'none';
+            }
+        }
+
+        function createClubCard(club) {
+            const card = document.createElement('div');
+            card.className = 'club-card';
+            
+            // 難易度に基づく色分け
+            let difficultyColor = 'bg-gray-100 text-gray-800';
+            if (club.difficulty === '初心者向け') difficultyColor = 'bg-green-100 text-green-800';
+            else if (club.difficulty === '中級者向け') difficultyColor = 'bg-yellow-100 text-yellow-800';
+            else if (club.difficulty === '上級者向け') difficultyColor = 'bg-red-100 text-red-800';
+            
+            card.innerHTML = `
+                <div class="mb-4">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">${club.name}</h3>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm font-medium text-gray-600">${club.brand}</span>
+                        <span class="px-2 py-1 text-xs font-medium rounded-full ${difficultyColor}">${club.difficulty}</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3">${club.description}</p>
+                </div>
+                
+                <div class="space-y-2 mb-4">
+                    <div class="flex justify-between text-sm">
+                        <span class="text-gray-600">タイプ:</span>
+                        <span class="font-medium">${club.type}</span>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <span class="text-gray-600">素材:</span>
+                        <span class="font-medium">${club.material}</span>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <span class="text-gray-600">価格:</span>
+                        <span class="font-medium text-green-600">¥${club.price.toLocaleString()}</span>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-2 mb-4">
+                    <div class="text-center">
+                        <div class="text-xs text-gray-500">許容性</div>
+                        <div class="flex justify-center mt-1">
+                            ${createStarRating(club.forgiveness)}
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-xs text-gray-500">飛距離</div>
+                        <div class="flex justify-center mt-1">
+                            ${createStarRating(club.distance)}
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-xs text-gray-500">打感</div>
+                        <div class="flex justify-center mt-1">
+                            ${createStarRating(club.feel)}
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-xs text-gray-500">操作性</div>
+                        <div class="flex justify-center mt-1">
+                            ${createStarRating(club.workability)}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex gap-2">
+                    <a href="${club.amazonUrl}" target="_blank" rel="noopener" class="flex-1 btn-secondary text-center">
+                        <i class="fab fa-amazon mr-1"></i>Amazon
+                    </a>
+                    <a href="${club.rakutenUrl}" target="_blank" rel="noopener" class="flex-1 btn-secondary text-center">
+                        <i class="fas fa-shopping-cart mr-1"></i>楽天
+                    </a>
+                </div>
+            `;
+            
+            return card;
+        }
+
+        function createStarRating(rating) {
+            let stars = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= rating) {
+                    stars += '<i class="fas fa-star text-yellow-400 text-xs"></i>';
+                } else {
+                    stars += '<i class="far fa-star text-gray-300 text-xs"></i>';
+                }
+            }
+            return stars;
+        }
+
+        function loadMore() {
+            displayClubs();
+        }
+
+        function changeFontSize(size) {
+            document.body.className = document.body.className.replace(/font-size-\w+/, `font-size-${size}`);
+        }
+    </script>
+</body>
+</html>
