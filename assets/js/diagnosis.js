@@ -50,58 +50,56 @@ class DiagnosisEngine {
 
     // デフォルトのクラブデータベース（フォールバック用）
     getDefaultClubDatabase() {
-        return {
-            clubs: [
-                {
-                    id: "ping_g430_iron",
-                    manufacturer: "PING",
-                    model: "G430 アイアン",
-                    category: "game_improvement",
-                    construction: "cavity",
-                    target_handicap: "15-30",
-                    price_range: "medium",
-                    weight: 350,
-                    lie_angle: 61.5,
-                    loft_7iron: 30.5,
-                    shaft_options: ["steel", "carbon"],
-                    features: {
-                        forgiveness: 9,
-                        workability: 5,
-                        distance: 8,
-                        feel: 7
-                    },
-                    specifications: {
-                        head_size: "large",
-                        sole_width: "wide",
-                        offset: "moderate"
-                    }
+        return [
+            {
+                id: "ping_g430_iron",
+                manufacturer: "PING",
+                model: "G430 アイアン",
+                category: "game_improvement",
+                construction: "cavity",
+                target_handicap: "15-30",
+                price_range: "medium",
+                weight: 350,
+                lie_angle: 61.5,
+                loft_7iron: 30.5,
+                shaft_options: ["steel", "carbon"],
+                features: {
+                    forgiveness: 9,
+                    workability: 5,
+                    distance: 8,
+                    feel: 7
                 },
-                {
-                    id: "titleist_t150_iron",
-                    manufacturer: "Titleist",
-                    model: "T150 アイアン",
-                    category: "players_distance",
-                    construction: "hollow",
-                    target_handicap: "5-15",
-                    price_range: "high",
-                    weight: 370,
-                    lie_angle: 62.0,
-                    loft_7iron: 32.0,
-                    shaft_options: ["steel"],
-                    features: {
-                        forgiveness: 7,
-                        workability: 8,
-                        distance: 9,
-                        feel: 9
-                    },
-                    specifications: {
-                        head_size: "mid",
-                        sole_width: "medium",
-                        offset: "minimal"
-                    }
+                specifications: {
+                    head_size: "large",
+                    sole_width: "wide",
+                    offset: "moderate"
                 }
-            ]
-        };
+            },
+            {
+                id: "titleist_t150_iron",
+                manufacturer: "Titleist",
+                model: "T150 アイアン",
+                category: "players_distance",
+                construction: "hollow",
+                target_handicap: "5-15",
+                price_range: "high",
+                weight: 370,
+                lie_angle: 62.0,
+                loft_7iron: 32.0,
+                shaft_options: ["steel"],
+                features: {
+                    forgiveness: 7,
+                    workability: 8,
+                    distance: 9,
+                    feel: 9
+                },
+                specifications: {
+                    head_size: "mid",
+                    sole_width: "medium",
+                    offset: "minimal"
+                }
+            }
+        ];
     }
 
     // 質問グループの設定
@@ -438,8 +436,11 @@ class DiagnosisEngine {
         const userProfile = this.createUserProfile();
         const scoredClubs = [];
 
+        // クラブデータベースの構造を確認して適切にアクセス
+        const clubsArray = Array.isArray(this.clubDatabase) ? this.clubDatabase : this.clubDatabase.clubs || [];
+
         // 各クラブのスコア計算
-        this.clubDatabase.clubs.forEach(club => {
+        clubsArray.forEach(club => {
             const score = this.calculateClubScore(club, userProfile);
             scoredClubs.push({
                 club,

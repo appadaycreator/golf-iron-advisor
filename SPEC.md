@@ -16,7 +16,8 @@ golf-iron-advisor/
 │   ├── css/
 │   │   ├── style.css
 │   │   └── responsive.css
-│   └── data/ (Empty - clubs.json missing)
+│   └── data/
+│       └── clubs.json (Club database - 6,414 lines, 50+ clubs)
 ├── manifest.json (PWA config)
 └── sw.js (Service Worker)
 ```
@@ -49,9 +50,10 @@ golf-iron-advisor/
 
 ### 2. Club Database
 **Structure:**
-- 100+ club entries
-- Properties: name, brand, type, price, specs
-- Currently hardcoded in HTML (needs extraction)
+- 50+ club entries in JSON format
+- Properties: basic_info, performance, specifications, suitability, features, links
+- Data format: Direct array of club objects
+- SVG placeholder images for club visualization
 
 ### 3. User Interface
 **Components:**
@@ -73,11 +75,11 @@ golf-iron-advisor/
 2. **Monolithic Structure:** 3,600-line HTML file
 3. **Poor Separation:** Business logic mixed with UI
 4. **No Module System:** Everything global
-5. **Data Issues:** Club database hardcoded in HTML
+5. ~~**Data Issues:** Club database hardcoded in HTML~~ ✅ **RESOLVED** - Moved to clubs.json
 
 ### Refactoring Requirements
 1. Extract JavaScript modules
-2. Separate club database to JSON
+2. ~~Separate club database to JSON~~ ✅ **COMPLETED**
 3. Implement proper state management
 4. Create component system
 5. Remove code duplication
@@ -96,7 +98,13 @@ golf-iron-advisor/
 ## Performance Metrics
 - First load: ~2-3 seconds
 - Diagnosis completion: ~5 minutes
-- Club data: ~100 entries
+- Club data: ~50 entries (extendable)
 - Browser compatibility: Modern browsers only
+
+## Recent Updates
+- ✅ **2025-01-20**: Fixed "Unexpected identifier 'viewBox'" SyntaxError
+  - Resolved club database access pattern mismatch
+  - Updated diagnosis.js to handle array-based club data structure
+  - Aligned data processing with clubs.json format
 
 This specification documents the current state before refactoring begins.
