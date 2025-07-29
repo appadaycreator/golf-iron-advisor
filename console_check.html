@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コンソールエラーチェック</title>
+</head>
+<body>
+    <h1>コンソールエラーチェック</h1>
+    <div id="error-log"></div>
+    
+    <script>
+        // 元のconsole.errorをキャプチャ
+        const originalError = console.error;
+        const originalWarn = console.warn;
+        const errorLog = document.getElementById('error-log');
+        
+        let errorCount = 0;
+        
+        // コンソールエラーをキャプチャして表示
+        console.error = function(...args) {
+            errorCount++;
+            originalError.apply(console, args);
+            
+            const errorDiv = document.createElement('div');
+            errorDiv.style.color = 'red';
+            errorDiv.style.marginBottom = '10px';
+            errorDiv.textContent = `❌ ERROR ${errorCount}: ${args.join(' ')}`;
+            errorLog.appendChild(errorDiv);
+        };
+        
+        console.warn = function(...args) {
+            originalWarn.apply(console, args);
+            
+            const warnDiv = document.createElement('div');
+            warnDiv.style.color = 'orange';
+            warnDiv.style.marginBottom = '10px';
+            warnDiv.textContent = `⚠️  WARNING: ${args.join(' ')}`;
+            errorLog.appendChild(warnDiv);
+        };
+        
+        // ページエラーをキャプチャ
+        window.addEventListener('error', (e) => {
+            errorCount++;
+            const errorDiv = document.createElement('div');
+            errorDiv.style.color = 'red';
+            errorDiv.style.marginBottom = '10px';
+            errorDiv.textContent = `❌ JS ERROR ${errorCount}: ${e.message} at ${e.filename}:${e.lineno}`;
+            errorLog.appendChild(errorDiv);
+        });
+        
+        // メインページからスクリプトを読み込んでテスト
+        setTimeout(() => {
+            fetch('/')
+                .then(response => response.text())
+                .then(html => {
+                    // SVGデータのテスト
+                    const svgTests = [
+                        'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 100\' fill=\'%23f3f4f6\'%3E%3Crect width=\'200\' height=\'100\'/%3E%3Ctext x=\'100\' y=\'55\' text-anchor=\'middle\' fill=\'%236b7280\'%3ETest%3C/text%3E%3C/svg%3E'
+                    ];
+                    
+                    // テスト用の画像エレメントを作成
+                    svgTests.forEach((svgData, index) => {
+                        const img = document.createElement('img');
+                        img.src = svgData;
+                        img.style.display = 'none';
+                        img.onerror = () => {
+                            console.error(`SVG ${index + 1} failed to load`);
+                        };
+                        img.onload = () => {
+                            console.log(`✅ SVG ${index + 1} loaded successfully`);
+                        };
+                        document.body.appendChild(img);
+                    });
+                    
+                    // 10秒後に結果をまとめる
+                    setTimeout(() => {
+                        const summaryDiv = document.createElement('div');
+                        summaryDiv.style.marginTop = '20px';
+                        summaryDiv.style.padding = '10px';
+                        summaryDiv.style.border = '2px solid ' + (errorCount === 0 ? 'green' : 'red');
+                        summaryDiv.innerHTML = `
+                            <h2>${errorCount === 0 ? '✅ テスト成功!' : '❌ エラーあり'}</h2>
+                            <p>エラー数: ${errorCount}</p>
+                            <p>SVGテスト完了</p>
+                        `;
+                        errorLog.appendChild(summaryDiv);
+                    }, 10000);
+                })
+                .catch(e => {
+                    console.error('Failed to fetch main page:', e);
+                });
+        }, 1000);
+    </script>
+</body>
+</html> 
